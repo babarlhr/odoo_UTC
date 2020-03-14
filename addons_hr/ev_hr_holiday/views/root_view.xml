@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <menuitem id="holidays_menu" name="Holidays" parent="ev_hr_timesheet.timesheet_menu"/>
+    </data>
+</odoo>

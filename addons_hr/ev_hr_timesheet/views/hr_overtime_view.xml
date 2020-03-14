@@ -1,0 +1,146 @@
+<odoo>
+    <data>
+        <!--<record id="hr_employee_overtime_filter" model="ir.ui.view">-->
+            <!--<field name="name">hr.employee.overtimesearch</field>-->
+            <!--<field name="model">hr.employee.overtime</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<search>-->
+                    <!--<field name="name"-->
+                           <!--filter_domain="['|', '|', '|', '|', ('employee_id.name_related', 'ilike', self),-->
+                           <!--('employee_id.x_emp_code','ilike',self),-->
+                           <!--('employee_id.work_email','ilike',self),-->
+                           <!--('employee_id.department_id.x_department_code','ilike',self),-->
+                           <!--('employee_id.mobile_phone','ilike',self)]"/>-->
+                    <!--<filter string="Department" name="department"-->
+                            <!--domain="[]" context="{'group_by':'department_id'}"/>-->
+                    <!--<filter string="Date" domain="[]" context="{'group_by':'from_date'}"/>-->
+                <!--</search>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record model="ir.ui.view" id="hr_employee_overtime_tree_view">
+            <field name="name">hr_employee_overtime_tree_view</field>
+            <field name="model">hr.employee.overtime</field>
+            <field name="arch" type="xml">
+                <tree colors="blue:state == 'draft'; green:state == 'confirm'; red:state == 'cancel';">
+                    <field name="department_id"/>
+                    <field name="employee_id"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="overtime" widget="float_time"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="hr_employee_overtime_form_view">
+            <field name="name">hr_employee_overtime_form_view</field>
+            <field name="model">hr.employee.overtime</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send" string="Send" type="object" states="draft" class="oe_highlight"
+                                confirm="Bạn chắc chắn gửi?" groups="sc_hr_employee.group_hr_dept_manager"/>
+                        <button name="action_make_done" string="Confirm" type="object" class="oe_highlight"
+                                states="confirm" groups="base.group_hr_user"
+                                confirm="Bạn chắc chắn muốn phê duyệt bản ghi này ?"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="draft"
+                                groups="sc_hr_employee.group_hr_dept_manager"
+                                confirm="Bạn chắc chắn muốn hủy bản ghi này ?"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="confirm"
+                                groups="base.group_hr_user" confirm="Bạn chắc chắn muốn hủy bản ghi này ?"/>
+                        <button name="action_adjust" string="Adjust" type="object"
+                                groups="sc_hr_employee.group_hr_dept_manager"
+                                attrs="{'invisible': [('state','in',['draft', 'cancel'])]}"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft, confirm, done"/>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <field name="employee_id" context="{'is_emp_filter': 1}"
+                                   attrs="{'readonly': [('state','!=','draft')]}"
+                                   options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                        </h1>
+
+                        <group col="4">
+                            <field name="create_uid" invisible="1"/>
+                            <field name="department_id" attrs="{'readonly': [('state','!=','draft')]}"
+                                   context="{'readonly_by_pass':True, 'is_dep_filter':1}"/>
+                            <field name="from_date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="to_date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="overtime" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="type_overtime" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="is_work_company" attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </group>
+                        <label for="description"/>
+                        <field name="description" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                        <field name="reason_cancel" readonly="1"/>
+                        <notebook>
+                            <page string="Detail adjust">
+                                <field name="detail_adjust_ids" create="0">
+                                    <tree string="Detail adjust" editable="bottom" create="0">
+                                        <field name="date"/>
+                                        <field name="hours_holiday"/>
+                                        <field name="type_overtime"/>
+                                        <field name="note"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_employee_overtime" model="ir.actions.act_window">
+            <field name="name">Employee overtime</field>
+            <field name="res_model">hr.employee.overtime</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_employee_overtime"
+                  parent="timesheet"
+                  action="action_employee_overtime" sequence="31"/>
+
+
+        <record model="ir.ui.view" id="hr_employee_overtime_detail_adjust_form_view">
+            <field name="name">hr_employee_overtime_detail_adjust_form_view</field>
+            <field name="model">hr.employee.overtime.detail.adjust</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="employee_overtime_id"
+                                   options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}" readonly="1"/>
+                        </group>
+                        <group col="4">
+                            <field name="date"/>
+                            <field name="hours_holiday"/>
+                            <field name="type_overtime"/>
+                        </group>
+                        <field name="note"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <!--<record id="view_hr_employee_overtime_reason_cancel_form" model="ir.ui.view">-->
+            <!--<field name="name">HR employee overtime form</field>-->
+            <!--<field name="model">hr.employee.overtime</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Reason cancel">-->
+                    <!--<header>-->
+                        <!--<button name="confirm_reason_cancel" string="Confirm reason cancel" type="object"/>-->
+                    <!--</header>-->
+                    <!--<sheet>-->
+                        <!--<field name="reason_cancel" required="1"/>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</odoo>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="email_recruitment">
+            <field name="name">mail recruitment popup</field>
+            <field name="model">mail.recruitment.popup</field>
+            <field name="arch" type="xml">
+                <form string="Compose Email">
+                    <field name="attachment_ids" widget="many2many_binary" string="Attach a file"/>
+                    <footer>
+                        <button string="Send" name="action_send_mail" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,17 @@
+<openerp>
+    <data>
+        <!--<template id="ev_hr_timesheet_assets_backend1" name="ev_hr_timesheet_js11" inherit_id="hr.assets_backend">-->
+            <!--<xpath expr="." position="inside">-->
+                <!--<link rel="stylesheet" href="/ev_hr_timesheet/static/src/css/shift_assign_sheet.css"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/timesheet_sheet.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/time_sheet_line.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/import_shift_assign.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/shift_assign_sheet.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/main.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/shift_assign_details.js"/>-->
+                <!--<script type="text/javascript" src="/ev_hr_timesheet/static/src/js/tableHeadFixer.js"/>-->
+                <!--<link rel="stylesheet" href="/ev_hr_timesheet/static/src/less/shift_assign_details.less"/>-->
+            <!--</xpath>-->
+        <!--</template>-->
+    </data>
+</openerp>

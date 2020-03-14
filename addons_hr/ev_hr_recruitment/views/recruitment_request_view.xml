@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="recruitment_request_action" model="ir.actions.act_window">
+            <field name="name">recruitment request</field>
+            <field name="res_model">hr.recruitment.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass':True}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new recruitment_request record</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="recruitment_request_tree_view">
+            <field name="name">recruitment request</field>
+            <field name="model">hr.recruitment.request</field>
+            <field name="arch" type="xml">
+                <tree string="Recruitment request  Tree"
+                      colors="red:state=='pending';green:state=='process';blue:state=='draft';#cccccc:state=='done'">
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="request_date"/>
+                    <field name="reponse_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="recruitment_request_form_view">
+            <field name="name">recruitment request</field>
+            <field name="model">hr.recruitment.request</field>
+            <field name="arch" type="xml">
+                <form string="Recruitment request  Form">
+                    <header class="oe_read_only">
+                        <button name="send" string="Send request" type="object"
+                                class="oe_highlight"
+                                states="draft"
+                                groups="ev_hr_recruitment.group_manager_recruitment_id,
+                                        ev_hr_recruitment.group_branch_recruitment_id"/>
+                        <button name="receive"
+                                string="Receive request" type="object" class="oe_highlight"
+                                states="pending"
+                                groups="ev_hr_recruitment.group_manager_recruitment_id,
+                                        ev_hr_recruitment.group_officials_recruitment_id"/>
+                        <button name="done"
+                                string="Done" type="object" class="oe_highlight"
+                                states="process"
+                                groups="ev_hr_recruitment.group_manager_recruitment_id,
+                                        ev_hr_recruitment.group_officials_recruitment_id"/>
+                        <button name="cancel"
+                                attrs="{'invisible': [('state', 'in', ['done','cancel'])]}"
+                                string="Cancel" type="object" class="oe_highlight"
+                                groups="ev_hr_recruitment.group_manager_recruitment_id,
+                                        ev_hr_recruitment.group_officials_recruitment_id"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft, pending, process, done, cancel"/>
+                    </header>
+                    <sheet>
+                        <div>
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                            <field name="request_date" attrs="{'readonly': [('state', 'not in', ['draft',])]}"/>
+                            <field name="department_id" attrs="{'readonly': True}"/>
+                            <field name="reponse_date" attrs="{'readonly': [('state', 'not in', ['draft',])]}"/>
+                        </group>
+                        <label for="note"/>
+                        <field name="note" attrs="{'readonly': [('state', 'not in', ['draft',])]}"/>
+                        <field name="recruitment_request_line_ids" context="{'readonly_by_pass':True}"
+                               attrs="{'readonly': [('state', 'not in', ['draft',])]}">
+                            <tree editable="bottom"
+                                  colors="red:status_request=='not_enough';green:status_request=='enough';blue:status_request=='process'">
+                                <field name="recruitment_request_state"
+                                       invisible="1"/>
+                                <field name="job_id"
+                                       options="{'no_create': 1, 'no_create_edit': 1}"
+                                       attrs="{'readonly': [('recruitment_request_state', 'in', ['pending','process','done',])]}"/>
+                                <field name="qty"
+                                       attrs="{'readonly': [('recruitment_request_state', 'in', ['pending','process','done',])]}"/>
+                                <field name="description"
+                                       attrs="{'readonly': [('recruitment_request_state', 'in', ['pending','process','done',])]}"/>
+                                <field name="actual_qty"
+                                       readonly="1" force_save="1"/>
+                                <field name="status_request"
+                                       readonly="1"/>
+                                <button name="action_open_form_update_request_line"
+                                        string="Update"
+                                        type="object"
+                                        attrs="{'invisible': [('status_request', 'in', ['enough','not_enough',])]}"
+                                        class="oe_highlight"
+                                        groups="base.group_hr_user"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <menuitem id="recruitment_request_menu"
+                  name="Recruitment request"
+                  parent="hr_recruitment.menu_hr_recruitment_root"
+                  action="recruitment_request_action"/>
+    </data>
+</odoo>

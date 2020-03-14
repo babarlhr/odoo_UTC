@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="history_applicant_recruitment_form" model="ir.ui.view">
+            <field name="name">History Applicant</field>
+            <field name="model">hr.history.applicant.recruitment</field>
+            <field name="arch" type="xml">
+                <form string="History">
+                    <sheet>
+                        <group>
+                            <field name="applicant_name" readonly="1"/>
+                            <field name="applicant_email" readonly="1"/>
+                            <field name="phone" readonly="1"/>
+                            <field name="applicant_id" readonly="1"/>
+                        </group>
+                        <field name="lines" readonly="1">
+                            <tree editable="bottom">
+                                <field name="recruitment_session_id"/>
+                                <field name="job_name"/>
+                                <field name="interview_id"/>
+                                <field name="state"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="history_applicant_recruitment_form_id" model="ir.actions.act_window">
+            <field name="name">History Applicant</field>
+            <field name="res_model">hr.history.applicant.recruitment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ev_hr_recruitment.history_applicant_recruitment_form"/>
+            <field name="target">new</field>
+            <field name="context">{'default_compute_at_date': 0, 'valuation': True}</field>
+        </record>
+    </data>
+</odoo>

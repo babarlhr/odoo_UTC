@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--<menuitem id="timesheet_menu" name="Chấm công" sequence="10"/>-->
+        <!--&lt;!&ndash;level1&ndash;&gt;-->
+        <!--<menuitem id="timesheet" name="Chấm công"-->
+                  <!--parent="timesheet_menu" sequence="1"/>-->
+        <!--<menuitem id="config_timesheet" name="Config Timesheet"-->
+                  <!--parent="timesheet_menu" sequence="100"/>-->
+
+        <!--&lt;!&ndash;level _2&ndash;&gt;-->
+
+
+
+        <!--<menuitem id="action_hr_shift_assign" name="Phân ca làm việc"-->
+                  <!--parent="timesheet" action="action_hr_shift_assign1" sequence="1"/>-->
+
+        <!--<menuitem action="action_employee_shift" name="Cấu hình ca"-->
+                  <!--id="menu_employee_shift"-->
+                  <!--sequence="10" parent="config_timesheet"/>-->
+
+
+    </data>
+</odoo>

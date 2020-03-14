@@ -1,0 +1,7 @@
+<openerp>
+    <data noupdate="1">
+        <!--<record id="group_hr_dept_manager" model="res.groups">-->
+            <!--<field name="name">Department manager</field>-->
+        <!--</record>-->
+    </data>
+</openerp>

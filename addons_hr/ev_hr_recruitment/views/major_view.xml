@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="major_action" model="ir.actions.act_window">
+            <field name="name">Major</field>
+            <field name="res_model">hr.major</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Major record</p>
+            </field>
+        </record>
+
+        <record id="view_major_form" model="ir.ui.view">
+            <field name="name">major form</field>
+            <field name="model">hr.major</field>
+            <field name="arch" type="xml">
+                <form string="Major Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_major_tree" model="ir.ui.view">
+            <field name="name">major tree</field>
+            <field name="model">hr.major</field>
+            <field name="arch" type="xml">
+                <tree string="majors">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="major_menu"
+                  name="Majors"
+                  parent="hr.menu_hr_configuration"
+                  action="major_action"/>
+    </data>
+</odoo>

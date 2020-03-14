@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="birt_report_comment_student" model="ir.ui.view">
+            <field name="name">Conment student</field>
+            <field name="model">birt.report.timetable</field>
+            <field name="arch" type="xml">
+                <form string="Birt report contest">
+                    <sheet>
+                        <group>
+                            <field name="session_ids" widget="many2many_tags"/>
+                        </group>
+                    </sheet>
+                    <footer>
+                        <button name="create_report_rating" string="Create" type="object"
+                                class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+        <record id="birt_report_conment_student_id" model="ir.actions.act_window">
+            <field name="name">Session comment student</field>
+            <field name="res_model">birt.report.timetable</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ev_training.birt_report_comment_student"/>
+            <field name="target">new</field>
+            <field name="context">{'default_compute_at_date': 0, 'valuation': True}</field>
+        </record>
+    </data>
+</openerp>

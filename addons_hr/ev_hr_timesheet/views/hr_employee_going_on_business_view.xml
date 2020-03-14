@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!--<record id="hr_employee_going_on_business_exception_filter" model="ir.ui.view">-->
+            <!--<field name="name">hr.employee.going.on.business.search</field>-->
+            <!--<field name="model">hr.employee.going.on.business</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<search>-->
+                    <!--<field name="name"-->
+                           <!--filter_domain="['|', '|', '|', '|', ('employee_id.name_related', 'ilike', self),-->
+                           <!--('employee_id.x_emp_code','ilike',self),-->
+                           <!--('employee_id.work_email','ilike',self),-->
+                           <!--('employee_id.department_id.x_department_code','ilike',self),-->
+                           <!--('employee_id.mobile_phone','ilike',self)]"/>-->
+                    <!--<filter string="Department" name="department"-->
+                            <!--domain="[]" context="{'group_by':'department_id'}"/>-->
+                    <!--<filter string="Date" domain="[]" context="{'group_by':'from_date'}"/>-->
+                <!--</search>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="hr_employee_going_on_business_action" model="ir.actions.act_window">
+            <field name="name">Employee going on business</field>
+            <field name="res_model">hr.employee.going.on.business</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass':True}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Employee going on business record</p>
+            </field>
+        </record>
+
+        <record id="view_hr_employee_going_on_business_form" model="ir.ui.view">
+            <field name="name">Employee going on business form</field>
+            <field name="model">hr.employee.going.on.business</field>
+            <field name="arch" type="xml">
+                <form string="Employee going on business Form">
+                    <header>
+                        <button name="send" string="Send" type="object" states="draft"/>
+                        <button name="approval" string="Approval" type="object" states="wait_approval"
+                                groups="base.group_hr_user"/>
+                        <button name="reject" string="Reject" type="object" states="wait_approval"
+                                groups="base.group_hr_user"/>
+                        <button name="action_cancel" string="Cancel" type="object" states="approved"
+                                groups="sc_hr_employee.group_hr_dept_manager"/>
+                        <button name="action_hr_confirm_cancel" string="Confirm cancel" type="object"
+                                states="hr_confirm_cancel"
+                                groups="sc_hr_employee.group_hr_dept_manager"/>
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft, wait_approval, approved, rejected"/>
+                    </header>
+                    <sheet>
+                        <h1>
+                            <field name="create_uid" invisible="1"/>
+                            <field name="employee_id" required="1" nolabel="1"
+                                   attrs="{'readonly': [('state','!=','draft')]}" context="{'is_emp_filter': 1}"
+                                   options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                        </h1>
+                        <group>
+                            <field name="department_id" context="{'readonly_by_pass':True, 'is_dep_filter':1}"/>
+                        </group>
+                        <group col="4">
+                            <field name="from_date" required="True" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="to_date" required="True" attrs="{'readonly': [('state','!=','draft')]}"/>
+                        </group>
+                        <label for="note"/>
+                        <field name="note" attrs="{'readonly': [('state','!=','draft')]}" required="1"/>
+                        <field name="reason_cancel" readonly="1"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_employee_going_on_business_tree" model="ir.ui.view">
+            <field name="name">hr_employee_going_on_business tree</field>
+            <field name="model">hr.employee.going.on.business</field>
+            <field name="arch" type="xml">
+                <tree string="Employee going on business" colors="green:state == 'wait_approval';blue:state == 'draft';red:state == 'rejected'">
+                    <field name="department_id"/>
+                    <field name="employee_id"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <menuitem id="hr_employee_going_on_business_menu"
+                  name="Employee going on business"
+                  parent="timesheet"
+                  action="hr_employee_going_on_business_action"
+                  sequence="23"/>
+
+        <!--<record id="view_hr_employee_going_on_business_reason_cancel_form" model="ir.ui.view">-->
+            <!--<field name="name">Employee going on business reason cancel form</field>-->
+            <!--<field name="model">hr.employee.going.on.business</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Reason cancel">-->
+                    <!--<header>-->
+                        <!--<button name="confirm_reason_cancel" string="Confirm reason cancel" type="object"/>-->
+                    <!--</header>-->
+                    <!--<sheet>-->
+                        <!--<field name="reason_cancel" required="1"/>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+
+    </data>
+</odoo>

@@ -1,0 +1,32 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* sc_hr_department
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-12 09:54+0000\n"
+"PO-Revision-Date: 2016-04-12 09:54+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: sc_hr_department
+#: field:hr.department,x_area_code:0
+msgid "Area Code"
+msgstr "Mã Khu Vực"
+
+#. module: sc_hr_department
+#: field:hr.department,x_department_code:0
+msgid "Department Code"
+msgstr "Mã Phòng Ban"
+
+#. module: sc_hr_department
+#: help:hr.department,x_department_code:0
+msgid "Enter the department code"
+msgstr "Nhập mã phòng ban"
+

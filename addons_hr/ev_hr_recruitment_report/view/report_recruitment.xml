@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <record id="report_recruitment_session" model="ir.ui.view">
+            <field name="name">Birt report recruitment</field>
+            <field name="model">birt.report.recruitment</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="recruitment_session_id" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <button name="create_report_recruitment_session" string="Create recruitment session"
+                                    type="object"
+                                    class="btn-primary"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="report_recruitment_sessions_id" model="ir.actions.act_window">
+            <field name="name">Birt report recruitment</field>
+            <field name="res_model">birt.report.recruitment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ev_hr_recruitment_report.report_recruitment_session"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new applicant record</p>
+            </field>
+            <field name="target">inline</field>
+        </record>
+    </data>
+</openerp>

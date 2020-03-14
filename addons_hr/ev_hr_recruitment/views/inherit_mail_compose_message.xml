@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="email_compose_message_wizard_form_2">
+            <field name="name">mail.compose.message.form</field>
+            <!--<field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>-->
+            <field name="model">mail.compose.message</field>
+            <field name="arch" type="xml">
+                <form string="Compose Email">
+                    <group>
+                        <field name="interview_id" readonly="1"/>
+                        <!-- truly invisible fields for control and options -->
+                        <field name="composition_mode" invisible="1"/>
+                        <field name="model" invisible="1"/>
+                        <field name="res_id" invisible="1"/>
+                        <field name="is_log" invisible="1"/>
+                        <field name="parent_id" invisible="1"/>
+                        <field name="mail_server_id" invisible="1"/>
+                        <field name="use_active_domain" invisible="1"/>
+                        <field name="email_from"
+                               attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>
+                        <!--<field name="subject" placeholder="Subject..." required="True"/>-->
+                        <!-- recipients -->
+                        <label for="applicant_ids" string="Applicant"/>
+                        <div groups="base.group_user" attrs="{'invisible': [('is_log', '=', True)]}">
+                            <field name="applicant_ids" widget="many2many_tags"
+                                   context="{'interview_id':interview_id}"/>
+                        </div>
+                        <!-- mass post -->
+                        <!--<field name="notify"-->
+                        <!--attrs="{'invisible':['|', ('composition_mode', '!=', 'mass_post')]}"/>-->
+                        <!-- mass mailing -->
+                        <!--<field name="no_auto_thread" attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>-->
+                        <!--<field name="reply_to" placeholder="Email address to redirect replies..."-->
+                        <!--attrs="{'invisible':['|', ('no_auto_thread', '=', False), ('composition_mode', '!=', 'mass_mail')],-->
+                        <!--'required':[('no_auto_thread', '=', True), ('composition_mode', '=', 'mass_mail')]}"/>-->
+                    </group>
+                    <field name="body"/>
+                    <!--<field name="attachment_ids" widget="many2many_binary" string="Attach a file"/>-->
+                    <footer>
+                        <button string="Send" name="send_mail" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="email_compose_message_wizard_form_3">
+            <field name="name">mail.compose.message.form</field>
+            <!--<field name="inherit_id" ref="mail.email_compose_message_wizard_form"/>-->
+            <field name="model">mail.compose.message</field>
+            <field name="arch" type="xml">
+                <form string="Compose Email">
+                    <group>
+                        <field name="interview_id" readonly="1"/>
+                        <field name="composition_mode" invisible="1"/>
+                        <field name="model" invisible="1"/>
+                        <field name="res_id" invisible="1"/>
+                        <field name="is_log" invisible="1"/>
+                        <field name="parent_id" invisible="1"/>
+                        <field name="mail_server_id" invisible="1"/>
+                        <field name="use_active_domain" invisible="1"/>
+                        <field name="email_from"
+                               attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>
+                        <!--<field name="subject" placeholder="Subject..." required="True"/>-->
+                        <!-- recipients -->
+                        <label for="applicant_ids" string="Applicant"/>
+                        <div groups="base.group_user" attrs="{'invisible': [('is_log', '=', True)]}">
+                            <field name="applicant_ids" widget="many2many_tags"
+                                   context="{'interview_id':interview_id}"/>
+                        </div>
+                        <!-- mass post -->
+                        <!--<field name="notify"-->
+                        <!--attrs="{'invisible':['|', ('composition_mode', '!=', 'mass_post')]}"/>-->
+                        <!-- mass mailing -->
+                        <!--<field name="no_auto_thread" attrs="{'invisible':[('composition_mode', '!=', 'mass_mail')]}"/>-->
+                        <!--<field name="reply_to" placeholder="Email address to redirect replies..."-->
+                        <!--attrs="{'invisible':['|', ('no_auto_thread', '=', False), ('composition_mode', '!=', 'mass_mail')],-->
+                        <!--'required':[('no_auto_thread', '=', True), ('composition_mode', '=', 'mass_mail')]}"/>-->
+                        <!--<field name="type_mail" required="1"/>-->
+                    </group>
+                    <field name="body" readonly="1"/>
+                    <!--<field name="attachment_ids" widget="many2many_binary" string="Attach a file"/>-->
+                    <footer>
+                        <button string="Send" name="send" type="object" class="oe_highlight"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

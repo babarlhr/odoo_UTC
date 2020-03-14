@@ -1,0 +1,75 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="formview_import_applicant">
+            <field name="name">Import Applicant</field>
+            <field name="model">import.applicant</field>
+            <field name="arch" type="xml">
+                <form string="Import Applicant">
+                    <header>
+                        <button name="update_file" string="Confirm" type="object" class="oe_highlight"
+                                confirm="Bạn chắc chắn muốn cập nhật dữ liệu ứng viên" states="draft"/>
+                        <button name="dowmload_templates_file_xlsx" string="Download Templates" type="object"
+                                states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"
+                               statusbar_colors='{"draft":"blue","done":"red"}'/>
+                    </header>
+                    <br/>
+                    <br/>
+                    <group col="1">
+                        <h2>
+                            <label for="file_upload"
+                                   string="Select File "/>
+                        </h2>
+                        <h2>
+                            <field name="file_name" invisible="1"/>
+                            <field name="file_upload" filename="file_name" nolabel="1"/>
+                        </h2>
+                        <group>
+                            <button
+                                    name="import_file_applicant"
+                                    states="draft"
+                                    type="object"
+                                    class="oe_highlight"
+                                    string="Validate file"/>
+                        </group>
+                        <notebook>
+                            <page string="Detail Applicant">
+                                <field name="detail_ids" nolabel="1" attrs="{'readonly': [('state','=','done')]}">
+                                    <tree editable="bottom" create="0" delete="0">
+                                        <field name="name"/>
+                                        <field name="date_of_birth"/>
+                                        <field name="gender"/>
+                                        <field name="current_address"/>
+                                        <field name="applicant_phone"/>
+                                        <field name="applicant_email"/>
+                                        <field name="account_facebook"/>
+                                        <field name="experience"/>
+                                        <field name="job_id"/>
+                                        <field name="job_position_id"/>
+                                        <field name="work_place"/>
+                                        <field name="plan_date"/>
+                                        <field name="applicant_source_id"/>
+                                        <field name="receiver_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_import_applicant_file" model="ir.actions.act_window">
+            <field name="name">Import applicant</field>
+            <field name="res_model">import.applicant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+        </record>
+
+
+        <menuitem id="import_applicant_menu"
+                  name="Import applicant"
+                  parent="hr_recruitment.menu_hr_recruitment_root"
+                  action="action_import_applicant_file"/>
+    </data>
+</odoo>

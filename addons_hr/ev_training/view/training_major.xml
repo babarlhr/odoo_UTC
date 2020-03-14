@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="training_major_action" model="ir.actions.act_window">
+            <field name="name">Major</field>
+            <field name="res_model">training.major</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Major record</p>
+            </field>
+        </record>
+
+        <record id="view_training_major_form" model="ir.ui.view">
+            <field name="name">Major form</field>
+            <field name="model">training.major</field>
+            <field name="arch" type="xml">
+                <form string="Training Major">
+                    <sheet>
+                        <group>
+                            <h1>
+                                <field name="name" required="1"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <field name="major_code" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_training_major_tree" model="ir.ui.view">
+            <field name="name">Major tree</field>
+            <field name="model">training.major</field>
+            <field name="arch" type="xml">
+                <tree string="Major">
+                    <field name="name"/>
+                    <field name="major_code"/>
+                </tree>
+            </field>
+        </record>
+        <!--<menuitem id="training_course_config" name="Config"-->
+                  <!--parent="education_course_session"/>-->
+
+    </data>
+</openerp>

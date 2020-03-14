@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="ev_hr_timesheet.ShiftAssignDetails">
+        <!--<button type="button" id="save" t-if="!shiftAssignDetail.get('effective_readonly')">Click Meto save</button>-->
+        <div class="izi_oe_timesheet_weekly">
+            <table class="table table-condensed table-responsive" id="fixTable">
+                <thead>
+                    <tr>
+                        <th class="oe_shift_assign_first_col" colspan="3"
+                            style="width: 280px; display:block; text-align: left">Nhân viên
+                            <br/>
+                            <br/>
+                        </th>
+                        <t t-foreach="shiftAssignDetail.dates" t-as="date">
+                            <th t-att-class="'oe_timesheet_weekly_date_head' + (Date.compare(date, Date.today()) === 0 ? ' oe_timesheet_weekly_today' : '')">
+                                <t t-esc="date.toString('ddd')"/>
+                                <br/>
+                                <t t-esc="date.toString('dd/MM')"/>
+                            </th>
+                        </t>
+
+                    </tr>
+                </thead>
+                <t t-set="row_num" t-value="0"/>
+                <tr t-foreach="shiftAssignDetail.emp_shifts" t-as="emp_shift"
+                    t-att-class="row_num%2 == 0 ? 'row_hight' : 'row_hight oe_shift_assign_color'">
+                    <!--<td colspan="3"  style="width: 180px; display:block; text-align: left;">-->
+                        <!--[<t t-esc="emp_shift.department_code"/>] <t t-esc="emp_shift.department_name"/>-->
+                    <!--</td>-->
+                    <td colspan="3"  style="width: 280px; display:block; text-align: left;">
+                        <strong>[<t t-esc="emp_shift.department_code"/>]</strong>[<t t-esc="emp_shift.employee_code"/>] <t t-esc="emp_shift.employee_name"/>
+                    </td>
+                    <t t-set="row_num" t-value="row_num+1"/>
+                    <t t-foreach="emp_shift.data" t-as="d">
+                        <td>
+                            <t t-if="state == 'draft'">
+                            <input t-att-emp-id="emp_shift.employee_id"
+                                   t-att-day="d.day"
+                                   t-att-date="d.date"
+                                   t-att-shift_name="d.shift_name"
+                                   style="width: 50px; text-transform: uppercase;"
+                                   class="shift_to_assign" t-if="!shiftAssignDetail.get('effective_readonly') "
+                                           t-att-value="d.shift_name"/>
+
+                            <span type="text" t-if="shiftAssignDetail.get('effective_readonly')"
+                                  style="text-align:center;" t-esc="d.shift_name"/>
+                            </t>
+                            <t t-if="state != 'draft'">
+                                <span type="text"
+                                  style="text-align:center;" t-esc="d.shift_name"/>
+                            </t>
+                        </td>
+                    </t>
+                </tr>
+            </table>
+        </div>
+    </t>
+</templates>

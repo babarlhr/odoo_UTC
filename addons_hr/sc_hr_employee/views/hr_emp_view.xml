@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Form hr_employee -->
+        <record id="res_employee_form_view_inherit" model="ir.ui.view">
+            <field name="name">Employee Form Inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <!--<xpath expr="//label[@for='name']" position="before">-->
+                    <!--<label for="x_emp_code"/>-->
+                    <!--<field name="x_emp_code" readonly="1"/>-->
+                <!--</xpath>-->
+                <xpath expr="//label[@for='name']" position="before">
+                    <field name="x_emp_code_new" readonly="0"
+                           string="Gợi ý"/>
+                </xpath>
+
+
+            </field>
+        </record>
+
+        <!-- Tree hr_employee -->
+
+        <record id="res_employy_tree_view_inherit" model="ir.ui.view">
+            <field name="name">Empoyee tree view inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="before">
+                    <field name="x_emp_code"/>
+                </xpath>
+            </field>
+        </record>
+        <!--<menuitem parent="hr.menu_hr_root" id="menu_inherit_hr" name="Hoạt động khác"/>-->
+        <!--<menuitem parent="menu_inherit_hr" id="menu_inherit_hr_job_position" action="hr.action_hr_job" sequence="10"-->
+                  <!--name="Vị trí công việc"/>-->
+        <!--<menuitem parent="menu_inherit_hr" id="menu_inherit_hr_attendance_position"-->
+                  <!--groups="hr_attendance.group_hr_attendance_user"-->
+                  <!--action="hr_attendance.hr_attendance_action" sequence="20" name="Chấm công"/>-->
+    </data>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="job_position_action" model="ir.actions.act_window">
+            <field name="name">Job position</field>
+            <field name="res_model">hr.job.position</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Job position record</p>
+            </field>
+        </record>
+
+        <record id="view_job_position_form" model="ir.ui.view">
+            <field name="name">Job position form</field>
+            <field name="model">hr.job.position</field>
+            <field name="arch" type="xml">
+                <form string="Job position Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_job_position_tree" model="ir.ui.view">
+            <field name="name">Job position tree</field>
+            <field name="model">hr.job.position</field>
+            <field name="arch" type="xml">
+                <tree string="Job position">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="description"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="job_position_menu"
+                  name="Job position"
+                  parent="hr.menu_hr_configuration"
+                  action="job_position_action"/>
+    </data>
+</odoo>

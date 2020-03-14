@@ -1,0 +1,33 @@
+<openerp>
+    <data>
+        <record id="res_employee_session_form_view_inherit" model="ir.ui.view">
+            <field name="name">Employee Form Inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@string='HR Settings']" position="after">
+                    <page string="Training">
+                        <field name="session_ids">
+                            <tree editable="bottom">
+                                <field name="course_id"
+                                       options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                                <field name="date_from_course"/>
+                                <field name="date_to_course"/>
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+        <record id="res_employee_level_form_view_inherit" model="ir.ui.view">
+            <field name="name">Employee level Inherit</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="sc_hr_employee.res_employee_form_view_inherit"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='status']" position="after">
+                    <field name="level_id"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</openerp>

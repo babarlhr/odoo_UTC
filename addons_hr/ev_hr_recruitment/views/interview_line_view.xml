@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="view_interview_line_form" model="ir.ui.view">
+            <field name="name">interview line form</field>
+            <field name="model">hr.interview.line</field>
+            <field name="arch" type="xml">
+                <form string="Interview line form">
+                    <sheet>
+                        <group col="4">
+                            <field name="applicant_id" readonly="1"/>
+                            <field name="status_applicant"/>
+                            <label for="file_interview"/>
+                            <field name="file_interview_name" invisible="1"/>
+                            <field name="file_interview" filename="file_interview_name" nolabel="1"/>
+                        </group>
+                        <label for="note"/>
+                        <field name="note"/>
+                    </sheet>
+                    <footer>
+                        <button name="action_update_applicant" string="Update"
+                                type="object"
+                                class="oe_highlight"/>
+                        or
+                        <button special="cancel" string="Cancel" class="oe_link"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

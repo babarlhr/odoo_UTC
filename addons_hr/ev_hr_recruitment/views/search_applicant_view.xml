@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<odoo>
+    <data>
+        <record id="search_applicant_action" model="ir.actions.act_window">
+            <field name="name">search applicant</field>
+            <field name="res_model">hr.search.applicant.criteria</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="search_applicant_form_view">
+            <field name="name">search applicant</field>
+            <field name="model">hr.search.applicant.criteria</field>
+            <field name="arch" type="xml">
+                <form string="Search applicant" edit="false" create="false" delete="false" write="false">
+                    <sheet>
+                        <group col="6">
+                            <field name="partner_name"/>
+                            <field name="applicant_phone"/>
+                            <field name="certificates" placeholder="ví dụA, ví dụ B, ..."/>
+                            <field name="job_position_id"
+                                   options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                            <field name="applicant_email"/>
+                            <field name="year_of_birth"/>
+                        </group>
+                        <button
+                                name="action_search_applicant"
+                                type="object"
+                                class="oe_highlight"
+                                string="Search"/>
+                        <notebook>
+                            <page string='Result search'>
+                                <field name="search_applicant_result_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="partner_name"/>
+                                        <field name="applicant_email"/>
+                                        <field name="applicant_phone"/>
+                                        <field name="status_applicant"/>
+                                        <button name="action_view_detail_applicant" string="Detail"
+                                                type="object"
+                                                class="oe_highlight"/>
+                                        <button name="action_view_history" string="Recruitment history"
+                                                type="object"
+                                                class="oe_highlight"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--<record id="search_applicant_result_form_view" model="ir.ui.view">-->
+            <!--<field name="name">Applicant form</field>-->
+            <!--<field name="model">hr.applicant</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="Application form">-->
+                    <!--<sheet>-->
+                        <!--<div class="oe_title">-->
+                            <!--<label for="name" class="oe_edit_only"/>-->
+                            <!--<h1>-->
+                                <!--<field name="name" readonly="1"/>-->
+                            <!--</h1>-->
+                            <!--<field name="avatar" widget='image' class="oe_left oe_avatar" readonly="1"/>-->
+                            <!--<h2 style="display: inline-block;">-->
+                                <!--<field name="partner_name" placeholder="Name applicant" class="oe_inline" readonly="1"/>-->
+                            <!--</h2>-->
+                        <!--</div>-->
+                        <!--<group col="4">-->
+                            <!--<field name="date_of_birth" readonly="1"/>-->
+                            <!--<field name="job_position_id" readonly="1"/>-->
+                            <!--<field name="applicant_phone" readonly="1"/>-->
+                            <!--<field name="applicant_email" readonly="1"/>-->
+                            <!--<field name="receiver_id" readonly="1"/>-->
+                            <!--<field name="source_id" readonly="1"/>-->
+                        <!--</group>-->
+                        <!--<group>-->
+                            <!--<label for="file_cv"/>-->
+                            <!--<field name="file_cv_name" invisible="1"/>-->
+                            <!--<field name="file_cv" filename="file_cv_name" nolabel="1" readonly="1"/>-->
+                        <!--</group>-->
+                        <!--<notebook>-->
+                            <!--<page string="Skill - Experience">-->
+                                <!--<label for="certificate_ids"/>-->
+                                <!--<field name="certificate_ids" readonly="1">-->
+                                    <!--<tree editable="bottom">-->
+                                        <!--<field name="time"/>-->
+                                        <!--<field name="name"/>-->
+                                        <!--<field name="unit_allocation"/>-->
+                                        <!--<field name="level"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                                <!--<br/>-->
+                                <!--<br/>-->
+                                <!--<label for="experience_ids"/>-->
+                                <!--<field name="experience_ids" readonly="1">-->
+                                    <!--<tree editable="bottom">-->
+                                        <!--<field name="time"/>-->
+                                        <!--<field name="name"/>-->
+                                        <!--<field name="job_position"/>-->
+                                        <!--<field name="description"/>-->
+                                        <!--<field name="pay_rate"/>-->
+                                        <!--<field name="reason_of_leaving"/>-->
+                                    <!--</tree>-->
+                                <!--</field>-->
+                            <!--</page>-->
+                            <!--<page string="Additional information">-->
+                                <!--<group>-->
+                                    <!--<field name="advantage" readonly="1"/>-->
+                                    <!--<field name="disadvantages" readonly="1"/>-->
+                                    <!--<field name="hobby" readonly="1"/>-->
+                                <!--</group>-->
+                            <!--</page>-->
+                        <!--</notebook>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <menuitem action="search_applicant_action"
+                  id="search_applicant_menu" name="Search applicant"
+                  parent="hr_recruitment.menu_hr_recruitment_root"
+                  />
+    </data>
+</odoo>

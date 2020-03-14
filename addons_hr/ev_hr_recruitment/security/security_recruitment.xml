@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <!--Tạo group quyền-->
+        <record id="group_manager_recruitment_id" model="res.groups">
+            <field name="name">Manager recruitment</field>
+            <field name="category_id" ref="base.module_category_hr_recruitment"/>
+            <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        </record>
+        <!--Tạo group quyền cán bộ-->
+        <record id="group_officials_recruitment_id" model="res.groups">
+            <field name="name">Officials recruitment</field>
+            <field name="category_id" ref="base.module_category_hr_recruitment"/>
+            <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        </record>
+        <!--Tạo group quyền cho các chi nhánh -->
+        <record id="group_branch_recruitment_id" model="res.groups">
+            <field name="name">Branch recruitment</field>
+            <field name="category_id" ref="base.module_category_hr_recruitment"/>
+            <field name="implied_ids" eval="[(4, ref('hr.group_hr_user'))]"/>
+        </record>
+    </data>
+</odoo>

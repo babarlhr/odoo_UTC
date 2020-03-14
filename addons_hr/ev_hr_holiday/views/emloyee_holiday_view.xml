@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="hr_holiday_action" model="ir.actions.act_window">
+            <field name="name">Holidays</field>
+            <field name="res_model">hr.employee.holiday</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass': True}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new holiday record</p>
+            </field>
+        </record>
+
+
+        <record id="view_hr_holiday_form" model="ir.ui.view">
+            <field name="name">Holidays form</field>
+            <field name="model">hr.employee.holiday</field>
+            <field name="arch" type="xml">
+                <form string="Application form">
+                    <header>
+                        <button name="action_send"
+                                string="Send" type="object" class="oe_highlight"
+                                states="draft"/>
+                        <button name="action_done"
+                                string="Done" type="object" class="oe_highlight"
+                                states="confirm"/>
+
+                        <button name="action_cancel"
+                                string="Reject cancel" type="object" class="oe_highlight"
+                                states="draft,confirm"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,done,cancel"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                            <field name="create_uid" invisible="1"/>
+                            <field name="employee_id"
+                                   context="{'is_emp_filter': 1}"
+                                   attrs="{'readonly': [('state','!=','draft')]}"
+                                   options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="department_id"
+                                   context="{'readonly_by_pass':True, 'is_dep_filter':1}"/>
+                            <field name="from_date"
+                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="remaining_leave_day"/>
+                            <field name="to_date"
+                                   context="{'readonly_by_pass':True}"
+                                   attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="holidays" readonly="1"/>
+                        </group>
+                        <label for="employee_holiday_line_ids"/>
+                        <field name="employee_holiday_line_ids"
+                               attrs="{'readonly': [('state','!=','draft')]}">
+                            <tree editable="bottom">
+                                <field name="employee_holiday_type_id"
+                                       options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                                <field name="number_of_day"/>
+                            </tree>
+                        </field>
+                        <label for="note"/>
+                        <field name="note"
+                               attrs="{'readonly': [('state','!=','draft')]}"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_hr_holiday_tree" model="ir.ui.view">
+            <field name="name">hr.holiday.tree</field>
+            <field name="model">hr.employee.holiday</field>
+            <field name="arch" type="xml">
+                <tree string="Holidays">
+                    <field name="name"/>
+                    <field name="department_id"/>
+                    <field name="employee_id"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="holidays"/>
+                    <field name="detail_holiday"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <menuitem id="hr_holiday_menu"
+                  name="Holidays"
+                  parent="ev_hr_holiday.holidays_menu"
+                  action="hr_holiday_action"/>
+
+    </data>
+</odoo>

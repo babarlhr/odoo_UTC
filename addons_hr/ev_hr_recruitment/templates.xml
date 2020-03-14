@@ -1,0 +1,54 @@
+<openerp>
+    <data noupdate="1">
+        <!-- recruitment request name tự sinh -->
+        <record forcecreate="1" id="hr_recruitment_request_name_seq_type_id" model="ir.sequence">
+            <field name="name">HR_RECRUITMENT_REQUEST_NAME_SEQ</field>
+            <field name="code">hr_recruitment_request_name_seq</field>
+        </record>
+        <record forcecreate="1" id="hr_recruitment_request_name_seq_id" model="ir.sequence">
+            <field name="name">hr recruitment_request name seq</field>
+            <field name="code">hr_recruitment_request_name_seq</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">YCTD%(y)s%(month)s/</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+
+        <!-- interview name tự sinh -->
+        <record forcecreate="1" id="hr_interview_name_seq_type_id" model="ir.sequence">
+            <field name="name">HR_INTERVIEW_NAME_SEQ</field>
+            <field name="code">hr_interview_name_seq</field>
+        </record>
+        <record forcecreate="1" id="hr_interview_name_seq_id" model="ir.sequence">
+            <field name="name">hr interview name seq</field>
+            <field name="code">hr_interview_name_seq</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">DPV%(y)s%(month)s/</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+
+        <!-- recruitment session name tự sinh -->
+        <record forcecreate="1" id="hr_recruitment_session_name_seq_type_id" model="ir.sequence">
+            <field name="name">HR_RECRUITMENT_SESSION_NAME_SEQ</field>
+            <field name="code">hr_recruitment_session_name_seq</field>
+        </record>
+        <record forcecreate="1" id="hr_recruitment_session_name_seq_id" model="ir.sequence">
+            <field name="name">hr recruitment session name seq</field>
+            <field name="code">hr_recruitment_session_name_seq</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">DTD%(y)s%(month)s/</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+    </data>
+</openerp>

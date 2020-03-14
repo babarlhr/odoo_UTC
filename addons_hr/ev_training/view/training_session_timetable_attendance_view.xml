@@ -1,0 +1,88 @@
+<openerp>
+    <data>
+        <template id="report_session_timetable_attendance_view_id">
+            <t t-call="report.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <div class="clear-both"></div>
+                        <div class="title">
+                            <h3 class="text-center">Báo Cáo Điểm Danh</h3>
+                            <br/>
+                        </div>
+                        <div class="info">
+                            <p class="text-center italic">
+                                Lớp :
+                                <span t-field="o.session_id"/>
+                            </p>
+                            <p class="text-center italic">
+                                Môn :
+                                <span t-field="o.major_id"/>
+                            </p>
+                            <p class="text-center italic">
+                                Thời gian học :
+                                <span t-field="o.start_time" t-field-options='{"format": "dd/MM/yyyy hh:mm:ss"}'/>
+                                --
+                                <span t-field="o.end_time" t-field-options='{"format": "dd/MM/yyyy hh:mm:ss"}'/>
+                            </p>
+                        </div>
+                        <div class="invoice-details">
+                            <table class="table table-condensed">
+                                <tr>
+                                    <td class="text-center" width="15%">
+                                        <strong>Mã học viên</strong>
+                                    </td>
+                                    <td class="text-center" width="35%">
+                                        <strong>Học viên</strong>
+                                    </td>
+                                    <td class="text-center" width="20%">
+                                        <strong>Điểm danh</strong>
+                                    </td>
+                                    <td class="text-center" width="30%">
+                                        <strong>Chú thích</strong>
+                                    </td>
+                                </tr>
+                                <tbody>
+                                    <t t-foreach="o.employee_ids" t-as="b_line">
+                                        <tr>
+                                            <td>
+                                                <span t-field="b_line.employee_id.x_emp_code"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="b_line.employee_id.name_related"/>
+                                            </td>
+                                            <td>
+                                                <t t-if="b_line.state != False">
+                                                    <span>Có mặt</span>
+                                                </t>
+                                                <t t-if="b_line.state == False">
+                                                    <span>Vắng mặt</span>
+                                                </t>
+                                            </td>
+                                            <td>
+                                                <span t-field="b_line.note"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <br/>
+                            </table>
+                        </div>
+                        <div class="info">
+                            <table cellspacing="10">
+                                <tr class="spaceUnder">
+                                    <td>Mô tả:</td>
+                                    <td>
+                                        <span t-field="o.description"></span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+
+
+                    </div>
+                    <!-- End page -->
+                </t>
+            </t>
+        </template>
+    </data>
+</openerp>

@@ -1,0 +1,57 @@
+.replace('x','y') : thay thế các phần tử x bằng y
+-------------------------------------------------------------------
+quantity = 3
+itemno = 567
+price = 49
+myorder = "I want {} pieces of item number {} for {:.2f} dollars."
+print(myorder.format(quantity, itemno, price))
+print ("Hello, I am {} years old !".format(18))
+-------------------------------------------------------------------
+>>> "{:.0f}".format(2.85)
+'3'
+>>> "%.0f"%2.85
+'3'
+>>> "%.1f"%2.85
+'2.9'
+>>> "%i"%2.85
+'2'
+-------------------------------------------------------------------
+.count(1) : dem trong list phan tu co gtri 1
+.index(2) : vị trí số 2 trong list
+a.copy() : trả về list giống a và k cùng position
+a.append(1) : thêm từng phần tử
+a.extend([1,2]): thêm nhiều phần tử
+a.split(","): phân chia phần tử
+.strip() : xóa khoảng trắng đầu và cuối
+.insert(1,"a"): them vào vị trí 1 , (k thay thế)
+.pop(2): xóa theo vị trí
+ -u ev_hr_recruitment -d odoo_vmt
+.sudo() : quyền cao nhất
+--------------------------------------------------------------------
+import re
+
+str = 'izisolution'
+instr = re.search(r'tion', str)
+if instr:
+	print(instr.group()) # in ra chuỗi đó
+else:
+	print('Không thấy')
+# tion
+import re 
+
+str = 'izisolution'
+instr = re.split(r't', str)
+if instr:
+	print(instr) # in ra chuỗi đó
+else:
+	print('Không thấy')
+- findall(r'i', str): tìm tất cả 
+------------------------------------------------------------------------
+str = 'Hoc lap trinh Toidicode.com'
+match = re.sub(r'Toidicode.com','https://toidicode.com', str)
+# Hoc lap trinh https://toidicode.com
+
+
+https://toidicode.com/regular-expression-trong-python-p2-366.html
+
+

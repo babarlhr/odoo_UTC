@@ -1,0 +1,94 @@
+<odoo>
+    <data>
+        <record id="list_send_mail_applicant_interview_form" model="ir.ui.view">
+            <field name="name">list.send.mail.applicant.interview</field>
+            <field name="model">list.send.mail.applicant.interview</field>
+            <field name="arch" type="xml">
+                <form string="List Applicant">
+                    <group>
+                        <field name="interview_id" readonly="1"/>
+                        <field name="applicant_ids" widget="many2many_tags" context="{'interview_id': interview_id}"
+                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                    </group>
+                    <field name="body_html" readonly="1"/>
+                    <br/>
+                    <button name="action_send" string="Send mail" type="object"
+                            class="oe_highlight"/>
+                </form>
+            </field>
+        </record>
+        <record id="list_send_mail_applicant_interview_action" model="ir.actions.act_window">
+            <field name="name">list.send.mail.applicant.interview</field>
+            <field name="res_model">list.send.mail.applicant.interview</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="list_send_mail_applicant_interview_form"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add list send mail applicant interview record</p>
+            </field>
+        </record>
+
+
+        <record id="list_send_mail_applicant_interview_form_2" model="ir.ui.view">
+            <field name="name">list.send.mail.applicant.interview.2</field>
+            <field name="model">list.send.mail.applicant.interview</field>
+            <field name="arch" type="xml">
+                <form string="List Applicant">
+                    <group>
+                        <field name="hr_recruitment_session_id" readonly="1"/>
+                        <field name="applicant_ids"
+                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                    </group>
+                    <br/>
+                    <button name="action_add_applicant" string="Add Applicant" type="object"
+                            class="oe_highlight"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="list_send_mail_applicant_interview_form_3" model="ir.ui.view">
+            <field name="name">list.send.mail.applicant.interview</field>
+            <field name="model">list.send.mail.applicant.interview</field>
+            <field name="arch" type="xml">
+                <form string="List Applicant">
+                    <group>
+                        <field name="interview_id" readonly="1"/>
+                        <field name="applicant_ids" readonly="1" widget="many2many_tags"
+                               context="{'interview_id': interview_id}"
+                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                        <field name="type" required="1"/>
+                        <field name="date_work" required="1"/>
+                        <field name="date_expired" attrs="{'invisible': [('type', '!=', 'form_1')],
+                        'required': [('type', '=', 'form_1')]}"/>
+                    </group>
+                    <field name="body_html" readonly="1"/>
+                    <br/>
+                    <button name="action_send_work" string="Send mail work" type="object"
+                            class="oe_highlight"/>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="list_send_mail_applicant_interview_form_4" model="ir.ui.view">
+            <field name="name">list.send.mail.applicant.interview</field>
+            <field name="model">list.send.mail.applicant.interview</field>
+            <field name="arch" type="xml">
+                <form string="List Applicant">
+                    <group>
+                        <field name="interview_id" readonly="1"/>
+                        <field name="applicant_ids" readonly="1" widget="many2many_tags"
+                               context="{'interview_id': interview_id}"
+                               options="{'no_create': 1, 'no_create_edit': 1}"/>
+                    </group>
+                    <field name="body_html" readonly="1"/>
+                    <br/>
+                    <button name="action_send_thank" string="Send mail thank" type="object"
+                            class="oe_highlight"/>
+                </form>
+            </field>
+        </record>
+
+
+    </data>
+</odoo>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_act_import_id" model="ir.actions.act_window">
+            <field name="name">Import</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">training.session.import</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">new</field>
+            <field name="context">{'default_compute_at_date': 0, 'valuation': True}</field>
+        </record>
+        <record id="view_act_import_contest" model="ir.ui.view">
+            <field name="name">Import contest</field>
+            <field name="model">training.session.import</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="import_xls_contest" string="Update" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="session_id" invisible="1"/>
+                            <field name="major_id" required="1"/>
+                            <field name="date" required="1"/>
+                            <field name="teacher_id" required="1"/>
+                            <field name="file_name" invisible="1"/>
+                            <field name="xls_file_contest" filename="file_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_act_import_timetable" model="ir.ui.view">
+            <field name="name">Import timetable</field>
+            <field name="model">training.session.import</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="import_xls_timetable" string="Update" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="file_name" invisible="1"/>
+                            <field name="xls_file_timetable" filename="file_name"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,246 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ev_hr_employee_profile
+#	* sc_hr_employee
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-05-16 09:31+0000\n"
+"PO-Revision-Date: 2018-05-16 09:31+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_hr_employee_profile
+#: model:ir.actions.act_window,help:ev_hr_employee_profile.ev_hr_employee_profile_action
+msgid "<p class=\"oe_view_nocontent_create\">Create the first course</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Create the first course</p>\n"
+"            "
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,archive_store:0
+msgid "Archive store"
+msgstr "Nơi lưu trữ"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,career_id:0
+msgid "Career"
+msgstr "Nhóm nghề nghiệp"
+
+#. module: sc_hr_employee
+#: field:hr.career,code:0
+#: field:hr.employee,x_emp_code:0
+#: field:hr.job.category,code:0
+msgid "Code"
+msgstr "Mã Nhân Viên"
+
+#. module: sc_hr_employee
+#: field:hr.employee,x_emp_code_new:0
+msgid "Code New"
+msgstr "Mã mới"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,create_uid:0
+#: field:hr.career,create_uid:0
+#: field:hr.job.category,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,create_date:0
+#: field:hr.career,create_date:0
+#: field:hr.job.category,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,current_address:0
+msgid "Current address"
+msgstr "Địa chỉ hiện tại"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,date_margin_trading:0
+msgid "Date margin trading"
+msgstr "Ngày ký quỹ"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,date_of_issue:0
+msgid "Date of Issue"
+msgstr "Ngày cấp CMND"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,state_id:0
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,date_start_training:0
+msgid "Date start training"
+msgstr "Ngày bắt đầu đào tạo"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee.profile,description:0
+msgid "Description"
+msgstr "Mô tả"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,employee_ids:0
+#: model:ir.actions.act_window,name:ev_hr_employee_profile.ev_hr_employee_inherit_action
+#: model:ir.model,name:ev_hr_employee_profile.model_hr_employee
+#: model:ir.model,name:sc_hr_employee.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: sc_hr_employee
+#: view:hr.employee:sc_hr_employee.res_employee_form_view_inherit
+msgid "Gợi ý"
+msgstr "Gợi ý"
+
+#. module: sc_hr_employee
+#: model:res.groups,name:sc_hr_employee.group_hr_dept_manager
+msgid "HR Department manager"
+msgstr "Trưởng phòng"
+
+#. module: ev_hr_employee_profile
+#: view:hr.employee:ev_hr_employee_profile.ev_hr_employee_inherit
+msgid "Hồ sơ nhân viên"
+msgstr "Hồ sơ nhân viên"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,id:0
+#: field:hr.career,id:0
+#: field:hr.job.category,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: sc_hr_employee
+#: field:hr.employee,is_create_user:0
+msgid "Is create user"
+msgstr "Tạo User"
+
+#. module: sc_hr_employee
+#: field:hr.employee,is_lead_team:0
+msgid "Is lead team"
+msgstr "Là trưởng phòng"
+
+#. module: sc_hr_employee
+#: model:ir.model,name:sc_hr_employee.model_hr_job
+msgid "Job Position"
+msgstr "Chức vụ"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,job_category_id:0
+msgid "Job category"
+msgstr "Nhóm chức vụ"
+
+#. module: sc_hr_employee
+#: field:hr.employee,job_priority:0
+msgid "Job priority"
+msgstr "Độ ưu tiên chức vụ"
+
+#. module: sc_hr_employee
+#: field:hr.employee,x_join_date:0
+msgid "Join Date"
+msgstr "Ngày Vào Công Ty"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,write_uid:0
+#: field:hr.career,write_uid:0
+#: field:hr.job.category,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: field:hr.employee.profile,write_date:0
+#: field:hr.career,write_date:0
+#: field:hr.job.category,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: sc_hr_employee
+#: selection:hr.employee,status:0
+msgid "Leave"
+msgstr "Nghỉ việc"
+
+#. module: sc_hr_employee
+#: selection:hr.employee,status:0
+msgid "Maternity leave"
+msgstr "Nghỉ thai sản"
+
+#. modules: ev_hr_employee_profile, sc_hr_employee
+#: view:hr.employee.profile:ev_hr_employee_profile.ev_hr_employee_profile_search
+#: field:hr.employee.profile,name:0
+#: field:hr.career,name:0
+#: field:hr.job.category,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: sc_hr_employee
+#: field:hr.employee,official_contract_date:0
+msgid "Official contract date"
+msgstr "Ngày ký hợp đồng"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,place_of_issue_id:0
+msgid "Place of Issue"
+msgstr "Nơi cấp CMND"
+
+#. module: sc_hr_employee
+#: field:hr.job,priority:0
+msgid "Priority"
+msgstr "Độ ưu tiên"
+
+#. module: ev_hr_employee_profile
+#: field:hr.employee,profile_ids:0
+#: view:hr.employee.profile:ev_hr_employee_profile.ev_hr_employee_profile_tree
+#: model:ir.actions.act_window,name:ev_hr_employee_profile.ev_hr_employee_profile_action
+#: model:ir.ui.menu,name:ev_hr_employee_profile.employee_profile_menu
+msgid "Profile"
+msgstr "Hồ sơ nhân viên"
+
+#. module: sc_hr_employee
+#: selection:hr.employee,status:0
+msgid "Retired"
+msgstr "Nghỉ hưu"
+
+#. module: sc_hr_employee
+#: view:hr.employee:sc_hr_employee.res_employee_form_view_inherit
+msgid "Revenue history"
+msgstr "Lịch sử doanh thu"
+
+#. module: ev_hr_employee_profile
+#: view:hr.employee.profile:ev_hr_employee_profile.ev_hr_employee_profile_search
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: sc_hr_employee
+#: field:hr.employee,sequence:0
+msgid "Sequence"
+msgstr "Sequence"
+
+#. module: sc_hr_employee
+#: field:hr.employee,status:0
+msgid "Status"
+msgstr "Tình trạng"
+
+#. module: sc_hr_employee
+#: help:hr.employee,x_emp_code:0
+msgid "The employee code will be generated automatically"
+msgstr "Mã nhân viên sẽ được sinh tự động"
+
+#. module: sc_hr_employee
+#: selection:hr.employee,status:0
+msgid "Unpaid leave"
+msgstr "Nghỉ không lương"
+
+#. module: sc_hr_employee
+#: selection:hr.employee,status:0
+msgid "Working"
+msgstr "Đang làm việc"
+

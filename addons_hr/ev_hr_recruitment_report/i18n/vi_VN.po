@@ -1,0 +1,64 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_hr_recruitment_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-23 01:48+0000\n"
+"PO-Revision-Date: 2019-10-23 08:48+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi_VN\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#. module: ev_hr_recruitment_report
+#: model:ir.actions.act_window,help:ev_hr_recruitment_report.report_recruitment_applicants_id
+#: model:ir.actions.act_window,help:ev_hr_recruitment_report.report_recruitment_sessions_id
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new applicant record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new applicant record</p>\n"
+"            "
+
+#. module: ev_hr_recruitment_report
+#: model:ir.actions.act_window,name:ev_hr_recruitment_report.report_recruitment_sessions_id
+msgid "Birt report recruitment"
+msgstr "Báo cáo tuyển dụng"
+
+#. module: ev_hr_recruitment_report
+#: model:ir.actions.act_window,name:ev_hr_recruitment_report.report_recruitment_applicants_id
+msgid "Birt report recruitment applicant"
+msgstr "Báo cáo tuyển dung theo ứng viên"
+
+#. module: ev_hr_recruitment_report
+#: view:birt.report.recruitment:ev_hr_recruitment_report.report_recruitment_applicant
+msgid "Create recruitment applicant"
+msgstr "Tạo đợt tuyển theo ứng viên"
+
+#. module: ev_hr_recruitment_report
+#: view:birt.report.recruitment:ev_hr_recruitment_report.report_recruitment_session
+msgid "Create recruitment session"
+msgstr "Tạo đợt tuyển dụng"
+
+#. module: ev_hr_recruitment_report
+#: field:birt.report.recruitment,job_applicant_id:0
+msgid "Job"
+msgstr "Vị trí ứng tuyển"
+
+#. module: ev_hr_recruitment_report
+#: model:ir.ui.menu,name:ev_hr_recruitment_report.menu_izi_report_recruitment
+#: model:ir.ui.menu,name:ev_hr_recruitment_report.menu_izi_report_recruitment_id
+msgid "Recruitment report"
+msgstr "Báo cáo tuyển dụng"
+
+#. module: ev_hr_recruitment_report
+#: model:ir.ui.menu,name:ev_hr_recruitment_report.menu_izi_report_recruitment_applicant_id
+msgid "Recruitment report applicant"
+msgstr "Báo cáo tuyển dụng theo ứng viên"

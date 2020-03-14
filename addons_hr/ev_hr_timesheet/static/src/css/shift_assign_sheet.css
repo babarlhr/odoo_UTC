@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+.openerp .oe_timesheet_weekly .oe_shift_assign_first_col {
+    width: 220px !important;
+    background: #EEEEEE;
+    position: absolute;
+    left: 0;
+}
+
+.openerp .oe_timesheet_weekly .oe_shift_assign_name_col {
+    width: 220px !important;
+    background: #EEEEEE;
+    position: absolute;
+    left: 0;
+}
+
+.openerp .oe_timesheet_weekly .oe_employee_code {
+    text-align: left;
+    width: 220px !important;
+    position: absolute;
+    left: 0;
+    height: 30px;
+}
+
+.openerp .oe_timesheet_weekly .oe_text_right {
+    text-align: right;
+}
+
+.openerp .oe_timesheet_weekly .oe_text_center {
+    text-align: center;
+}
+
+.openerp .oe_timesheet_weekly .oe_text_center_blue {
+    text-align: center;
+    color: blue;
+}
+
+.openerp .oe_timesheet_weekly .oe_shift_assign_color {
+    background: #efeff8 !important;
+}
+
+.openerp .oe_timesheet_weekly .row_hight {
+    height: 30px;
+}
+
+.openerp .oe_timesheet_weekly {
+    overflow-x: scroll;
+    overflow-y: visible;
+    margin-left: 200px;
+}
+
+.employee-witdh th[width="1"] {
+    position: absolute;
+    left: 0;
+    display: none;
+    background: #EEEEEE
+}
+
+.employee-witdh th[data-id="employee_id"] {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    background: #EEEEEE;
+}
+
+.oe_form_readonly .employee-witdh td[data-field="employee_id"] {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    margin-top: 1px;
+}
+
+.oe_form_editable .employee-witdh td[data-field="employee_id"] {
+    position: absolute;
+    left: 0;
+    width: 250px;
+    margin-top: 2px;
+}
+
+.detail-shift-assign .employee-witdh .oe_form .oe_form_field {
+    position: relative;
+}
+
+.employee-witdh span[data-fieldname="employee_id"] {
+    position: absolute !important;
+}
+
+.detail-shift-assign {
+    overflow-x: scroll;
+    overflow-y: visible;
+    margin-left: 220px;
+}
+
+.openerp .izi_oe_timesheet_weekly {
+    overflow-x: auto;
+    max-width: 1340px;
+    max-height: 440px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table {
+    width: 100%;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > th {
+    text-align: center;
+    font-size: 10px;
+    background-color: #eeeeee;
+    /*border: 1px solid #585858;*/
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td {
+    text-align: right;
+    /*border: 1px solid #585858;*/
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td.oe_timesheet_weekly_account {
+    white-space: nowrap;
+    text-align: left;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td input.oe_timesheet_weekly_input {
+    display: inline-block;
+    max-width: 10px !important;
+    text-align: center;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td .oe_timesheet_button_add {
+    margin-left: 8px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td .o_with_button + .oe_timesheet_button_add {
+    margin-left: 45px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr > td .openerp .oe_timesheet_weekly .oe_shift_assign_color {
+    background: #efeff8 !important;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .izi_oe_timesheet_weekly_today {
+    background-color: #eeeeee;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .oe_timesheet_total {
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .o_add_timesheet_line {
+    width: 1%;
+    background-color: #eeeeee;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .o_add_timesheet_line > div .o_form_field_many2one {
+    min-width: 200px;
+    margin: 0;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .o_add_timesheet_line > div .o_external_button {
+    background-color: #eeeeee;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .o_add_timesheet_line > div .oe_timesheet_button_add {
+    margin-left: 8px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > thead > tr .o_add_timesheet_line > div .o_with_button + .oe_timesheet_button_add {
+    margin-left: 45px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > th {
+    text-align: center;
+    font-size: 10px;
+    /*background-color: #ff00df;*/
+    /*border: 1px solid #585858;*/
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td {
+    text-align: right;
+    /*border: 1px solid #585858;*/
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td.oe_timesheet_weekly_account {
+    white-space: nowrap;
+    text-align: left;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td input.oe_timesheet_weekly_input {
+    display: inline-block;
+    width: 40px;
+    text-align: right;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td .oe_timesheet_button_add {
+    margin-left: 8px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td .o_with_button + .oe_timesheet_button_add {
+    margin-left: 45px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td .openerp .oe_timesheet_weekly .oe_shift_assign_color {
+    background: #efeff8 !important;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .izi_oe_timesheet_weekly_today {
+    background-color: #ffccf9;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .oe_timesheet_total {
+    font-weight: bold;
+    background-color: #eeeeee;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line {
+    width: 1%;
+    background-color: #eeeeee;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line > div .o_form_field_many2one {
+    min-width: 200px;
+    margin: 0;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line > div .o_external_button {
+    background-color: #eeeeee;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line > div .oe_timesheet_button_add {
+    margin-left: 8px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line > div .o_with_button + .oe_timesheet_button_add {
+    margin-left: 45px;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > th {
+    color: #069;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .o_add_timesheet_line {
+    width: auto;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr .oe_shift_assign_color {
+    background: #efeff8 !important;
+}
+
+.openerp .izi_oe_timesheet_weekly > table > tbody > tr > td .oe_shift_assign_color {
+    background: #efeff8 !important;
+}

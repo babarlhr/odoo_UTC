@@ -1,0 +1,138 @@
+<odoo>
+    <data>
+        <!--<record id="hr_employee_leave_filter" model="ir.ui.view">-->
+            <!--<field name="name">hr.employee.leave_search</field>-->
+            <!--<field name="model">hr.employee.leave</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<search>-->
+                    <!--<field name="name"-->
+                           <!--filter_domain="['|', '|', '|', '|', ('employee_id.name_related', 'ilike', self),-->
+                           <!--('employee_id.x_emp_code','ilike',self),-->
+                           <!--('employee_id.work_email','ilike',self),-->
+                           <!--('employee_id.department_id.x_department_code','ilike',self),-->
+                           <!--('employee_id.mobile_phone','ilike',self)]"/>-->
+                    <!--<filter string="Department" name="department"-->
+                            <!--domain="[]" context="{'group_by':'department_id'}"/>-->
+                    <!--<filter string="Date" domain="[]" context="{'group_by':'from_date'}"/>-->
+                <!--</search>-->
+            <!--</field>-->
+        <!--</record>-->
+        <record id="hr_employee_leave_tree_view" model="ir.ui.view">
+            <field name="name">hr.employee.leave.tree.view</field>
+            <field name="model">hr.employee.leave</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="department_id"/>
+                    <field name="employee_id"/>
+                    <field name="from_date"/>
+                    <field name="to_date"/>
+                    <field name="leave_day"/>
+                    <field name="used_day"/>
+                    <field name="remaining_leave_day"/>
+                    <field name="rest_leave_day"/>
+                    <field name="leave_day_last_year"/>
+                    <field name="remaining_leave_day_last_year"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_leave_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.leave.form.view</field>
+            <field name="model">hr.employee.leave</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="action_confirm" string="Confirm" type="object" class="oe_highlight"
+                                states="draft"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,done"/>
+                    </header>
+
+                    <sheet>
+                        <field name="name" invisible="1"/>
+                        <label for="employee_id" string="Employee" class="oe_edit_only"/>
+                        <h1>
+                            <field name="employee_id" context="{'is_emp_filter': 1}"
+                                   attrs="{'readonly': [('state','=','done')]}"/>
+                        </h1>
+                        <group col="4">
+                            <group col="2" colspan="2">
+                                <field name="from_date" attrs="{'readonly': [('state','=','done')]}"/>
+                                <field name="to_date" attrs="{'readonly': [('state','=','done')]}"/>
+                                <field name="leave_day" attrs="{'readonly': [('state','=','done')]}"/>
+                                <field name="used_day"/>
+                                <field name="remaining_leave_day" readonly="1"/>
+                            </group>
+                            <group col="2" colspan="2">
+                                <field name="rest_leave_day" readonly="1"/>
+                                <field name="leave_day_last_year" readonly="1"/>
+                                <field name="remaining_leave_day_last_year" readonly="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <notebook>
+                                <page string="Detail">
+                                    <field name="log_ids" nolabel="1" readonly="1">
+                                        <tree editable="bottom" create="0" delete="0">
+                                            <field name="date"/>
+                                            <field name="add_date"/>
+                                        </tree>
+                                    </field>
+                                </page>
+                            </notebook>
+                        </group>
+                        <group>
+                            <field name="note"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_employee_leave" model="ir.actions.act_window">
+            <field name="name">Employee leave</field>
+            <field name="res_model">hr.employee.leave</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+        <menuitem action="action_employee_leave" name="Employee leave"
+                  id="menu_employee_leave"
+                  sequence="15" parent="config_timesheet"/>
+
+
+        <record id="hr_employee_leave_log_tree_view" model="ir.ui.view">
+            <field name="name">hr.employee.leave.log.tree.view</field>
+            <field name="model">hr.employee.leave.log</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="date"/>
+                    <field name="add_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_leave_log_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.leave.log.form.view</field>
+            <field name="model">hr.employee.leave.log</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group col="2">
+                            <field name="leave_id"/>
+                            <field name="employee_id"/>
+                            <field name="date"/>
+                            <field name="add_date"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="action_employee_leave_log" model="ir.actions.act_window">
+            <field name="name">Employee leave log</field>
+            <field name="res_model">hr.employee.leave.log</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+</odoo>

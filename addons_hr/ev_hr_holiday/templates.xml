@@ -1,0 +1,17 @@
+<openerp>
+    <data noupdate="1">
+        <!-- employee holiday name tự sinh -->
+        <record forcecreate="1" id="hr_holiday_name_seq_id" model="ir.sequence">
+            <field name="name">hr holiday name seq</field>
+            <field name="code">hr_holiday_name_seq</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">NP%(y)s%(month)s/</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+
+    </data>
+</openerp>

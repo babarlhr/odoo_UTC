@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <report
+                id="report_training_timetable_attendance"
+                model="training.session.timetable"
+                string="Báo cáo điểm danh"
+                report_type="qweb-pdf"
+                name="ev_training.report_session_timetable_attendance_view_id"
+                file="ev_training.report_session_timetable_attendance_view_id"
+        />
+    </data>
+</openerp>

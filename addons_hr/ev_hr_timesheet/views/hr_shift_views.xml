@@ -1,0 +1,283 @@
+<openerp>
+    <data>
+
+        <record id="hr_employee_shift_tree_view" model="ir.ui.view">
+            <field name="name">hr.employee.shift.tree.view</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="from_time" widget="float_time"/>
+                    <field name="to_time" widget="float_time"/>
+                    <field name="break_time" widget="float_time"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="hr_employee_shift_form_view" model="ir.ui.view">
+            <field name="name">hr.employee.shift.form.view</field>
+            <field name="model">hr.employee.shift</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <h1>
+                            <field name="name" required="1" nolabel="1"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="from_time" widget="float_time" required="1"/>
+                                <field name="to_time" widget="float_time" required="1"/>
+                                <field name="break_time" widget="float_time"/>
+                                <field name="standard_time"/>
+                                <field name="overtime_rate"/>
+                                <field name="department_ids" widget="many2many_tags"/>
+                            </group>
+                        </group>
+                        <label for="shift_standard_ids"/>
+                        <field name="shift_standard_ids">
+                            <tree editable="bottom">
+                                <field name="job_id"/>
+                                <field name="standard_time"/>
+                            </tree>
+                        </field>
+                        <group>
+                            <field name="description"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_employee_shift" model="ir.actions.act_window">
+            <field name="name">Employee Shift</field>
+            <field name="res_model">hr.employee.shift</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <record id="hr_shift_assign_form_view" model="ir.ui.view">
+            <field name="name">hr.shift.assign.form.view</field>
+            <field name="model">hr.shift.assign</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="send" string="Send" type="object" states="draft"/>
+                        <button name="refresh" string="Refresh" type="object" states="draft"
+                                confirm="Sau khi ấn làm lại, toàn bộ dữ liệu phân ca sẽ mất, bạn có chắc chắn muốn làm lại ?"/>
+                        <button name="approval" string="Approval" type="object" states="wait_approval"
+                                groups="base.group_hr_user"/>
+                        <button name="revoke" string="Revoke" type="object" states="wait_approval"
+                                groups="sc_hr_employee.group_hr_dept_manager"/>
+                        <!--<button name="done" string="Done"-->
+                        <!--confirm="Chỉ hoàn thành bảng phân ca sau khi các chức năng đổi ca làm việc, đến muộn về sớm, chế độ con nhỏ, xin nghỉ, làm thêm giờ, chế độ đi công tác đều hoàn thành hết.-->
+                        <!--Chắc chắn hoàn thành hết các chức năng trên?" type="object" states="approved"-->
+                        <!--groups="base.group_hr_user"/>-->
+                        <button name="done" string="Done"
+                                type="object" states="approved"
+                                groups="base.group_hr_user"/>
+                        <!--<button name="cancel" string="Cancel" type="object"-->
+                        <!--attrs="{'invisible': [('state', 'in', ['draft', 'done', 'cancel'])]}"-->
+                        <!--groups="base.group_hr_user"/>-->
+                        <field name="state" widget="statusbar"
+                               statusbar_visible="draft, wait_approval, approved, done, cancel"/>
+                    </header>
+                    <br/>
+                    <br/>
+                    <group col="4">
+                        <field name="random_number" invisible="1"/>
+                        <field name="random_number_1" invisible="1"/>
+                        <field name="period_id"
+                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"
+                               required="1"
+                               attrs="{'readonly': [('state', '!=', 'init')]}"/>
+                        <field name="department_id"
+                               context="{'is_dep_filter':1}"
+                               options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"
+                               attrs="{'readonly': [('state', '!=', 'init')]}"/>
+                        <field name="close_timesheet_date"
+                               attrs="{'invisible': [('close_timesheet_date', '=', 0)], 'readonly': 1}"/>
+                    </group>
+                    <group col="2">
+                        <button name="do_clone_last_month" string="Clone last month" type="object" states="init"/>
+                        <button name="do_init_shift" string="Init shift" type="object" states="init"/>
+                    </group>
+                    <!--<widget type="weekly_izi_timesheet"/>-->
+                    <!--<widget type="shift_assign_details" attrs="{'invisible': [('state', '=', 'init')]}"/>-->
+                    <!--<div class="detail-shift-assign">-->
+                    <label for="detail_ids"/>
+
+                <!--<div class="izi_oe_timesheet_weekly" invisible="1">-->
+                    <field name="detail_ids" attrs="{'readonly': [('state', 'not in', ['draft', ])]}">
+                        <!--<tree editable="bottom" create="0" class="employee-witdh">-->
+                        <tree editable="bottom" create="0">
+                            <field name="total_day" invisible="1"/>
+                            <field name="employee_id"/>
+                            <field name="day_1" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_2" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_3" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_4" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_5" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_6" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_7" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_8" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_9" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_10" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_11" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_12" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_13" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_14" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_15" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_16" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_17" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_18" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_19" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_20" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_21" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_22" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_23" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_24" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_25" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_26" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_27" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_28" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"/>
+                            <field name="day_29" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                   attrs="{'invisible': [('total_day','&lt;',29)]}"/>
+                            <field name="day_30" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                   attrs="{'invisible': [('total_day','&lt;',30)]}"/>
+                            <field name="day_31" options="{'no_open': 1, 'no_create': 1, 'no_create_edit': 1}"
+                                   attrs="{'invisible': [('total_day','&lt;',31)]}"/>
+                        </tree>
+                    </field>
+                <!--</div>-->
+                    <!--</div>-->
+                    <br/>
+                    <label for="employee_shift_ids"/>
+                    <field name="employee_shift_ids" readonly="1">
+                        <tree>
+                            <field name="name"/>
+                            <field name="from_time" widget="float_time"/>
+                            <field name="to_time" widget="float_time"/>
+                            <field name="description"/>
+                            <field name="break_time" widget="float_time"/>
+                            <field name="standard_time"/>
+                            <field name="overtime_rate"/>
+                        </tree>
+                    </field>
+
+
+                </form>
+            </field>
+        </record>
+
+
+        <!--<record id="hr_shift_assign_view_search" model="ir.ui.view">-->
+        <!--<field name="name">hr.shift.assign</field>-->
+        <!--<field name="model">hr.shift.assign</field>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<search string="Search Shift Assign">-->
+        <!--<field name="period_id"/>-->
+        <!--<field name="department_id"/>-->
+        <!--<field name="state"/>-->
+        <!--<group expand="0" string="Group By">-->
+        <!--<filter string="Region" icon="terp-personal" domain="[]"-->
+        <!--context="{'group_by':'department_id.x_area_code'}"/>-->
+        <!--</group>-->
+        <!--</search>-->
+        <!--</field>-->
+        <!--</record>-->
+
+
+        <record id="done_hr_shift_assign_form_view" model="ir.ui.view">
+            <field name="name">done_hr_shift_assign_form_view</field>
+            <field name="model">hr.shift.assign</field>
+            <field name="priority">17</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="from_date" readonly="1"/>
+                            <field name="to_date"/>
+                            <!--<field name="close_timesheet_type" required="1" attrs="{'readonly': [('from_date', '>', 1)]}"/>-->
+                        </group>
+                        <button name="action_complete" string="Complete" type="object"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="import_hr_shift_assign_form_view" model="ir.ui.view">
+            <field name="name">import_hr_shift_assign_form_view</field>
+            <field name="model">hr.shift.assign</field>
+            <field name="priority">18</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button name="download_template" string="Download Template" type="object"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="file_name" invisible="1"/>
+                            <field name="file_upload" filename="file_name"/>
+                        </group>
+                    </sheet>
+                    <button name="read_file" type="object"
+                            class="oe_highlight" string="Read file"/>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_shift_assign_tree_view" model="ir.ui.view">
+            <field name="name">hr.shift.assign.tree.view</field>
+            <field name="model">hr.shift.assign</field>
+            <field name="view_id" ref="hr_shift_assign_form_view"/>
+            <field name="arch" type="xml">
+                <tree colors="green:state == 'wait_approval';blue:state == 'draft'">
+                    <field name="period_id"/>
+                    <field name="department_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_shift_assign1" model="ir.actions.act_window">
+            <field name="name">Shift Assign</field>
+            <field name="res_model">hr.shift.assign</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'readonly_by_pass':True}</field>
+            <!--<field name="search_view_id" ref="hr_shift_assign_view_search"/>-->
+        </record>
+
+        <!--<record id="action_view_hr_shift_assign_tree" model="ir.actions.act_window.view">-->
+            <!--<field name="sequence" eval="0"/>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="view_id" ref="hr_shift_assign_tree_view"/>-->
+            <!--<field name="act_window_id" ref="action_hr_shift_assign"/>-->
+        <!--</record>-->
+
+        <!--<record id="action_view_hr_shift_assign_form" model="ir.actions.act_window.view">-->
+            <!--<field name="sequence" eval="1"/>-->
+            <!--<field name="view_mode">form</field>-->
+            <!--<field name="view_id" ref="hr_shift_assign_form_view"/>-->
+            <!--<field name="act_window_id" ref="action_hr_shift_assign"/>-->
+        <!--</record>-->
+
+        <menuitem id="timesheet_menu" name="Chấm công" sequence="10" groups="base.group_user"/>
+        <!--level1-->
+        <menuitem id="timesheet" name="Chấm công"
+                  parent="timesheet_menu" sequence="1" groups="base.group_user"/>
+        <menuitem id="config_timesheet" name="Config Timesheet"
+                  parent="timesheet_menu" sequence="100" groups="base.group_user"/>
+
+        <!--level _2-->
+
+
+
+        <menuitem id="action_hr_shift_assign" name="Phân ca làm việc"
+                  parent="timesheet" action="action_hr_shift_assign1" sequence="1" groups="base.group_user"/>
+
+        <menuitem action="action_employee_shift" name="Cấu hình ca"
+                  id="menu_employee_shift"
+                  sequence="10" parent="config_timesheet" groups="base.group_user"/>
+
+    </data>
+</openerp>

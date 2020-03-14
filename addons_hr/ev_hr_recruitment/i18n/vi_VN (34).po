@@ -1,0 +1,2149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ev_hr_recruitment
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-04-17 04:12+0000\n"
+"PO-Revision-Date: 2017-04-17 04:12+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_hr_recruitment
+#: model:email.template,body_html:ev_hr_recruitment.template_hr_recruitment_send_mail_thank_1
+msgid "\n"
+"\n"
+"                VMT Group chân thành cảm ơn bạn đã dành thời gian để tìm hiểu, nộp hồ sơ ứng tuyển và tham dự các vòng phỏng vấn với chúng tôi.\n"
+"                Thời điểm hiện tại, hồ sơ ứng tuyển của bạn chưa thực sự phù hợp vị trí mà chúng tôi đang tuyển dụng, vì vậy VMT xin phép sẽ lưu hồ sơ của bạn vào ngân hàng hồ sơ tiềm năng cho kế hoạch tuyển dụng của chúng tôi trong tương lai gần.\n"
+"                Mong rằng VMT sẽ cơ hội hợp tác cùng bạn tại một thời điểm thích hợp với một vị trí công việc phù hợp.\n"
+"                Chúc bạn thành công!\n"
+"                Trân trọng\n"
+"\n"
+""
+msgstr "\n"
+"\n"
+"                VMT Group chân thành cảm ơn bạn đã dành thời gian để tìm hiểu, nộp hồ sơ ứng tuyển và tham dự các vòng phỏng vấn với chúng tôi.\n"
+"                Thời điểm hiện tại, hồ sơ ứng tuyển của bạn chưa thực sự phù hợp vị trí mà chúng tôi đang tuyển dụng, vì vậy VMT xin phép sẽ lưu hồ sơ của bạn vào ngân hàng hồ sơ tiềm năng cho kế hoạch tuyển dụng của chúng tôi trong tương lai gần.\n"
+"                Mong rằng VMT sẽ cơ hội hợp tác cùng bạn tại một thời điểm thích hợp với một vị trí công việc phù hợp.\n"
+"                Chúc bạn thành công!\n"
+"                Trân trọng\n"
+"\n"
+""
+
+#. module: ev_hr_recruitment
+#: model:email.template,body_html:ev_hr_recruitment.template_hr_recruitment_send_mail_invite_interview_3
+msgid "\n"
+"                <p>Dear <span>${object.obj_mail_invite_to_interview(object.applicant_id)['gender']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id)['applicant_name']}</span>, </p>\n"
+"\n"
+"                <p>VMT Group, nhà phân phối độc quyền thương hiệu mỹ phấm Menard Nhật Bản tại Việt Nam đã nhận được hồ sơ ứng tuyển của bạn.</p>\n"
+"\n"
+"                <p>Chúng tôi trân trọng mời bạn vào lúc: <span>${object.obj_mail_invite_to_interview(object.applicant_id)['time']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id)['day']}</span> ngày <span>${object.obj_mail_invite_to_interview(object.applicant_id)['date']}</span> có mặt tại trụ sở công ty chúng tôi, địa chỉ:</p>\n"
+"\n"
+"                <p>Tầng 12, Tòa nhà VMT Building, số 1, ngõ 82 phố Duy Tân, Dịch Vọng Hậu, Cầu Giấy, HN ( Đối diện tòa nhà FPT)</p>\n"
+"\n"
+"                <p>để tham dự buổi phỏng vấn sơ tuyển, vị trí: <span>${object.obj_mail_invite_to_interview(object.applicant_id)['job_name']}</span></p>\n"
+"\n"
+"                <p>Ứng viên vui lòng đến đúng giờ và mang theo hồ sơ xin việc( bản sao).</p>\n"
+"\n"
+"                <p>Vui lòng phúc đáp thư để xác nhận có hoặc không tham dự phỏng vấn, nếu bạn không thể tham gia buổi phỏng vấn theo thư mời, hãy liên hệ trực tiếp với chúng tôi để được sắp xếp lịch phỏng vấn vào một ngày khác.</p>\n"
+"\n"
+"                <p>Trân trọng</p>\n"
+"\n"
+"                <p>&nbsp;</p>\n"
+"\n"
+"                <p><img alt=\"Description: ChuKy_2-63\" height=\"156\" src=\"file:///C:\\Users\\DOVIET~1\\AppData\\Local\\Temp\\msohtmlclip1\\01\\clip_image001.jpg\" width=\"624\" /></p>\n"
+"\n"
+"                <p>&nbsp;</p>\n"
+""
+msgstr "\n"
+"                <p>Dear <span>${object.obj_mail_invite_to_interview(object.applicant_id)['gender']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id)['applicant_name']}</span>, </p>\n"
+"\n"
+"                <p>VMT Group, nhà phân phối độc quyền thương hiệu mỹ phấm Menard Nhật Bản tại Việt Nam đã nhận được hồ sơ ứng tuyển của bạn.</p>\n"
+"\n"
+"                <p>Chúng tôi trân trọng mời bạn vào lúc: <span>${object.obj_mail_invite_to_interview(object.applicant_id)['time']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id)['day']}</span> ngày <span>${object.obj_mail_invite_to_interview(object.applicant_id)['date']}</span> có mặt tại trụ sở công ty chúng tôi, địa chỉ:</p>\n"
+"\n"
+"                <p>Tầng 12, Tòa nhà VMT Building, số 1, ngõ 82 phố Duy Tân, Dịch Vọng Hậu, Cầu Giấy, HN ( Đối diện tòa nhà FPT)</p>\n"
+"\n"
+"                <p>để tham dự buổi phỏng vấn sơ tuyển, vị trí: <span>${object.obj_mail_invite_to_interview(object.applicant_id)['job_name']}</span></p>\n"
+"\n"
+"                <p>Ứng viên vui lòng đến đúng giờ và mang theo hồ sơ xin việc( bản sao).</p>\n"
+"\n"
+"                <p>Vui lòng phúc đáp thư để xác nhận có hoặc không tham dự phỏng vấn, nếu bạn không thể tham gia buổi phỏng vấn theo thư mời, hãy liên hệ trực tiếp với chúng tôi để được sắp xếp lịch phỏng vấn vào một ngày khác.</p>\n"
+"\n"
+"                <p>Trân trọng</p>\n"
+"\n"
+"                <p>&nbsp;</p>\n"
+"\n"
+"                <p><img alt=\"Description: ChuKy_2-63\" height=\"156\" src=\"file:///C:\\Users\\DOVIET~1\\AppData\\Local\\Temp\\msohtmlclip1\\01\\clip_image001.jpg\" width=\"624\" /></p>\n"
+"\n"
+"                <p>&nbsp;</p>\n"
+""
+
+#. module: ev_hr_recruitment
+#: model:email.template,body_html:ev_hr_recruitment.template_hr_recruitment_send_mail_invite_work_4
+msgid "\n"
+"                Chúc mừng bạn đã trúng tuyển vào công ty!\n"
+""
+msgstr "\n"
+"                Chúc mừng bạn đã trúng tuyển vào công ty!\n"
+""
+
+#. module: ev_hr_recruitment
+#: model:email.template,subject:ev_hr_recruitment.template_hr_recruitment_send_mail_invite_interview_3
+#: model:email.template,subject:ev_hr_recruitment.template_hr_recruitment_send_mail_invite_work_4
+#: model:email.template,subject:ev_hr_recruitment.template_hr_recruitment_send_mail_thank_1
+msgid "${object.subject}"
+msgstr "${object.subject}"
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.job_position_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new Job position record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Bấm tạo để thêm một Chức danh mới</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.major_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new Major record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Bấm tạo để thêm một Chuyên ngành mới</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.source_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new Source record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Click create to add a new Source record</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.applicant_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new applicant record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Click create to add a new applicant record</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.interview_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new interview record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Bấm tạo để thêm một đợt phỏng vấn mới</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.job_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new job record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Click create to add a new job record</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.recruitment_session_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new recruitment session record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Bấm tạo để tạo một đợt tuyển dụng mới</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,help:ev_hr_recruitment.recruitment_request_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new recruitment_request record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Bấm tạo để tạo một yêu cầu tuyển dụng mới</p>\n"
+"            "
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,account_facebook:0
+#: field:hr.search.applicant.result,account_facebook:0
+msgid "Account facebook"
+msgstr "Tài khoản facebook"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,active:0
+msgid "Active"
+msgstr "Active"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.search_applicant_result_form_view
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Additional information"
+msgstr "Thông tin bổ sung"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,address:0
+#: field:hr.search.applicant.result,address:0
+msgid "Address"
+msgstr "Địa chỉ thường trú"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,advantage:0
+#: field:hr.search.applicant.result,advantage:0
+msgid "Advantage"
+msgstr "Ưu điểm"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "An Giang"
+msgstr "An Giang"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_search
+#: field:hr.applicant.degree,applicant_id:0
+#: field:hr.applicant.references,applicant_id:0
+#: field:hr.certificate,applicant_id:0
+#: field:hr.experience,applicant_id:0
+#: field:hr.family.relationship,applicant_id:0
+#: field:hr.foreign.language,applicant_id:0
+#: field:hr.interview.line,applicant_id:0
+#: field:hr.search.applicant.result,applicant_id:0
+#: model:ir.model,name:ev_hr_recruitment.model_hr_applicant
+#: model:ir.model,name:ev_hr_recruitment.model_hr_search_applicant_result
+#: field:mail.recruitment,applicant_id:0
+msgid "Applicant"
+msgstr "Ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:mail.invite.applicant,applicant_name:0
+msgid "Applicant name"
+msgstr "Applicant name"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,applicant_source_id:0
+#: field:hr.search.applicant.result,applicant_source_id:0
+msgid "Applicant source"
+msgstr "Nguồn ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,partner_name:0
+msgid "Applicant's Name"
+msgstr "Tên ứng viên"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_tree
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+#: field:hr.recruitment.session,applicant_ids:0
+#: model:ir.actions.act_window,name:ev_hr_recruitment.applicant_action
+#: model:ir.ui.menu,name:ev_hr_recruitment.applicant_menu
+msgid "Applicants"
+msgstr "Các ứng viên"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.search_applicant_result_form_view
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Application form"
+msgstr "Application form"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_recruitment:0
+#: selection:hr.search.applicant.result,status_recruitment:0
+msgid "Apply"
+msgstr "Ứng tuyển"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,priority:0
+msgid "Appreciation"
+msgstr "Appreciation"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,date_open:0
+msgid "Assigned"
+msgstr "Assigned"
+
+#. module: ev_hr_recruitment
+#: view:mail.recruitment:ev_hr_recruitment.email_recruitment
+msgid "Attach a file"
+msgstr "Đính kèm file"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,auto_delete:0
+msgid "Auto Delete"
+msgstr "Auto Delete"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,availability:0
+msgid "Availability"
+msgstr "Availability"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,avatar:0
+#: field:hr.search.applicant.result,avatar:0
+msgid "Avatar"
+msgstr "Ảnh đại diện"
+
+#. module: ev_hr_recruitment
+#: selection:hr.search.applicant.result,priority:0
+msgid "Average"
+msgstr "Average"
+
+#. module: ev_hr_recruitment
+#: selection:hr.search.applicant.result,priority:0
+msgid "Bad"
+msgstr "Bad"
+
+#. module: ev_hr_recruitment
+#: selection:hr.search.applicant.result,priority:0
+msgid "Below Average"
+msgstr "Below Average"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bình Dương"
+msgstr "Bình Dương"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bình Phước"
+msgstr "Bình Phước"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bình Thuận"
+msgstr "Bình Thuận"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bình Ðịnh"
+msgstr "Bình Ðịnh"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Băc Giang"
+msgstr "Băc Giang"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Băc Kạn"
+msgstr "Băc Kạn"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bạc Liêu"
+msgstr "Bạc Liêu"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bắc Ninh"
+msgstr "Bắc Ninh"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Bến Tre"
+msgstr "Bến Tre"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+#: selection:hr.interview,state:0
+#: view:hr.interview.line:ev_hr_recruitment.view_interview_line_form
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+#: selection:hr.recruitment.request,state:0
+#: view:hr.recruitment.request.line:ev_hr_recruitment.recruitment_request_line_form_view
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+#: selection:hr.recruitment.session,state:0
+#: view:mail.recruitment:ev_hr_recruitment.email_recruitment
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_hr_recruitment
+#: selection:mail.recruitment,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Cao Bằng"
+msgstr "Cao Bằng"
+
+#. module: ev_hr_recruitment
+#: help:mail.recruitment,email_cc:0
+msgid "Carbon copy message recipients"
+msgstr "Carbon copy message recipients"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,certificate_ids:0
+#: field:hr.search.applicant.criteria,certificates:0
+#: field:hr.search.applicant.result,certificate_ids:0
+msgid "Certificate"
+msgstr "Chứng chỉ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.recruitment.session,state:0
+msgid "Choose applicant"
+msgstr "Chọn ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,date_closed:0
+msgid "Closed"
+msgstr "Closed"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.source,code:0
+#: field:hr.job,code:0
+#: field:hr.job.position,code:0
+#: field:hr.major,code:0
+#: field:hr.recruitment.session,code:0
+msgid "Code"
+msgstr "Mã"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,color:0
+msgid "Color Index"
+msgstr "Color Index"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,company_id:0
+msgid "Company"
+msgstr "Công ty"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,compatibility_with_positive_position:0
+#: field:hr.search.applicant.result,compatibility_with_positive_position:0
+msgid "Compatibility with positive position"
+msgstr "Kỹ năng phù hợp vs vị trí ứng tuyển"
+
+#. module: ev_hr_recruitment
+#: view:mail.recruitment:ev_hr_recruitment.email_recruitment
+msgid "Compose Email"
+msgstr "Soạn thư"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,partner_id:0
+msgid "Contact"
+msgstr "Liên hệ"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,create_uid:0
+#: field:hr.applicant.references,create_uid:0
+#: field:hr.applicant.source,create_uid:0
+#: field:hr.certificate,create_uid:0
+#: field:hr.experience,create_uid:0
+#: field:hr.family.relationship,create_uid:0
+#: field:hr.foreign.language,create_uid:0
+#: field:hr.interview,create_uid:0
+#: field:hr.interview.line,create_uid:0
+#: field:hr.interview.questions,create_uid:0
+#: field:hr.job.position,create_uid:0
+#: field:hr.major,create_uid:0
+#: field:hr.recruitment.request,create_uid:0
+#: field:hr.recruitment.request.line,create_uid:0
+#: field:hr.recruitment.session,create_uid:0
+#: field:hr.recruitment.session.line,create_uid:0
+#: field:hr.search.applicant.criteria,create_uid:0
+#: field:hr.search.applicant.result,create_uid:0
+#: field:mail.invite.applicant,create_uid:0
+#: field:mail.recruitment,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,create_date:0
+#: field:hr.applicant.references,create_date:0
+#: field:hr.applicant.source,create_date:0
+#: field:hr.certificate,create_date:0
+#: field:hr.experience,create_date:0
+#: field:hr.family.relationship,create_date:0
+#: field:hr.foreign.language,create_date:0
+#: field:hr.interview,create_date:0
+#: field:hr.interview.line,create_date:0
+#: field:hr.interview.questions,create_date:0
+#: field:hr.job.position,create_date:0
+#: field:hr.major,create_date:0
+#: field:hr.recruitment.request,create_date:0
+#: field:hr.recruitment.request.line,create_date:0
+#: field:hr.recruitment.session,create_date:0
+#: field:hr.recruitment.session.line,create_date:0
+#: field:hr.search.applicant.criteria,create_date:0
+#: field:mail.invite.applicant,create_date:0
+#: field:mail.recruitment,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,create_date:0
+msgid "Creation Date"
+msgstr "Creation Date"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,current_address:0
+#: field:hr.search.applicant.result,current_address:0
+msgid "Current address"
+msgstr "Nơi ở hiện tại"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Cà Mau"
+msgstr "Cà Mau"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Cần Thơ"
+msgstr "Cần Thơ"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,date_of_issue:0
+#: field:hr.search.applicant.result,date_of_issue:0
+msgid "Date of Issue"
+msgstr "Ngày cấp"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,date_of_birth:0
+#: field:hr.search.applicant.result,date_of_birth:0
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,message_last_post:0
+#: help:mail.recruitment,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date of the last message posted on the record."
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,day_close:0
+msgid "Days to Close"
+msgstr "Days to Close"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,day_open:0
+msgid "Days to Open"
+msgstr "Days to Open"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,applicant_degree_ids:0
+#: field:hr.applicant.degree,degree:0
+#: field:hr.recruitment.session.line,degree_id:0
+#: field:hr.search.applicant.result,applicant_degree_ids:0
+#: field:hr.search.applicant.result,type_id:0
+msgid "Degree"
+msgstr "Bằng Cấp"
+
+#. module: ev_hr_recruitment
+#: selection:mail.recruitment,state:0
+msgid "Delivery Failed"
+msgstr "Delivery Failed"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.questions,department_id:0
+#: field:hr.recruitment.request,department_id:0
+#: field:hr.recruitment.session.line,department_id:0
+#: field:hr.search.applicant.result,department_id:0
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: ev_hr_recruitment
+#: field:hr.experience,description:0
+#: field:hr.interview.questions,description:0
+#: field:hr.job.position,description:0
+#: field:hr.major,description:0
+#: field:hr.recruitment.request.line,description:0
+#: field:hr.recruitment.session.line,description:0
+#: field:hr.search.applicant.result,description:0
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,description_recruited:0
+#: field:hr.search.applicant.result,description_recruited:0
+msgid "Description recruited"
+msgstr "Nếu có, khi nào, vị trí nào?"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,interview_line_ids:0
+#: field:hr.recruitment.session,recruitment_session_line_ids:0
+#: view:hr.search.applicant.criteria:ev_hr_recruitment.search_applicant_form_view
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+msgid "Details"
+msgstr "Những vị trí tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,disadvantages:0
+#: field:hr.search.applicant.result,disadvantages:0
+msgid "Disadvantages"
+msgstr "Điểm yếu"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+#: selection:hr.interview,state:0
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+#: selection:hr.recruitment.request,state:0
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+#: selection:hr.recruitment.session,state:0
+msgid "Done"
+msgstr "Xong"
+
+#. module: ev_hr_recruitment
+#: selection:hr.interview,state:0
+#: selection:hr.recruitment.request,state:0
+#: selection:hr.recruitment.session,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Education"
+msgstr "Trình độ học vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.references,email:0
+#: field:hr.search.applicant.result,email_from:0
+msgid "Email"
+msgstr "Email"
+
+#. module: ev_hr_recruitment
+#: field:mail.invite.applicant,email_cc:0
+#: field:mail.recruitment,email_cc:0
+msgid "Email cc"
+msgstr "Email cc"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,receiver_email:0
+msgid "Email receiver"
+msgstr "Email người nhận hồ sơ"
+
+#. module: ev_hr_recruitment
+#: field:mail.invite.applicant,email_to:0
+#: field:mail.recruitment,email_to:0
+msgid "Email to"
+msgstr "Email to"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,emp_id:0
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,emp_id:0
+msgid "Employee linked to the applicant."
+msgstr "Employee linked to the applicant."
+
+#. module: ev_hr_recruitment
+#: selection:hr.recruitment.request.line,status_request:0
+msgid "Enough"
+msgstr "Đáp ứng đủ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.search.applicant.result,priority:0
+msgid "Excellent"
+msgstr "Excellent"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,salary_expected:0
+msgid "Expected Salary"
+msgstr "Expected Salary"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,salary_expected_extra:0
+msgid "Expected Salary Extra"
+msgstr "Expected Salary Extra"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,expected_income:0
+#: field:hr.search.applicant.result,expected_income:0
+msgid "Expected income"
+msgstr "Thu nhập mong muốn"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,experience_ids:0
+#: field:hr.search.applicant.result,experience_ids:0
+msgid "Experience"
+msgstr "Kinh nghiệm"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Family information"
+msgstr "Thông tin gia đình"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,family_relationship_ids:0
+#: field:hr.search.applicant.result,family_relationship_ids:0
+msgid "Family relationship"
+msgstr "Quan hệ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,gender:0
+#: selection:hr.search.applicant.result,gender:0
+msgid "Female"
+msgstr "Nữ"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,file_cv:0
+#: field:hr.search.applicant.result,file_cv:0
+msgid "File CV"
+msgstr "File CV (sơ yếu lí lịch)"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,file_cv_name:0
+#: field:hr.search.applicant.result,file_cv_name:0
+msgid "File CV Name"
+msgstr "Tên file CV"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,file_interview:0
+msgid "File Interview"
+msgstr "File phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,file_interview_name:0
+msgid "File Interview Name"
+msgstr "Tên file phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_follower_ids:0
+#: field:mail.recruitment,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,foreign_language_ids:0
+#: field:hr.foreign.language,foreign_language:0
+#: field:hr.search.applicant.result,foreign_language_ids:0
+msgid "Foreign language"
+msgstr "Ngoại ngữ"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,from_date_interview:0
+msgid "From date"
+msgstr "Ngày bắt đầu"
+
+#. module: ev_hr_recruitment
+#: field:hr.family.relationship,full_name:0
+msgid "Full name"
+msgstr "Họ và tên"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,gender:0
+#: field:hr.search.applicant.result,gender:0
+msgid "Gender"
+msgstr "Giới tính"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Gia Lai"
+msgstr "Gia Lai"
+
+#. module: ev_hr_recruitment
+#: selection:hr.search.applicant.result,priority:0
+msgid "Good"
+msgstr "Good"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,headers:0
+msgid "Headers"
+msgstr "Headers"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,height:0
+#: field:hr.search.applicant.result,height:0
+msgid "Height"
+msgstr "Chiều cao"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,hobby:0
+#: field:hr.search.applicant.result,hobby:0
+msgid "Hobby"
+msgstr "Sở thích"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,message_summary:0
+#: help:mail.recruitment,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Huế"
+msgstr "Huế"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hà Giang"
+msgstr "Hà Giang"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hà Nam"
+msgstr "Hà Nam"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hà Nội"
+msgstr "Hà Nội"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hà Tinh"
+msgstr "Hà Tinh"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hòa Bình"
+msgstr "Hòa Bình"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hưng Yên"
+msgstr "Hưng Yên"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hải Dương"
+msgstr "Hải Dương"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hải Phòng"
+msgstr "Hải Phòng"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hậu Giang"
+msgstr "Hậu Giang"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Hồ Chí Minh"
+msgstr "Hồ Chí Minh"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,id:0
+#: field:hr.applicant.references,id:0
+#: field:hr.applicant.source,id:0
+#: field:hr.certificate,id:0
+#: field:hr.experience,id:0
+#: field:hr.family.relationship,id:0
+#: field:hr.foreign.language,id:0
+#: field:hr.interview,id:0
+#: field:hr.interview.line,id:0
+#: field:hr.interview.questions,id:0
+#: field:hr.job.position,id:0
+#: field:hr.major,id:0
+#: field:hr.recruitment.request,id:0
+#: field:hr.recruitment.request.line,id:0
+#: field:hr.recruitment.session,id:0
+#: field:hr.recruitment.session.line,id:0
+#: field:hr.search.applicant.criteria,id:0
+#: field:hr.search.applicant.result,id:0
+#: field:mail.invite.applicant,id:0
+#: field:mail.recruitment,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,identity_card:0
+#: field:hr.search.applicant.result,identity_card:0
+msgid "Identity Card"
+msgstr "Số CMT"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,message_unread:0
+#: help:mail.recruitment,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,active:0
+msgid "If the active field is set to false, it will allow you to hide the case without removing it."
+msgstr "If the active field is set to false, it will allow you to hide the case without removing it."
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,fetchmail_server_id:0
+msgid "Inbound Mail Server"
+msgstr "Inbound Mail Server"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,index_content:0
+msgid "Index Content"
+msgstr "Index Content"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,informatics:0
+#: field:hr.search.applicant.result,informatics:0
+msgid "Informatics"
+msgstr "Kỹ năng tin học"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,interview_id:0
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+#: selection:hr.recruitment.session,state:0
+msgid "Interview"
+msgstr "Đợt phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview.line:ev_hr_recruitment.view_interview_line_form
+msgid "Interview line form"
+msgstr "Form đợt phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: model:ir.ui.menu,name:ev_hr_recruitment.menu_interview_questions
+msgid "Interview questions"
+msgstr "Câu hỏi phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,time_interview:0
+msgid "Interview time"
+msgstr "Thời gian phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,interviewer_ids:0
+msgid "Interviewer"
+msgstr "Người phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+#: field:hr.recruitment.session,interview_ids:0
+#: model:ir.ui.menu,name:ev_hr_recruitment.interview_menu
+msgid "Interviews"
+msgstr "Đợt phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,notification:0
+msgid "Is Notification"
+msgstr "Is Notification"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_is_follower:0
+#: field:mail.recruitment,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_applicant:0
+#: selection:hr.search.applicant.result,status_applicant:0
+msgid "Is employee"
+msgstr "Là nhân viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,is_recruited:0
+#: field:hr.search.applicant.result,is_recruited:0
+msgid "Is recruited"
+msgstr "Đã từng ứng tuyển?"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,is_sent_mail_invite_interview:0
+msgid "Is sent mail invite interview"
+msgstr "Is sent mail invite interview"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,is_sent_mail_invite_work:0
+msgid "Is sent mail invite work"
+msgstr "Is sent mail invite work"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.line,is_sent_mail_thank:0
+msgid "Is sent mail thank"
+msgstr "Is sent mail thank"
+
+#. module: ev_hr_recruitment
+#: field:hr.family.relationship,job:0
+msgid "Job"
+msgstr "Công việc"
+
+#. module: ev_hr_recruitment
+#: model:ir.model,name:ev_hr_recruitment.model_hr_job
+msgid "Job Position"
+msgstr "Chức vụ"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,job_id:0
+msgid "Job Title"
+msgstr "Chức danh"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Job information"
+msgstr "Thông tin công việc"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,job_position_id:0
+#: field:hr.applicant.references,job_position:0
+#: field:hr.experience,job_position:0
+#: view:hr.job.position:ev_hr_recruitment.view_job_position_tree
+#: field:hr.search.applicant.criteria,job_position_id:0
+#: field:hr.search.applicant.result,job_position_id:0
+#: model:ir.actions.act_window,name:ev_hr_recruitment.job_position_action
+#: model:ir.ui.menu,name:ev_hr_recruitment.job_position_menu
+msgid "Job position"
+msgstr "Ngành nghề tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: view:hr.job.position:ev_hr_recruitment.view_job_position_form
+msgid "Job position Form"
+msgstr "Job position Form"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request.line,job_id:0
+#: field:hr.search.applicant.result,job_id:0
+msgid "Job title"
+msgstr "Chức danh"
+
+#. module: ev_hr_recruitment
+#: view:hr.job:ev_hr_recruitment.view_job_tree
+#: model:ir.actions.act_window,name:ev_hr_recruitment.job_action
+#: model:ir.ui.menu,name:ev_hr_recruitment.job_menu
+msgid "Jobs"
+msgstr "Vị trí tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Khánh Hòa"
+msgstr "Khánh Hòa"
+
+#. module: ev_hr_recruitment
+#: sql_constraint:hr.interview.line:0
+msgid "Không được chọn trùng ứng viên"
+msgstr "Không được chọn trùng ứng viên"
+
+#. module: ev_hr_recruitment
+#: sql_constraint:hr.recruitment.session:0
+msgid "Không được trùng Mã đợt tuyển dụng!"
+msgstr "Không được trùng Mã đợt tuyển dụng!"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Kiên Giang"
+msgstr "Kiên Giang"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Kon Tum"
+msgstr "Kon Tum"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Lai Châu"
+msgstr "Lai Châu"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_last_post:0
+#: field:mail.recruitment,message_last_post:0
+msgid "Last Message Date"
+msgstr "Last Message Date"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,last_stage_id:0
+msgid "Last Stage"
+msgstr "Last Stage"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,date_last_stage_update:0
+msgid "Last Stage Update"
+msgstr "Last Stage Update"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,write_uid:0
+#: field:hr.applicant.references,write_uid:0
+#: field:hr.applicant.source,write_uid:0
+#: field:hr.certificate,write_uid:0
+#: field:hr.experience,write_uid:0
+#: field:hr.family.relationship,write_uid:0
+#: field:hr.foreign.language,write_uid:0
+#: field:hr.interview,write_uid:0
+#: field:hr.interview.line,write_uid:0
+#: field:hr.interview.questions,write_uid:0
+#: field:hr.job.position,write_uid:0
+#: field:hr.major,write_uid:0
+#: field:hr.recruitment.request,write_uid:0
+#: field:hr.recruitment.request.line,write_uid:0
+#: field:hr.recruitment.session,write_uid:0
+#: field:hr.recruitment.session.line,write_uid:0
+#: field:hr.search.applicant.criteria,write_uid:0
+#: field:hr.search.applicant.result,write_uid:0
+#: field:mail.invite.applicant,write_uid:0
+#: field:mail.recruitment,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,write_date:0
+#: field:hr.applicant.references,write_date:0
+#: field:hr.applicant.source,write_date:0
+#: field:hr.certificate,write_date:0
+#: field:hr.experience,write_date:0
+#: field:hr.family.relationship,write_date:0
+#: field:hr.foreign.language,write_date:0
+#: field:hr.interview,write_date:0
+#: field:hr.interview.line,write_date:0
+#: field:hr.interview.questions,write_date:0
+#: field:hr.job.position,write_date:0
+#: field:hr.major,write_date:0
+#: field:hr.recruitment.request,write_date:0
+#: field:hr.recruitment.request.line,write_date:0
+#: field:hr.recruitment.session,write_date:0
+#: field:hr.recruitment.session.line,write_date:0
+#: field:hr.search.applicant.criteria,write_date:0
+#: field:mail.invite.applicant,write_date:0
+#: field:mail.recruitment,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,level:0
+#: field:hr.certificate,level:0
+msgid "Level"
+msgstr "Xếp hạng"
+
+#. module: ev_hr_recruitment
+#: field:hr.foreign.language,listen_skill:0
+msgid "Listen skill"
+msgstr "Kỹ năng nghe"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,location_recruitment:0
+msgid "Location recruitment"
+msgstr "Địa điểm tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Long An"
+msgstr "Long An"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Lào Cai"
+msgstr "Lào Cai"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Lâm Ðồng"
+msgstr "Lâm Ðồng"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Lạng Sơn"
+msgstr "Lạng Sơn"
+
+#. module: ev_hr_recruitment
+#: help:mail.recruitment,notification:0
+msgid "Mail has been created to notify people of an existing mail.message"
+msgstr "Mail has been created to notify people of an existing mail.message"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,major:0
+#: model:ir.actions.act_window,name:ev_hr_recruitment.major_action
+msgid "Major"
+msgstr "Chuyên ngành"
+
+#. module: ev_hr_recruitment
+#: view:hr.major:ev_hr_recruitment.view_major_form
+msgid "Major Form"
+msgstr "Form chuyên ngành"
+
+#. module: ev_hr_recruitment
+#: model:ir.ui.menu,name:ev_hr_recruitment.major_menu
+msgid "Majors"
+msgstr "Chuyên ngành"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,gender:0
+#: selection:hr.search.applicant.result,gender:0
+msgid "Male"
+msgstr "Nam"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,mailing_id:0
+msgid "Mass Mailing"
+msgstr "Mass Mailing"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,mail_message_id:0
+msgid "Message"
+msgstr "Message"
+
+#. module: ev_hr_recruitment
+#: help:mail.recruitment,references:0
+msgid "Message references, such as identifiers of previous messages"
+msgstr "Message references, such as identifiers of previous messages"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_ids:0
+#: field:mail.recruitment,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,message_ids:0
+#: help:mail.recruitment,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,partner_mobile:0
+msgid "Mobile"
+msgstr "Số điện thoại"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Nam Ðịnh"
+msgstr "Nam Ðịnh"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.references,name:0
+#: field:hr.applicant.source,name:0
+#: field:hr.certificate,name:0
+#: field:hr.experience,name:0
+#: field:hr.interview,name:0
+#: field:hr.interview.questions,name:0
+#: field:hr.job.position,name:0
+#: field:hr.major,name:0
+#: field:hr.recruitment.request,name:0
+#: field:hr.recruitment.session,name:0
+#: field:hr.search.applicant.criteria,partner_name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.search_applicant_result_form_view
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Name applicant"
+msgstr "Tên ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,title_action:0
+msgid "Next Action"
+msgstr "Next Action"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,date_action:0
+msgid "Next Action Date"
+msgstr "Next Action Date"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Nghệ An"
+msgstr "Nghệ An"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.criteria,certificates:0
+msgid "Nhập chuyên ngành của chứng chỉ theo dạng: ví dụA, ví dụ B, ..."
+msgstr "Nhập chuyên ngành của chứng chỉ theo dạng: ví dụA, ví dụ B, ..."
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ninh Bình"
+msgstr "Ninh Bình"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ninh Thuận"
+msgstr "Ninh Thuận"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_recruitment:0
+#: selection:hr.search.applicant.result,status_recruitment:0
+msgid "Not coming"
+msgstr "Không đến phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_applicant:0
+#: selection:hr.search.applicant.result,status_applicant:0
+msgid "Not employee"
+msgstr "Không là nhân viên"
+
+#. module: ev_hr_recruitment
+#: selection:hr.recruitment.request.line,status_request:0
+msgid "Not enough"
+msgstr "Không đáp ứng đủ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_recruitment:0
+#: selection:hr.search.applicant.result,status_recruitment:0
+msgid "Not pass"
+msgstr "Không trúng tuyển"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,note:0
+#: field:hr.interview.line,note:0
+#: field:hr.recruitment.request,note:0
+#: field:hr.recruitment.session,note:0
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,attachment_number:0
+msgid "Number of Attachments"
+msgstr "Number of Attachments"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,number_of_years_experience:0
+msgid "Number of years of experience"
+msgstr "Số năm kinh nghiệm"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,origin:0
+msgid "Origin"
+msgstr "Origin"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,gender:0
+#: selection:hr.search.applicant.result,gender:0
+msgid "Other"
+msgstr "Khác"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,other_courses:0
+#: field:hr.search.applicant.result,other_courses:0
+msgid "Other courses"
+msgstr "Khóa học khác"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,other_source:0
+#: field:hr.search.applicant.result,other_source:0
+msgid "Other source"
+msgstr "Nguồn khác"
+
+#. module: ev_hr_recruitment
+#: selection:mail.recruitment,state:0
+msgid "Outgoing"
+msgstr "Outgoing"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_recruitment:0
+#: selection:hr.search.applicant.result,status_recruitment:0
+msgid "Pass"
+msgstr "Trúng tuyển"
+
+#. module: ev_hr_recruitment
+#: field:hr.experience,pay_rate:0
+msgid "Pay rate"
+msgstr "Mức lương"
+
+#. module: ev_hr_recruitment
+#: selection:hr.recruitment.request,state:0
+msgid "Pending"
+msgstr "Đang chờ nhận"
+
+#. module: ev_hr_recruitment
+#: help:mail.recruitment,auto_delete:0
+msgid "Permanently delete this email after sending it, to save space"
+msgstr "Permanently delete this email after sending it, to save space"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Personal information"
+msgstr "Thông tin cá nhân"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.references,phone:0
+#: field:hr.search.applicant.result,partner_phone:0
+msgid "Phone"
+msgstr "Số điện thoại"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,receiver_phone:0
+msgid "Phone receiver"
+msgstr "Số điện thoại người nhận hồ sơ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Phú Thọ"
+msgstr "Phú Thọ"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Phú Yên"
+msgstr "Phú Yên"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,place_of_issue:0
+#: field:hr.search.applicant.result,place_of_issue:0
+msgid "Place of Issue"
+msgstr "Nơi cấp"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,place_of_birth:0
+#: field:hr.search.applicant.result,place_of_birth:0
+msgid "Place of birth"
+msgstr "Nơi sinh"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,plan_date:0
+#: field:hr.search.applicant.result,plan_date:0
+msgid "Plan date"
+msgstr "Ngày có thể làm việc"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,position_recruitment:0
+msgid "Position recruitment"
+msgstr "Vị trí tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Print CV"
+msgstr "In hồ sơ"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,probability:0
+msgid "Probability"
+msgstr "Probability"
+
+#. module: ev_hr_recruitment
+#: selection:hr.interview,state:0
+#: selection:hr.recruitment.request,state:0
+#: selection:hr.recruitment.request.line,status_request:0
+msgid "Process"
+msgstr "Đang xử lý"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,salary_proposed:0
+msgid "Proposed Salary"
+msgstr "Proposed Salary"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,salary_proposed_extra:0
+msgid "Proposed Salary Extra"
+msgstr "Proposed Salary Extra"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request.line,qty:0
+#: field:hr.recruitment.session.line,qty:0
+msgid "Quantity"
+msgstr "Số lượng"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview.questions,question:0
+msgid "Question"
+msgstr "Câu hỏi"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Quảng Bình"
+msgstr "Quảng Bình"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Quảng Nam"
+msgstr "Quảng Nam"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Quảng Ngãi"
+msgstr "Quảng Ngãi"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Quảng Ninh"
+msgstr "Quảng Ninh"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Quảng Trị"
+msgstr "Quảng Trị"
+
+#. module: ev_hr_recruitment
+#: field:hr.foreign.language,read_skill:0
+msgid "Read skill"
+msgstr "Kỹ năng đọc"
+
+#. module: ev_hr_recruitment
+#: field:hr.experience,reason_of_leaving:0
+msgid "Reason of leaving"
+msgstr "Lý do nghỉ"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+msgid "Receive request"
+msgstr "Nhận yêu cầu"
+
+#. module: ev_hr_recruitment
+#: selection:mail.recruitment,state:0
+msgid "Received"
+msgstr "Received"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,receiver_id:0
+#: field:hr.recruitment.session,receiver_id:0
+#: field:hr.search.applicant.result,receiver_id:0
+msgid "Receiver"
+msgstr "Người nhận hồ sơ"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,recent_income:0
+#: field:hr.search.applicant.result,recent_income:0
+msgid "Recent income"
+msgstr "Thu nhập hiện tại"
+
+#. module: ev_hr_recruitment
+#: model:ir.ui.menu,name:ev_hr_recruitment.recruitment_process_menu
+msgid "Recruitment process"
+msgstr "Quy trình tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request.line,recruitment_request_id:0
+#: field:hr.recruitment.session,recruitment_request_ids:0
+#: model:ir.ui.menu,name:ev_hr_recruitment.recruitment_request_menu
+msgid "Recruitment request"
+msgstr "Yêu cầu tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+msgid "Recruitment request  Form"
+msgstr "Form yêu cầu tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_tree_view
+msgid "Recruitment request  Tree"
+msgstr "Danh sách yêu cầu tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request,recruitment_request_line_ids:0
+msgid "Recruitment request line"
+msgstr "Recruitment request line"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.request.line:ev_hr_recruitment.recruitment_request_line_form_view
+msgid "Recruitment request line Form"
+msgstr "Form Chi tiết yêu cầu tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,recruitment_session_id:0
+#: model:ir.ui.menu,name:ev_hr_recruitment.recruitment_session_menu
+msgid "Recruitment session"
+msgstr "Đợt tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,applicant_references_ids:0
+#: field:hr.search.applicant.result,applicant_references_ids:0
+#: field:mail.recruitment,references:0
+msgid "References"
+msgstr "Thông tin tham khảo"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,reference:0
+msgid "Referred By"
+msgstr "Referred By"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.references,relationship:0
+#: field:hr.family.relationship,relationship:0
+msgid "Relationship"
+msgstr "Quan hệ"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request,request_date:0
+msgid "Request date"
+msgstr "Ngày yêu cầu"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,response_id:0
+msgid "Response"
+msgstr "Response"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request,reponse_date:0
+msgid "Response date"
+msgstr "Ngày đáp ứng"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,user_id:0
+msgid "Responsible"
+msgstr "Responsible"
+
+#. module: ev_hr_recruitment
+#: view:hr.search.applicant.criteria:ev_hr_recruitment.search_applicant_form_view
+msgid "Result search"
+msgstr "Kết quả tìm kiếm"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.criteria,search_applicant_result_ids:0
+msgid "Results"
+msgstr "Kết quả"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,body_html:0
+msgid "Rich-text Contents"
+msgstr "Rich-text Contents"
+
+#. module: ev_hr_recruitment
+#: help:mail.recruitment,body_html:0
+msgid "Rich-text/HTML message"
+msgstr "Rich-text/HTML message"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,salary_expected:0
+msgid "Salary Expected by Applicant"
+msgstr "Salary Expected by Applicant"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,salary_expected_extra:0
+msgid "Salary Expected by Applicant, extra advantages"
+msgstr "Salary Expected by Applicant, extra advantages"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,salary_proposed:0
+msgid "Salary Proposed by the Organisation"
+msgstr "Salary Proposed by the Organisation"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,salary_proposed_extra:0
+msgid "Salary Proposed by the Organisation, extra advantages"
+msgstr "Salary Proposed by the Organisation, extra advantages"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,school:0
+msgid "School"
+msgstr "Trường"
+
+#. module: ev_hr_recruitment
+#: view:hr.search.applicant.criteria:ev_hr_recruitment.search_applicant_form_view
+msgid "Search"
+msgstr "Tìm kiếm"
+
+#. module: ev_hr_recruitment
+#: view:hr.search.applicant.criteria:ev_hr_recruitment.search_applicant_form_view
+#: model:ir.ui.menu,name:ev_hr_recruitment.search_applicant_menu
+msgid "Search applicant"
+msgstr "Tra cứu ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,search_applicant_criteria_id:0
+msgid "Search applicant criteria id"
+msgstr "Search applicant criteria id"
+
+#. module: ev_hr_recruitment
+#: view:mail.recruitment:ev_hr_recruitment.email_recruitment
+msgid "Send"
+msgstr "Gửi"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+msgid "Send mail invite interview"
+msgstr "Mời ứng viên phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+msgid "Send mail invite work"
+msgstr "Mời ứng viên làm việc"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+msgid "Send mail thank"
+msgstr "Gửi email cảm ơn"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+msgid "Send request"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_hr_recruitment
+#: selection:mail.recruitment,state:0
+msgid "Sent"
+msgstr "Sent"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview.questions:ev_hr_recruitment.treeview_interview_questions
+msgid "Skill"
+msgstr "Kỹ năng"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant:ev_hr_recruitment.search_applicant_result_form_view
+#: view:hr.applicant:ev_hr_recruitment.view_applicant_form
+msgid "Skill - Experience"
+msgstr "Kỹ năng - Kinh nghiệm"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,source_id:0
+#: model:ir.actions.act_window,name:ev_hr_recruitment.source_action
+msgid "Source"
+msgstr "Nguồn"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant.source:ev_hr_recruitment.view_source_form
+msgid "Source Form"
+msgstr "Source Form"
+
+#. module: ev_hr_recruitment
+#: model:ir.ui.menu,name:ev_hr_recruitment.source_menu
+msgid "Sources"
+msgstr "Sources"
+
+#. module: ev_hr_recruitment
+#: field:hr.foreign.language,speak_skill:0
+msgid "Speak skill"
+msgstr "Kỹ năng nói"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,stage_id:0
+msgid "Stage"
+msgstr "Stage"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,last_stage_id:0
+msgid "Stage of the applicant before being in the current stage. Used for lost cases analysis."
+msgstr "Stage of the applicant before being in the current stage. Used for lost cases analysis."
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+msgid "Start"
+msgstr "Khởi động"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request,state:0
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,state:0
+msgid "State interview"
+msgstr "Tiến trình"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,state:0
+msgid "State recruitment session"
+msgstr "Tiến trình"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,statistics_ids:0
+msgid "Statistics"
+msgstr "Statistics"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,status_applicant:0
+#: field:hr.interview.line,status_applicant:0
+#: field:hr.search.applicant.result,status_applicant:0
+msgid "Status applicant"
+msgstr "Trạng thái"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,status_recruitment:0
+#: field:hr.search.applicant.result,status_recruitment:0
+msgid "Status recruitment"
+msgstr "Trạng thái tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request.line,status_request:0
+msgid "Status request"
+msgstr "Trạng thái yêu cầu"
+
+#. module: ev_hr_recruitment
+#: field:mail.invite.applicant,subject:0
+#: field:mail.recruitment,subject:0
+msgid "Subject"
+msgstr "Tiêu đề"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,name:0
+msgid "Subject / Application Name"
+msgstr "Tiêu đề"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_summary:0
+#: field:mail.recruitment,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,survey:0
+msgid "Survey"
+msgstr "Survey"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Sóc Trăng"
+msgstr "Sóc Trăng"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Sơn La"
+msgstr "Sơn La"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,categ_ids:0
+msgid "Tags"
+msgstr "Tags"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Thanh Hóa"
+msgstr "Thanh Hóa"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.request.line,actual_qty:0
+msgid "The actual quantity"
+msgstr "Số lượng thực tế"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,availability:0
+msgid "The number of days in which the applicant will be available to start working"
+msgstr "The number of days in which the applicant will be available to start working"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,email_cc:0
+msgid "These email addresses will be added to the CC field of all inbound and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
+msgstr "These email addresses will be added to the CC field of all inbound and outbound emails for this record before being sent. Separate multiple email addresses with a comma"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,email_from:0
+msgid "These people will receive email."
+msgstr "These people will receive email."
+
+#. module: ev_hr_recruitment
+#: help:hr.applicant,avatar:0
+#: help:hr.search.applicant.result,avatar:0
+msgid "This field holds the image used as photo for the applicant, limited to 1024x1024px."
+msgstr "This field holds the image used as photo for the applicant, limited to 1024x1024px."
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Thái Bình"
+msgstr "Thái Bình"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Thái Nguyên"
+msgstr "Thái Nguyên"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant.degree,time:0
+#: field:hr.certificate,time:0
+#: field:hr.experience,time:0
+msgid "Time"
+msgstr "Thời gian"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,time_end_receive_resumes:0
+msgid "Time end receive resumes"
+msgstr "Thời gian kết thúc nhận hồ sơ"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session,time_start_receive_resumes:0
+msgid "Time start receive resumes"
+msgstr "Thời gian bắt đầu nhận hồ sơ"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,times_interview:0
+msgid "Times interview"
+msgstr "Lần phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Tiền Giang"
+msgstr "Tiền Giang"
+
+#. module: ev_hr_recruitment
+#: field:mail.recruitment,recipient_ids:0
+msgid "To (Partners)"
+msgstr "To (Partners)"
+
+#. module: ev_hr_recruitment
+#: field:hr.interview,to_date_interview:0
+msgid "To date"
+msgstr "Ngày kết thúc"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Trà Vinh"
+msgstr "Trà Vinh"
+
+#. module: ev_hr_recruitment
+#: sql_constraint:hr.job:0
+msgid "Trùng code!"
+msgstr "Trùng code!"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Tuyên Quang"
+msgstr "Tuyên Quang"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Tây Ninh"
+msgstr "Tây Ninh"
+
+#. module: ev_hr_recruitment
+#: field:hr.certificate,unit_allocation:0
+msgid "Unit allocation"
+msgstr "Đơn vị cấp"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,message_unread:0
+#: field:mail.recruitment,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+#: view:hr.interview:ev_hr_recruitment.view_via_recruitment_session_interview_form
+#: view:hr.interview.line:ev_hr_recruitment.view_interview_line_form
+#: view:hr.recruitment.request:ev_hr_recruitment.recruitment_request_form_view
+#: view:hr.recruitment.request.line:ev_hr_recruitment.recruitment_request_line_form_view
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,write_date:0
+msgid "Update Date"
+msgstr "Update Date"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+msgid "Update request"
+msgstr "Cập nhật"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,user_email:0
+msgid "User Email"
+msgstr "User Email"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Vĩnh Long"
+msgstr "Vĩnh Long"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Vĩnh Phúc"
+msgstr "Vĩnh Phúc"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Vũng Tàu"
+msgstr "Vũng Tàu"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,status_recruitment:0
+#: selection:hr.search.applicant.result,status_recruitment:0
+msgid "Waiting interview"
+msgstr "Chờ phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,email_cc:0
+msgid "Watchers Emails"
+msgstr "Watchers Emails"
+
+#. module: ev_hr_recruitment
+#: field:hr.search.applicant.result,website_message_ids:0
+#: field:mail.recruitment,website_message_ids:0
+msgid "Website Messages"
+msgstr "Website Messages"
+
+#. module: ev_hr_recruitment
+#: help:hr.search.applicant.result,website_message_ids:0
+#: help:mail.recruitment,website_message_ids:0
+msgid "Website communication history"
+msgstr "Website communication history"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,weight:0
+#: field:hr.search.applicant.result,weight:0
+msgid "Weight"
+msgstr "Cân nặng"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,work_place:0
+#: field:hr.applicant.references,work_place:0
+#: field:hr.search.applicant.result,work_place:0
+msgid "Work place"
+msgstr "Nơi làm việc"
+
+#. module: ev_hr_recruitment
+#: field:hr.family.relationship,work_unit:0
+msgid "Work unit"
+msgstr "Cơ quan công tác"
+
+#. module: ev_hr_recruitment
+#: field:hr.foreign.language,write_skill:0
+msgid "Write skill"
+msgstr "Kỹ năng viết"
+
+#. module: ev_hr_recruitment
+#: field:hr.family.relationship,year_of_birth:0
+#: field:hr.search.applicant.criteria,year_of_birth:0
+msgid "Year of birth"
+msgstr "Năm sinh"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Yên Bái"
+msgstr "Yên Bái"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,applicant_email:0
+#: field:hr.search.applicant.criteria,applicant_email:0
+#: field:hr.search.applicant.result,applicant_email:0
+msgid "applicant email"
+msgstr "Email ứng viên"
+
+#. module: ev_hr_recruitment
+#: field:hr.applicant,applicant_phone:0
+#: field:hr.search.applicant.criteria,applicant_phone:0
+#: field:hr.search.applicant.result,applicant_phone:0
+msgid "applicant phone"
+msgstr "Số điện thoại ứng viên"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_form
+#: view:hr.interview:ev_hr_recruitment.view_via_recruitment_session_interview_form
+msgid "interview Form"
+msgstr "Form đợt phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview.questions:ev_hr_recruitment.formview_interview_questions
+#: model:ir.actions.act_window,name:ev_hr_recruitment.action_interview_questions
+msgid "interview questions"
+msgstr "Câu hỏi phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview:ev_hr_recruitment.view_interview_tree
+#: model:ir.actions.act_window,name:ev_hr_recruitment.interview_action
+msgid "interviews"
+msgstr "Đợt phỏng vấn"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,major_id:0
+msgid "major"
+msgstr "Chuyên ngành"
+
+#. module: ev_hr_recruitment
+#: view:hr.major:ev_hr_recruitment.view_major_tree
+msgid "majors"
+msgstr "Chuyên ngành"
+
+#. module: ev_hr_recruitment
+#: view:hr.interview.line:ev_hr_recruitment.view_interview_line_form
+#: view:hr.recruitment.request.line:ev_hr_recruitment.recruitment_request_line_form_view
+#: view:mail.recruitment:ev_hr_recruitment.email_recruitment
+msgid "or"
+msgstr "hoặc"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_form_view
+msgid "recruitment Session Form"
+msgstr "Form đợt tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: view:hr.recruitment.session:ev_hr_recruitment.recruitment_session_tree_view
+msgid "recruitment Session Tree"
+msgstr "Danh sách đợt tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,name:ev_hr_recruitment.recruitment_request_action
+msgid "recruitment request"
+msgstr "Yêu cầu tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: field:hr.recruitment.session.line,recruitment_session_id:0
+#: model:ir.actions.act_window,name:ev_hr_recruitment.recruitment_session_action
+msgid "recruitment session"
+msgstr "Đợt tuyển dụng"
+
+#. module: ev_hr_recruitment
+#: model:ir.actions.act_window,name:ev_hr_recruitment.search_applicant_action
+msgid "search applicant"
+msgstr "Tra cứu ứng viên"
+
+#. module: ev_hr_recruitment
+#: view:hr.applicant.source:ev_hr_recruitment.view_source_tree
+msgid "sources"
+msgstr "sources"
+
+#. module: ev_hr_recruitment
+#: view:hr.search.applicant.criteria:ev_hr_recruitment.search_applicant_form_view
+msgid "ví dụA, ví dụ B, ..."
+msgstr "ví dụA, ví dụ B, ..."
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ðak Lak"
+msgstr "Ðak Lak"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ðak Nông"
+msgstr "Ðak Nông"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ðiện Biên"
+msgstr "Ðiện Biên"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ðồng Nai"
+msgstr "Ðồng Nai"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Ðồng Tháp"
+msgstr "Ðồng Tháp"
+
+#. module: ev_hr_recruitment
+#: selection:hr.applicant,place_of_birth:0
+#: selection:hr.applicant,place_of_issue:0
+msgid "Đà Nẵng"
+msgstr "Đà Nẵng"
+

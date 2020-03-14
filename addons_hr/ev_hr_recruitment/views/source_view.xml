@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="source_action" model="ir.actions.act_window">
+            <field name="name">Source</field>
+            <field name="res_model">hr.applicant.source</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Source record</p>
+            </field>
+        </record>
+
+        <record id="view_source_form" model="ir.ui.view">
+            <field name="name">source form</field>
+            <field name="model">hr.applicant.source</field>
+            <field name="arch" type="xml">
+                <form string="Source Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="code"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_source_tree" model="ir.ui.view">
+            <field name="name">source tree</field>
+            <field name="model">hr.applicant.source</field>
+            <field name="arch" type="xml">
+                <tree string="sources">
+                    <field name="name"/>
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <menuitem id="source_menu"
+                  name="Sources"
+                  parent="hr.menu_hr_configuration"
+                  action="source_action"/>
+    </data>
+</odoo>

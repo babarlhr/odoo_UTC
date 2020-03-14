@@ -1,0 +1,10 @@
+<odoo>
+    <data>
+        <record id="seq_type_emp_code" model="ir.sequence">
+            <field name="name">Employee Code - Sequence type</field>
+            <field name="code">x_emp_code</field>
+        </record>
+
+    </data>
+</odoo>
+

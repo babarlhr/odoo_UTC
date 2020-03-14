@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="training_timetable_log_action" model="ir.actions.act_window">
+            <field name="name">Timetable Log</field>
+            <field name="res_model">training.timetable.log</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Timetable Log record</p>
+            </field>
+        </record>
+
+        <record id="training_timetable_log_form" model="ir.ui.view">
+            <field name="name">Timetable Log form</field>
+            <field name="model">training.timetable.log</field>
+            <field name="arch" type="xml">
+                <form string="Teacher">
+                    <sheet>
+                        <group>
+                            <field name="session_id"/>
+                            <field name="major_id"/>
+                            <field name="date"/>
+                            <field name="time"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="training_timetable_log_tree" model="ir.ui.view">
+            <field name="name">Timetable Log tree</field>
+            <field name="model">training.timetable.log</field>
+            <field name="arch" type="xml">
+                <tree string="Timetable Log">
+                    <field name="session_id"/>
+                    <field name="major_id"/>
+                    <field name="date"/>
+                    <field name="time"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

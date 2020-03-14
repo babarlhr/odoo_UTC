@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<openerp>
+    <data>
+        <record id="report_recruitment_applicant" model="ir.ui.view">
+            <field name="name">Birt report recruitment applicant</field>
+            <field name="model">birt.report.recruitment</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="recruitment_session_id" widget="many2many_tags"/>
+                            <field name="job_applicant_id"/>
+                        </group>
+                        <group>
+                            <button name="create_report_recruitment_session_applicant"
+                                    string="Create recruitment applicant"
+                                    type="object"
+                                    class="btn-primary"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="report_recruitment_applicants_id" model="ir.actions.act_window">
+            <field name="name">Birt report recruitment applicant</field>
+            <field name="res_model">birt.report.recruitment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="ev_hr_recruitment_report.report_recruitment_applicant"/>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new applicant record</p>
+            </field>
+        </record>
+        <!-- menu report recruitment-->
+        <menuitem id="menu_izi_report_recruitment" name="Recruitment report"
+                  parent="ev_crm_report.menu_izi_report" sequence="10"
+                  groups="base.group_hr_user"/>
+        <menuitem id="menu_izi_report_recruitment_id"
+                  name="Recruitment report"
+                  parent="menu_izi_report_recruitment"
+                  action="report_recruitment_sessions_id"/>
+        <menuitem id="menu_izi_report_recruitment_applicant_id"
+                  name="Recruitment report applicant"
+                  parent="menu_izi_report_recruitment"
+                  action="report_recruitment_applicants_id"/>
+
+    </data>
+</openerp>

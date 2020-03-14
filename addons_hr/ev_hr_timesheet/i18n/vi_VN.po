@@ -1,0 +1,2036 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_hr_timesheet
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-07-20 02:49+0000\n"
+"PO-Revision-Date: 2018-07-20 09:58+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.0.4\n"
+
+#. module: ev_hr_timesheet
+#: model:email.template,body_html:ev_hr_timesheet.template_reminder_sale_all_lead1
+msgid ""
+"\n"
+"\n"
+"                Mọi người làm bảng phân ca cho nhân viên ạ\n"
+"\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"\n"
+"                Mọi người làm bảng phân ca cho nhân viên ạ\n"
+"\n"
+"                \n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:email.template,body_html:ev_hr_timesheet.template_send_employee_timesheet1
+msgid ""
+"\n"
+"                    Nhân viên: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['employee_name'] }</strong><br/>\n"
+"\n"
+"                    Chấm công từ: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['from_date'] }</strong>\n"
+"                                đến: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['to_date'] }</strong> <br/>\n"
+"\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\">\n"
+"                        <tr>\n"
+"                            <td>Ngày</td>\n"
+"                            <td>Ca làm việc</td>\n"
+"                            <td>Kết quả chấm công</td>\n"
+"                            <td>Giờ công chuẩn</td>\n"
+"                            <td>Giờ công làm thêm(đã nhân hệ số)</td>\n"
+"                            <td>Tổng thời gian</td>\n"
+"                        </tr>\n"
+"                        % for ob in object.get_emp_data_for_timesheet_mail(object.params)['data']\n"
+"                           <tr>\n"
+"                                <td>${ob['date']}</td>\n"
+"                                <td>${ob['shift_name']}</td>\n"
+"                                <td>${ob['result_name']}</td>\n"
+"                                <td>${ob['standard_time']}</td>\n"
+"                                <td>${ob['overtime']}</td>\n"
+"                                <td>${ob['total_time']}</td>\n"
+"                           </tr>\n"
+"                        % endfor\n"
+"\n"
+"                    </table>\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"                    Nhân viên: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['employee_name'] }</strong><br/>\n"
+"\n"
+"                    Chấm công từ: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['from_date'] }</strong>\n"
+"                                đến: <strong>${object.get_emp_data_for_timesheet_mail(object.params)['to_date'] }</strong> <br/>\n"
+"\n"
+"                    <table border=\"1\" cellspacing=\"0\" cellpadding=\"5\">\n"
+"                        <tr>\n"
+"                            <td>Ngày</td>\n"
+"                            <td>Ca làm việc</td>\n"
+"                            <td>Kết quả chấm công</td>\n"
+"                            <td>Giờ công chuẩn</td>\n"
+"                            <td>Giờ công làm thêm(đã nhân hệ số)</td>\n"
+"                            <td>Tổng thời gian</td>\n"
+"                        </tr>\n"
+"                        % for ob in object.get_emp_data_for_timesheet_mail(object.params)['data']\n"
+"                           <tr>\n"
+"                                <td>${ob['date']}</td>\n"
+"                                <td>${ob['shift_name']}</td>\n"
+"                                <td>${ob['result_name']}</td>\n"
+"                                <td>${ob['standard_time']}</td>\n"
+"                                <td>${ob['overtime']}</td>\n"
+"                                <td>${ob['total_time']}</td>\n"
+"                           </tr>\n"
+"                        % endfor\n"
+"\n"
+"                    </table>\n"
+"                \n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:email.template,body_html:ev_hr_timesheet.template_reminder_hr_user2
+msgid ""
+"\n"
+"                Các shop đã gửi bảng phân ca, yêu cầu cán bộ nhân sự vào phần mềm để phê duyệt.\n"
+"                Danh sách các shop chưa gửi bảng phân ca tháng này:</br>\n"
+"                ${object.ir_cron_reminder_hr_user(object.params) }\n"
+"\n"
+"                \n"
+"            "
+msgstr ""
+"\n"
+"                Các shop đã gửi bảng phân ca, yêu cầu cán bộ nhân sự vào phần mềm để phê duyệt.\n"
+"                Danh sách các shop chưa gửi bảng phân ca tháng này:</br>\n"
+"                ${object.ir_cron_reminder_hr_user(object.params) }\n"
+"\n"
+"                \n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:email.template,subject:ev_hr_timesheet.template_reminder_hr_user2
+#: model:email.template,subject:ev_hr_timesheet.template_reminder_sale_all_lead1
+#: model:email.template,subject:ev_hr_timesheet.template_send_employee_timesheet1
+msgid "${object.subject}"
+msgstr "${object.subject}"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.change.shift,type:0
+msgid "1 Employee"
+msgstr "1 Employee"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_10:0
+#: field:hr.shift.assign.detail.add,day_10:0
+#: field:hr.shift.assign.detail.adjust,day_10:0
+msgid "10"
+msgstr "10"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_11:0
+#: field:hr.shift.assign.detail.add,day_11:0
+#: field:hr.shift.assign.detail.adjust,day_11:0
+msgid "11"
+msgstr "11"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_12:0
+#: field:hr.shift.assign.detail.add,day_12:0
+#: field:hr.shift.assign.detail.adjust,day_12:0
+msgid "12"
+msgstr "12"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_13:0
+#: field:hr.shift.assign.detail.add,day_13:0
+#: field:hr.shift.assign.detail.adjust,day_13:0
+msgid "13"
+msgstr "13"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_14:0
+#: field:hr.shift.assign.detail.add,day_14:0
+#: field:hr.shift.assign.detail.adjust,day_14:0
+msgid "14"
+msgstr "14"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_15:0
+#: field:hr.shift.assign.detail.add,day_15:0
+#: field:hr.shift.assign.detail.adjust,day_15:0
+msgid "15"
+msgstr "15"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_16:0
+#: field:hr.shift.assign.detail.add,day_16:0
+#: field:hr.shift.assign.detail.adjust,day_16:0
+msgid "16"
+msgstr "16"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_17:0
+#: field:hr.shift.assign.detail.add,day_17:0
+#: field:hr.shift.assign.detail.adjust,day_17:0
+msgid "17"
+msgstr "17"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_18:0
+#: field:hr.shift.assign.detail.add,day_18:0
+#: field:hr.shift.assign.detail.adjust,day_18:0
+msgid "18"
+msgstr "18"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_19:0
+#: field:hr.shift.assign.detail.add,day_19:0
+#: field:hr.shift.assign.detail.adjust,day_19:0
+msgid "19"
+msgstr "19"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.change.shift,type:0
+msgid "2 Employee"
+msgstr "2 Employee"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_20:0
+#: field:hr.shift.assign.detail.add,day_20:0
+#: field:hr.shift.assign.detail.adjust,day_20:0
+msgid "20"
+msgstr "20"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_21:0
+#: field:hr.shift.assign.detail.add,day_21:0
+#: field:hr.shift.assign.detail.adjust,day_21:0
+msgid "21"
+msgstr "21"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_22:0
+#: field:hr.shift.assign.detail.add,day_22:0
+#: field:hr.shift.assign.detail.adjust,day_22:0
+msgid "22"
+msgstr "22"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_23:0
+#: field:hr.shift.assign.detail.add,day_23:0
+#: field:hr.shift.assign.detail.adjust,day_23:0
+msgid "23"
+msgstr "23"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_24:0
+#: field:hr.shift.assign.detail.add,day_24:0
+#: field:hr.shift.assign.detail.adjust,day_24:0
+msgid "24"
+msgstr "24"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_25:0
+#: field:hr.shift.assign.detail.add,day_25:0
+#: field:hr.shift.assign.detail.adjust,day_25:0
+msgid "25"
+msgstr "25"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_26:0
+#: field:hr.shift.assign.detail.add,day_26:0
+#: field:hr.shift.assign.detail.adjust,day_26:0
+msgid "26"
+msgstr "26"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_27:0
+#: field:hr.shift.assign.detail.add,day_27:0
+#: field:hr.shift.assign.detail.adjust,day_27:0
+msgid "27"
+msgstr "27"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_28:0
+#: field:hr.shift.assign.detail.add,day_28:0
+#: field:hr.shift.assign.detail.adjust,day_28:0
+msgid "28"
+msgstr "28"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_29:0
+#: field:hr.shift.assign.detail.add,day_29:0
+#: field:hr.shift.assign.detail.adjust,day_29:0
+msgid "29"
+msgstr "29"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_30:0
+#: field:hr.shift.assign.detail.add,day_30:0
+#: field:hr.shift.assign.detail.adjust,day_30:0
+msgid "30"
+msgstr "30"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,day_31:0
+#: field:hr.shift.assign.detail.add,day_31:0
+#: field:hr.shift.assign.detail.adjust,day_31:0
+msgid "31"
+msgstr "31"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,help:ev_hr_timesheet.hr_shift_assign_add_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Assign shift record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Assign shift record</p>\n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,help:ev_hr_timesheet.hr_employee_going_on_business_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Employee going on business record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Employee going on business record</p>\n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,help:ev_hr_timesheet.hr_employee_have_child_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Employee have child record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Employee have child record</p>\n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,help:ev_hr_timesheet.hr_shift_assign_adjust_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to adjust a new Assign shift record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to adjust a new Assign shift record</p>\n"
+"            "
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.hr_shift_assign_add_action
+#: model:ir.ui.menu,name:ev_hr_timesheet.action_hr_shift_assign_add
+msgid "Add assign shift"
+msgstr "Phân ca bổ sung"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave.log,add_date:0
+msgid "Add date"
+msgstr "Số ngày thêm"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+msgid "Adjust"
+msgstr "Điều chỉnh"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.hr_shift_assign_adjust_action
+#: model:ir.ui.menu,name:ev_hr_timesheet.action_hr_shift_assign_adjust
+msgid "Adjust assign shift"
+msgstr "Điều chỉnh bảng phân ca"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,adjust_cause:0
+msgid "Adjust cause"
+msgstr "Nguyên nhân điều chỉnh"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_form_view
+msgid "Adjust history"
+msgstr "Lịch sử điều chỉnh"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.attendance,adjust_ids:0
+msgid "Adjust ids"
+msgstr "Adjust ids"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.attendance.adjust,datetime:0
+msgid "Adjust time"
+msgstr "Adjust time"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_adjust_timesheet_result
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_adjust_timesheet_result
+msgid "Adjust timesheet result"
+msgstr "Điều chỉnh chấm công"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.overtime,type_overtime:0
+#: selection:hr.employee.overtime.detail.adjust,type_overtime:0
+msgid "After work"
+msgstr "Sau ca làm "
+
+#. module: ev_hr_timesheet
+#: selection:hr.standard.time.config,department_category:0
+msgid "Amadora"
+msgstr "Amadora"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.going.on.business:ev_hr_timesheet.view_hr_employee_going_on_business_form
+#: view:hr.employee.have.child:ev_hr_timesheet.view_hr_employee_have_child_form
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Approval"
+msgstr "Phê duyệt"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.going.on.business,state:0
+#: selection:hr.employee.have.child,state:0 selection:hr.shift.assign,state:0
+msgid "Approved"
+msgstr "Đã phê duyệt"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type:0
+msgid "Attendance exception"
+msgstr "Đi muộn / về sớm"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.attendance.adjust,attendance_id:0
+#: field:hr.employee.attendance.line,attendance_id:0
+msgid "Attendance id"
+msgstr "Chấm công"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,auto_delete:0
+msgid "Auto Delete"
+msgstr "Auto Delete"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.overtime,type_overtime:0
+#: selection:hr.employee.overtime.detail.adjust,type_overtime:0
+msgid "Before work"
+msgstr "Trước ca làm"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift,break_time:0
+msgid "Break time"
+msgstr "Thời gian nghỉ"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+msgid "Bạn chắc chắn gửi yêu cầu ?"
+msgstr "Bạn chắc chắn gửi yêu cầu ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+msgid "Bạn chắc chắn gửi?"
+msgstr "Bạn chắc chắn gửi?"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+msgid "Bạn chắc chắn muốn ghi sổ ?"
+msgstr "Bạn chắc chắn muốn ghi sổ ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+msgid "Bạn chắc chắn muốn hủy bản ghi này ?"
+msgstr "Bạn chắc chắn muốn hủy bản ghi này ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+msgid "Bạn chắc chắn muốn hủy bỏ ?"
+msgstr "Bạn chắc chắn muốn hủy bỏ ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+msgid "Bạn chắc chắn muốn phê duyệt bản ghi này ?"
+msgstr "Bạn chắc chắn muốn phê duyệt bản ghi này ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.adjust.timesheet.result:ev_hr_timesheet.hr_adjust_timesheet_result_form_view
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_form_view
+msgid "Bạn chắc chắn xác nhận ?"
+msgstr "Bạn chắc chắn xác nhận ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+msgid "Bạn đã chắc chắn muốn import những dữ liệu này?"
+msgstr "Bạn đã chắc chắn muốn import những dữ liệu này?"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Bạn đã chắc chắn muốn đóng bảng chấm công này ?"
+msgstr "Bạn đã chắc chắn muốn đóng bảng chấm công này ?"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,state:0
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+#: selection:hr.attendance.exception,state:0
+#: selection:hr.employee.attendance.line,state:0
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+#: selection:hr.employee.change.shift,state:0
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+#: selection:hr.employee.overtime,state:0 selection:hr.shift.assign,state:0
+#: selection:hr.shift.assign.add,state:0
+#: selection:hr.shift.assign.adjust,state:0
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+#: selection:hr.timesheet.import,state:0
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: ev_hr_timesheet
+#: selection:mail.timesheet,state:0
+msgid "Cancelled"
+msgstr "Cancelled"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,email_cc:0
+msgid "Carbon copy message recipients"
+msgstr "Carbon copy message recipients"
+
+#. module: ev_hr_timesheet
+#: field:hr.standard.time.config,department_category:0
+msgid "Category"
+msgstr "Phân loại"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_change_employee_shift
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_change_employee_shift
+msgid "Change employee shift"
+msgstr "Đổi ca làm việc"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.shift_assign_sheet_form_view
+#: selection:hr.adjust.timesheet.result,type:0
+msgid "Change shift"
+msgstr "Đổi ca làm việc"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+#: field:hr.timesheet.mail.line,check:0
+msgid "Check"
+msgstr "Kiểm tra"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.mail,check_all:0
+msgid "Check all"
+msgstr "Chọn tất cả"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_form_view
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_tree_view
+msgid "Check timesheet"
+msgstr "Kiểm tra ca"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.shift.assign.detail.add:0
+#: sql_constraint:hr.shift.assign.detail.adjust:0
+msgid "Chi tiết không được thêm một nhân viên 2 lần"
+msgstr "Chi tiết không được thêm một nhân viên 2 lần"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Choose employee"
+msgstr "Chọn nhân viên"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+msgid "Clone last month"
+msgstr "Sao chép tháng trước"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Close Timesheet"
+msgstr "Chốt bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: view:hr.closing.timesheet:ev_hr_timesheet.hr_closing_timesheet_form_view
+msgid "Close timesheet"
+msgstr "Chốt bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign,close_timesheet_date:0
+msgid "Close timesheet date"
+msgstr "Đã chốt đến ngày"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign,close_timesheet_type:0
+msgid "Close timesheet type"
+msgstr "Close timesheet type"
+
+#. module: ev_hr_timesheet
+#: selection:hr.closing.timesheet,state:0
+msgid "Closed"
+msgstr "Đã chốt"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.timesheet,state:0
+msgid "Closed shift assign"
+msgstr "Chốt bảng phân ca"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.timesheet,state:0
+msgid "Closed timesheet"
+msgstr "Chốt bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_closing_timesheet
+msgid "Closing Timesheet"
+msgstr "Chốt bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_closing_timesheet
+msgid "Closing timesheet"
+msgstr "Chốt bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.done_hr_shift_assign_form_view
+msgid "Complete"
+msgstr "Hoàn thành"
+
+#. module: ev_hr_timesheet
+#: view:hr.adjust.timesheet.result:ev_hr_timesheet.hr_adjust_timesheet_result_form_view
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+#: selection:hr.attendance.exception,state:0
+#: view:hr.attendance.import:ev_hr_timesheet.hr_attendance_import_form_view
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_form_view
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_tree_view
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+#: selection:hr.employee.change.shift,state:0
+#: view:hr.employee.leave:ev_hr_timesheet.hr_employee_leave_form_view
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+#: selection:hr.employee.overtime,state:0
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+#: selection:hr.timesheet.import,state:0
+msgid "Confirm"
+msgstr "Xác nhận"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee,contact_person:0
+msgid "Contact person"
+msgstr "Người liên hệ khi cần"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee,contact_phone:0
+msgid "Contact phone"
+msgstr "Số điện thoại người liên hệ"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.mail.line,send_count:0
+msgid "Count"
+msgstr "Count"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,create_uid:0
+#: field:hr.adjust.timesheet.result,create_uid:0
+#: field:hr.attendance.exception,create_uid:0
+#: field:hr.attendance.import,create_uid:0
+#: field:hr.attendance.import.line,create_uid:0
+#: field:hr.closing.timesheet,create_uid:0
+#: field:hr.employee.attendance,create_uid:0
+#: field:hr.employee.attendance.adjust,create_uid:0
+#: field:hr.employee.attendance.line,create_uid:0
+#: field:hr.employee.change.shift,create_uid:0
+#: field:hr.employee.going.on.business,create_uid:0
+#: field:hr.employee.have.child,create_uid:0
+#: field:hr.employee.leave,create_uid:0
+#: field:hr.employee.leave.log,create_uid:0
+#: field:hr.employee.overtime,create_uid:0
+#: field:hr.employee.overtime.detail.adjust,create_uid:0
+#: field:hr.employee.shift,create_uid:0
+#: field:hr.employee.shift.standard,create_uid:0
+#: field:hr.employee.timesheet,create_uid:0 field:hr.shift.assign,create_uid:0
+#: field:hr.shift.assign.add,create_uid:0
+#: field:hr.shift.assign.adjust,create_uid:0
+#: field:hr.shift.assign.detail,create_uid:0
+#: field:hr.shift.assign.detail.add,create_uid:0
+#: field:hr.shift.assign.detail.adjust,create_uid:0
+#: field:hr.standard.time.config,create_uid:0
+#: field:hr.statistic.general.timesheet,create_uid:0
+#: field:hr.timesheet.general.result,create_uid:0
+#: field:hr.timesheet.import,create_uid:0
+#: field:hr.timesheet.import.line,create_uid:0
+#: field:hr.timesheet.mail,create_uid:0
+#: field:hr.timesheet.mail.line,create_uid:0
+#: field:hr.timesheet.result,create_uid:0 field:mail.timesheet,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,create_date:0
+#: field:hr.adjust.timesheet.result,create_date:0
+#: field:hr.attendance.exception,create_date:0
+#: field:hr.attendance.import,create_date:0
+#: field:hr.attendance.import.line,create_date:0
+#: field:hr.closing.timesheet,create_date:0
+#: field:hr.employee.attendance,create_date:0
+#: field:hr.employee.attendance.adjust,create_date:0
+#: field:hr.employee.attendance.line,create_date:0
+#: field:hr.employee.change.shift,create_date:0
+#: field:hr.employee.going.on.business,create_date:0
+#: field:hr.employee.have.child,create_date:0
+#: field:hr.employee.leave,create_date:0
+#: field:hr.employee.leave.log,create_date:0
+#: field:hr.employee.overtime,create_date:0
+#: field:hr.employee.overtime.detail.adjust,create_date:0
+#: field:hr.employee.shift,create_date:0
+#: field:hr.employee.shift.standard,create_date:0
+#: field:hr.employee.timesheet,create_date:0
+#: field:hr.shift.assign,create_date:0 field:hr.shift.assign.add,create_date:0
+#: field:hr.shift.assign.adjust,create_date:0
+#: field:hr.shift.assign.detail,create_date:0
+#: field:hr.shift.assign.detail.add,create_date:0
+#: field:hr.shift.assign.detail.adjust,create_date:0
+#: field:hr.standard.time.config,create_date:0
+#: field:hr.statistic.general.timesheet,create_date:0
+#: field:hr.timesheet.general.result,create_date:0
+#: field:hr.timesheet.import,create_date:0
+#: field:hr.timesheet.import.line,create_date:0
+#: field:hr.timesheet.mail,create_date:0
+#: field:hr.timesheet.mail.line,create_date:0
+#: field:hr.timesheet.result,create_date:0 field:mail.timesheet,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: ev_hr_timesheet
+#: view:hr.adjust.timesheet.result:ev_hr_timesheet.hr_adjust_timesheet_result_filter
+#: field:hr.adjust.timesheet.result,date:0
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_filter
+#: field:hr.attendance.exception,date:0 field:hr.attendance.import.line,date:0
+#: view:hr.employee.attendance:ev_hr_timesheet.view_hr_attendance_filter_view
+#: field:hr.employee.attendance,date:0
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_filter
+#: field:hr.employee.change.shift,date:0
+#: view:hr.employee.going.on.business:ev_hr_timesheet.hr_employee_going_on_business_exception_filter
+#: view:hr.employee.have.child:ev_hr_timesheet.hr_employee_have_child_filter
+#: view:hr.employee.leave:ev_hr_timesheet.hr_employee_leave_filter
+#: field:hr.employee.leave.log,date:0
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_filter
+#: field:hr.employee.overtime.detail.adjust,date:0
+#: field:hr.employee.timesheet,date:0 field:hr.timesheet.general.result,date:0
+#: field:hr.timesheet.import.line,date:0
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Date of the last message posted on the record."
+
+#. module: ev_hr_timesheet
+#: field:hr.standard.time.config,date_per_month:0
+#: field:hr.statistic.general.timesheet,date_per_month:0
+msgid "Date per month"
+msgstr "Ngày trên tháng"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.result,deduct_amount:0
+msgid "Deduct amount"
+msgstr "Tiền khấu trừ"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee,default_shift_id:0
+msgid "Defaut shift"
+msgstr "Ca mặc định"
+
+#. module: ev_hr_timesheet
+#: selection:mail.timesheet,state:0
+msgid "Delivery Failed"
+msgstr "Delivery Failed"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,department_id:0
+#: selection:employee_timesheet.sheet,display_type:0
+#: view:hr.adjust.timesheet.result:ev_hr_timesheet.hr_adjust_timesheet_result_filter
+#: field:hr.adjust.timesheet.result,department_id:0
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_filter
+#: field:hr.attendance.exception,department_id:0
+#: field:hr.attendance.import,department_id:0
+#: field:hr.attendance.import.line,department_id:0
+#: view:hr.employee.attendance:ev_hr_timesheet.view_hr_attendance_filter_view
+#: field:hr.employee.attendance,department_id:0
+#: field:hr.employee.attendance.line,department_id:0
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_filter
+#: view:hr.employee.going.on.business:ev_hr_timesheet.hr_employee_going_on_business_exception_filter
+#: field:hr.employee.going.on.business,department_id:0
+#: view:hr.employee.have.child:ev_hr_timesheet.hr_employee_have_child_filter
+#: field:hr.employee.have.child,department_id:0
+#: view:hr.employee.leave:ev_hr_timesheet.hr_employee_leave_filter
+#: field:hr.employee.leave,department_id:0
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_filter
+#: field:hr.employee.overtime,department_id:0
+#: field:hr.employee.timesheet,department_id:0
+#: selection:hr.shift.assign,close_timesheet_type:0
+#: field:hr.shift.assign,department_id:0
+#: field:hr.shift.assign.add,department_id:0
+#: field:hr.shift.assign.adjust,department_id:0
+#: field:hr.shift.assign.detail,department_id:0
+#: field:hr.shift.assign.detail.add,department_id:0
+#: field:hr.shift.assign.detail.adjust,department_id:0
+#: field:hr.timesheet.import,department_id:0
+#: field:hr.timesheet.mail,department_id:0
+msgid "Department"
+msgstr "Bộ phận"
+
+#. module: ev_hr_timesheet
+#: field:hr.closing.timesheet,department_id:0
+#: field:hr.employee.change.shift,department_id:0
+msgid "Department id"
+msgstr "Bộ phận"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,display_type:0
+#: field:hr.adjust.timesheet.result,department_timesheet_id:0
+#: field:hr.attendance.exception,department_timesheet_id:0
+#: field:hr.employee.change.shift,department_timesheet_id:0
+#: field:hr.employee.going.on.business,department_timesheet_id:0
+#: field:hr.employee.have.child,department_timesheet_id:0
+#: field:hr.employee.overtime,department_timesheet_id:0
+#: field:hr.employee.timesheet,department_timesheet_id:0
+#: selection:hr.shift.assign,close_timesheet_type:0
+msgid "Department timesheet"
+msgstr "Phòng ban chấm công"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift,department_ids:0
+msgid "Departments"
+msgstr "Phòng ban"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift,description:0
+msgid "Desc"
+msgstr "Mô tả"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.overtime,description:0
+#: field:hr.timesheet.result,description:0
+msgid "Description"
+msgstr "Mô tả"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_form_view
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_tree_view
+#: view:hr.employee.leave:ev_hr_timesheet.hr_employee_leave_form_view
+#: field:hr.timesheet.import,line_ids:0
+msgid "Detail"
+msgstr "Chi tiết"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+msgid "Detail adjust"
+msgstr "Chi tiết điều chỉnh"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.overtime,detail_adjust_ids:0
+msgid "Detail adjust holiday"
+msgstr "Chi tiết điều chỉnh"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign,detail_ids:0 field:hr.shift.assign.add,detail_ids:0
+#: field:hr.shift.assign.adjust,detail_ids:0
+msgid "Detail ids"
+msgstr "Chi tiết"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import,detail_ids:0
+#: field:hr.timesheet.mail,timesheet_mail_line_ids:0
+#: field:hr.timesheet.mail.line,timesheet_mail_id:0
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.timesheet,display:0
+msgid "Display"
+msgstr "Display"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,display_type:0
+msgid "Display type"
+msgstr "Hiển thị theo"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,state:0
+#: selection:hr.attendance.exception,state:0
+#: selection:hr.attendance.import,state:0
+#: selection:hr.attendance.import.line,state:0
+#: selection:hr.employee.attendance,state:0
+#: selection:hr.employee.attendance.line,state:0
+#: selection:hr.employee.change.shift,state:0
+#: selection:hr.employee.leave,state:0 selection:hr.employee.overtime,state:0
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: selection:hr.shift.assign,state:0 selection:hr.shift.assign.add,state:0
+#: selection:hr.shift.assign.adjust,state:0
+#: selection:hr.timesheet.import,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.import_hr_shift_assign_form_view
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+msgid "Download Template"
+msgstr "Tải file mẫu"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,state:0
+#: selection:hr.attendance.exception,state:0
+#: selection:hr.attendance.import,state:0
+#: selection:hr.employee.attendance,state:0
+#: selection:hr.employee.change.shift,state:0
+#: selection:hr.employee.going.on.business,state:0
+#: selection:hr.employee.have.child,state:0 selection:hr.employee.leave,state:0
+#: selection:hr.employee.overtime,state:0 selection:hr.shift.assign,state:0
+#: selection:hr.shift.assign.add,state:0
+#: selection:hr.shift.assign.adjust,state:0
+#: selection:hr.timesheet.import,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type_attendance_exception:0
+#: selection:hr.attendance.exception,type:0
+#: selection:hr.timesheet.result,type:0
+msgid "Early"
+msgstr "Về sớm"
+
+#. module: ev_hr_timesheet
+#: model:ir.model,name:ev_hr_timesheet.model_mail_timesheet
+msgid "Email Thread"
+msgstr "Email Thread"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,email_cc:0
+msgid "Email cc"
+msgstr "Email cc"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,email_to:0
+msgid "Email to"
+msgstr "Email to"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,employee_id:0
+#: field:hr.attendance.exception,employee_id:0
+#: field:hr.attendance.import.line,employee_id:0
+#: field:hr.employee.attendance,employee_id:0
+#: field:hr.employee.change.shift,employee_id:0
+#: field:hr.employee.going.on.business,employee_id:0
+#: field:hr.employee.have.child,employee_id:0
+#: view:hr.employee.leave:ev_hr_timesheet.hr_employee_leave_form_view
+#: field:hr.employee.leave,employee_id:0
+#: field:hr.employee.leave.log,employee_id:0
+#: field:hr.employee.overtime,employee_id:0
+#: field:hr.employee.timesheet,employee_id:0
+#: field:hr.shift.assign.detail,employee_id:0
+#: field:hr.shift.assign.detail.add,employee_id:0
+#: field:hr.shift.assign.detail.adjust,employee_id:0
+#: field:hr.statistic.general.timesheet,employee_id:0
+#: field:hr.timesheet.general.result,employee_id:0
+#: field:hr.timesheet.import.line,employee_id:0
+#: field:hr.timesheet.mail.line,employee_id:0
+#: model:ir.model,name:ev_hr_timesheet.model_hr_employee
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.change.shift,employee_2nd_id:0
+msgid "Employee 2"
+msgstr "Nhân viên 2"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_employee_shift
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_employee_shift
+msgid "Employee Shift"
+msgstr "Ca làm việc"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_employee_attendance
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_employee_attendance
+msgid "Employee attendance"
+msgstr "Check-in / Check-out"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_attendance_exception
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_attendance_exception
+msgid "Employee attendance exception"
+msgstr "Đến muộn / về sớm"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.going.on.business:ev_hr_timesheet.view_hr_employee_going_on_business_tree
+#: model:ir.actions.act_window,name:ev_hr_timesheet.hr_employee_going_on_business_action
+#: model:ir.ui.menu,name:ev_hr_timesheet.hr_employee_going_on_business_menu
+msgid "Employee going on business"
+msgstr "Chế độ đi công tác"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.going.on.business:ev_hr_timesheet.view_hr_employee_going_on_business_form
+msgid "Employee going on business Form"
+msgstr "Chế độ đi công tác Form"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.have.child:ev_hr_timesheet.view_hr_employee_have_child_tree
+#: model:ir.actions.act_window,name:ev_hr_timesheet.hr_employee_have_child_action
+msgid "Employee have child"
+msgstr "Chế độ con nhỏ"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.have.child:ev_hr_timesheet.view_hr_employee_have_child_form
+msgid "Employee have child Form"
+msgstr "Chế độ con nhỏ Form"
+
+#. module: ev_hr_timesheet
+#: model:ir.ui.menu,name:ev_hr_timesheet.hr_employee_have_child_menu
+msgid "Employee have childs"
+msgstr "Chế độ con nhỏ"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_employee_leave
+msgid "Employee leave"
+msgstr "Nghỉ phép của nhân viên"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_employee_leave_log
+msgid "Employee leave log"
+msgstr "Lịch sử cấp phép"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_employee_overtime
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_employee_overtime
+msgid "Employee overtime"
+msgstr "Làm việc ngoài giờ"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.general.result,employee_shift_id:0
+msgid "Employee shift"
+msgstr "Employee shift"
+
+#. module: ev_hr_timesheet
+#: selection:hr.attendance.import.line,state:0
+#: selection:hr.employee.attendance,state:0
+#: selection:hr.employee.attendance.line,state:0
+msgid "Exception"
+msgstr "Ngoại lệ"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,adjust_cause:0
+msgid "Excess"
+msgstr "Thừa"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee,facebook:0
+msgid "Facebook"
+msgstr "Facebook"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import,file_name:0 field:hr.shift.assign,file_name:0
+#: field:hr.shift.assign.add,file_name:0 field:hr.timesheet.import,file_name:0
+msgid "File name"
+msgstr "Tên File"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import,file_upload:0 field:hr.shift.assign,file_upload:0
+#: field:hr.shift.assign.add,file_upload:0
+#: field:hr.timesheet.import,file_upload:0
+msgid "File upload"
+msgstr "File upload"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_follower_ids:0
+msgid "Followers"
+msgstr "Followers"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.going.on.business,from_date:0
+#: field:hr.employee.have.child,from_date:0 field:hr.employee.leave,from_date:0
+#: field:hr.employee.overtime,from_date:0 field:hr.shift.assign,from_date:0
+#: field:hr.shift.assign.adjust,from_date:0
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+#: field:hr.timesheet.import,from_date:0
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type:0
+msgid "Going business"
+msgstr "Chế độ đi công tác"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+msgid "HR Approval"
+msgstr "Nhân sự phê duyệt"
+
+#. module: ev_hr_timesheet
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+msgid "HR Cancel"
+msgstr "Nhân sự hủy bỏ"
+
+#. module: ev_hr_timesheet
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+#: selection:hr.attendance.exception,state:0
+msgid "HR Confirm"
+msgstr "Nhân sự xác nhận"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type:0
+msgid "Have child"
+msgstr "Chế độ con nhỏ"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,headers:0
+msgid "Headers"
+msgstr "Headers"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.timesheet,holiday_id:0
+#: selection:hr.timesheet.result,type:0
+msgid "Holiday"
+msgstr "Ngày nghỉ"
+
+#. module: ev_hr_timesheet
+#: field:hr.standard.time.config,hour_per_day:0
+#: field:hr.statistic.general.timesheet,hour_per_day:0
+msgid "Hour per day"
+msgstr "Giờ công chuẩn trên ngày"
+
+#. module: ev_hr_timesheet
+#: field:hr.standard.time.config,hour_per_month:0
+#: field:hr.statistic.general.timesheet,hour_per_month:0
+msgid "Hour per month"
+msgstr "Giờ công chuẩn trên tháng"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.overtime.detail.adjust,hours_holiday:0
+msgid "Hours"
+msgstr "Số giờ"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,id:0 field:hr.adjust.timesheet.result,id:0
+#: field:hr.attendance.exception,id:0 field:hr.attendance.import,id:0
+#: field:hr.attendance.import.line,id:0 field:hr.closing.timesheet,id:0
+#: field:hr.employee.attendance,id:0 field:hr.employee.attendance.adjust,id:0
+#: field:hr.employee.attendance.line,id:0 field:hr.employee.change.shift,id:0
+#: field:hr.employee.going.on.business,id:0 field:hr.employee.have.child,id:0
+#: field:hr.employee.leave,id:0 field:hr.employee.leave.log,id:0
+#: field:hr.employee.overtime,id:0
+#: field:hr.employee.overtime.detail.adjust,id:0 field:hr.employee.shift,id:0
+#: field:hr.employee.shift.standard,id:0 field:hr.employee.timesheet,id:0
+#: field:hr.shift.assign,id:0 field:hr.shift.assign.add,id:0
+#: field:hr.shift.assign.adjust,id:0 field:hr.shift.assign.detail,id:0
+#: field:hr.shift.assign.detail.add,id:0
+#: field:hr.shift.assign.detail.adjust,id:0 field:hr.standard.time.config,id:0
+#: field:hr.statistic.general.timesheet,id:0
+#: field:hr.timesheet.general.result,id:0 field:hr.timesheet.import,id:0
+#: field:hr.timesheet.import.line,id:0 field:hr.timesheet.mail,id:0
+#: field:hr.timesheet.mail.line,id:0 field:hr.timesheet.result,id:0
+#: field:mail.timesheet,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "If checked new messages require your attention."
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.import.line,import_id:0
+msgid "Import"
+msgstr "Import"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_import_attendance
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_import_attendance
+msgid "Import attendance"
+msgstr "Import Check-in / Check-out"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+msgid "Import file"
+msgstr "Nhập từ file mẫu"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import.line,import_id:0
+msgid "Import id"
+msgstr "Import id"
+
+#. module: ev_hr_timesheet
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_hr_shift_assign2
+msgid "Import shift assign"
+msgstr "Import phân ca"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.have.child,type:0
+msgid "In late"
+msgstr "Đến muộn"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,fetchmail_server_id:0
+msgid "Inbound Mail Server"
+msgstr "Inbound Mail Server"
+
+#. module: ev_hr_timesheet
+#: selection:hr.shift.assign,state:0 selection:hr.shift.assign.add,state:0
+#: selection:hr.shift.assign.adjust,state:0
+msgid "Init"
+msgstr "Khỏi tạo"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+msgid "Init shift"
+msgstr "Khởi tạo phân ca"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,notification:0
+msgid "Is Notification"
+msgstr "Is Notification"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Is a Follower"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.add,is_closed:0
+msgid "Is cloased"
+msgstr "Đã chốt"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.import,is_generate:0
+msgid "Is generate"
+msgstr "Is generate"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,is_work_company:0
+#: field:hr.attendance.exception,is_work_company:0
+msgid "Is work company"
+msgstr "Việc của công ty"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift.standard,job_id:0
+#: field:hr.standard.time.config,job_id:0
+msgid "Job"
+msgstr "Chức danh"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,key:0
+msgid "Key"
+msgstr "Key"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_last_post:0
+msgid "Last Message Date"
+msgstr "Last Message Date"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,write_uid:0
+#: field:hr.adjust.timesheet.result,write_uid:0
+#: field:hr.attendance.exception,write_uid:0
+#: field:hr.attendance.import,write_uid:0
+#: field:hr.attendance.import.line,write_uid:0
+#: field:hr.closing.timesheet,write_uid:0
+#: field:hr.employee.attendance,write_uid:0
+#: field:hr.employee.attendance.adjust,write_uid:0
+#: field:hr.employee.attendance.line,write_uid:0
+#: field:hr.employee.change.shift,write_uid:0
+#: field:hr.employee.going.on.business,write_uid:0
+#: field:hr.employee.have.child,write_uid:0 field:hr.employee.leave,write_uid:0
+#: field:hr.employee.leave.log,write_uid:0
+#: field:hr.employee.overtime,write_uid:0
+#: field:hr.employee.overtime.detail.adjust,write_uid:0
+#: field:hr.employee.shift,write_uid:0
+#: field:hr.employee.shift.standard,write_uid:0
+#: field:hr.employee.timesheet,write_uid:0 field:hr.shift.assign,write_uid:0
+#: field:hr.shift.assign.add,write_uid:0
+#: field:hr.shift.assign.adjust,write_uid:0
+#: field:hr.shift.assign.detail,write_uid:0
+#: field:hr.shift.assign.detail.add,write_uid:0
+#: field:hr.shift.assign.detail.adjust,write_uid:0
+#: field:hr.standard.time.config,write_uid:0
+#: field:hr.statistic.general.timesheet,write_uid:0
+#: field:hr.timesheet.general.result,write_uid:0
+#: field:hr.timesheet.import,write_uid:0
+#: field:hr.timesheet.import.line,write_uid:0
+#: field:hr.timesheet.mail,write_uid:0 field:hr.timesheet.mail.line,write_uid:0
+#: field:hr.timesheet.result,write_uid:0 field:mail.timesheet,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,write_date:0
+#: field:hr.adjust.timesheet.result,write_date:0
+#: field:hr.attendance.exception,write_date:0
+#: field:hr.attendance.import,write_date:0
+#: field:hr.attendance.import.line,write_date:0
+#: field:hr.closing.timesheet,write_date:0
+#: field:hr.employee.attendance,write_date:0
+#: field:hr.employee.attendance.adjust,write_date:0
+#: field:hr.employee.attendance.line,write_date:0
+#: field:hr.employee.change.shift,write_date:0
+#: field:hr.employee.going.on.business,write_date:0
+#: field:hr.employee.have.child,write_date:0
+#: field:hr.employee.leave,write_date:0
+#: field:hr.employee.leave.log,write_date:0
+#: field:hr.employee.overtime,write_date:0
+#: field:hr.employee.overtime.detail.adjust,write_date:0
+#: field:hr.employee.shift,write_date:0
+#: field:hr.employee.shift.standard,write_date:0
+#: field:hr.employee.timesheet,write_date:0 field:hr.shift.assign,write_date:0
+#: field:hr.shift.assign.add,write_date:0
+#: field:hr.shift.assign.adjust,write_date:0
+#: field:hr.shift.assign.detail,write_date:0
+#: field:hr.shift.assign.detail.add,write_date:0
+#: field:hr.shift.assign.detail.adjust,write_date:0
+#: field:hr.standard.time.config,write_date:0
+#: field:hr.statistic.general.timesheet,write_date:0
+#: field:hr.timesheet.general.result,write_date:0
+#: field:hr.timesheet.import,write_date:0
+#: field:hr.timesheet.import.line,write_date:0
+#: field:hr.timesheet.mail,write_date:0
+#: field:hr.timesheet.mail.line,write_date:0
+#: field:hr.timesheet.result,write_date:0 field:mail.timesheet,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.mail.line,last_send:0
+msgid "Last send"
+msgstr "Last send"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type_attendance_exception:0
+#: selection:hr.attendance.exception,type:0
+#: selection:hr.timesheet.result,type:0
+msgid "Late"
+msgstr "Đi muộn"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.result,late_time:0
+msgid "Late time"
+msgstr "Thời gian muộn"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave.log,leave_id:0
+msgid "Leave"
+msgstr "Nghỉ việc"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,leave_day:0
+msgid "Leave day"
+msgstr "Quỹ phép"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,leave_day_last_year:0
+msgid "Leave day last year"
+msgstr "Số ngày phép đã sử dụng tồn phép năm trước"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.attendance,line_ids:0
+msgid "Line ids"
+msgstr "Line ids"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,log_ids:0
+msgid "Log"
+msgstr "Log"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,notification:0
+msgid "Mail has been created to notify people of an existing mail.message"
+msgstr "Mail has been created to notify people of an existing mail.message"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,mailing_id:0
+msgid "Mass Mailing"
+msgstr "Mass Mailing"
+
+#. module: ev_hr_timesheet
+#: selection:hr.standard.time.config,department_category:0
+msgid "Menard"
+msgstr "Menard"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,mail_message_id:0
+msgid "Message"
+msgstr "Message"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,references:0
+msgid "Message references, such as identifiers of previous messages"
+msgstr "Message references, such as identifiers of previous messages"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_ids:0
+msgid "Messages"
+msgstr "Messages"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,message_ids:0
+msgid "Messages and communication history"
+msgstr "Messages and communication history"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,adjust_cause:0
+msgid "Miss"
+msgstr "Thiếu"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import,period_id:0
+#: field:hr.closing.timesheet,period_id:0
+#: field:hr.employee.have.child,period_id:0 field:hr.shift.assign,period_id:0
+#: field:hr.shift.assign.add,period_id:0
+#: field:hr.shift.assign.adjust,period_id:0 field:hr.timesheet.mail,period_id:0
+msgid "Month"
+msgstr "Tháng"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.shift.assign:0
+msgid "Mỗi tháng chỉ được phân ca 1 lần trên 1 bộ phận !!!"
+msgstr "Mỗi tháng chỉ được phân ca 1 lần trên 1 bộ phận !!!"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,name:0
+#: field:hr.adjust.timesheet.result,name:0 field:hr.attendance.exception,name:0
+#: field:hr.closing.timesheet,name:0 field:hr.employee.attendance,name:0
+#: field:hr.employee.change.shift,name:0
+#: field:hr.employee.going.on.business,name:0
+#: field:hr.employee.have.child,name:0 field:hr.employee.leave,name:0
+#: field:hr.employee.overtime,name:0
+#: field:hr.employee.overtime.detail.adjust,name:0
+#: field:hr.employee.shift,name:0 field:hr.employee.timesheet,name:0
+#: field:hr.shift.assign,name:0 field:hr.shift.assign.add,name:0
+#: field:hr.shift.assign.adjust,name:0 field:hr.timesheet.import,name:0
+#: field:hr.timesheet.result,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_hr_timesheet
+#: selection:hr.attendance.import.line,state:0
+#: selection:hr.employee.timesheet,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,new_result_id:0
+msgid "New result"
+msgstr "Kết quả chấm công mới"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,gb_shift_id:0
+#: field:hr.adjust.timesheet.result,shift_id:0
+msgid "New shift"
+msgstr "Ca mới"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.change.shift,shift_id:0
+msgid "New shift 1st employee"
+msgstr "Ca mới (nhân viên 1)"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.change.shift,shift_2nd_id:0
+msgid "New shift 2st employee"
+msgstr "Ca mới (nhân viên 2)"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.employee.timesheet:0
+msgid "Nhân viên đã được phân ca trong thời gian này !!!"
+msgstr "Nhân viên đã được phân ca trong thời gian này !!!"
+
+#. module: ev_hr_timesheet
+#: selection:hr.standard.time.config,type:0
+msgid "No nominate"
+msgstr "Không theo chức danh"
+
+#. module: ev_hr_timesheet
+#: selection:hr.standard.time.config,type:0
+msgid "Nominate"
+msgstr "Theo chức danh"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,note:0 field:hr.attendance.exception,note:0
+#: field:hr.attendance.import.line,note:0 field:hr.employee.attendance,note:0
+#: field:hr.employee.attendance.line,note:0
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+#: field:hr.employee.change.shift,note:0
+#: field:hr.employee.going.on.business,note:0
+#: field:hr.employee.have.child,note:0 field:hr.employee.leave,note:0
+#: field:hr.employee.overtime.detail.adjust,note:0
+#: field:hr.employee.timesheet,note:0
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_hr_timesheet
+#: selection:hr.standard.time.config,department_category:0
+msgid "Office"
+msgstr "Văn phòng"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,old_result_id:0
+msgid "Old result"
+msgstr "Kết quả chấm công cũ"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,old_shift_id:0
+msgid "Old shift"
+msgstr "Ca cũ"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.change.shift,old_shift_id:0
+msgid "Old shift 1st employee"
+msgstr "Ca cũ (nhân viên 1)"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.change.shift,old_shift_2nd_id:0
+msgid "Old shift 2nd employee"
+msgstr "Ca cũ (nhân viên 2)"
+
+#. module: ev_hr_timesheet
+#: selection:hr.timesheet.result,type:0
+msgid "On time"
+msgstr "Đúng giờ"
+
+#. module: ev_hr_timesheet
+#: selection:hr.closing.timesheet,state:0
+msgid "Opening"
+msgstr "Opening"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.have.child,type:0
+msgid "Out early"
+msgstr "Về sớm"
+
+#. module: ev_hr_timesheet
+#: selection:mail.timesheet,state:0
+msgid "Outgoing"
+msgstr "Outgoing"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,type:0
+msgid "Over time"
+msgstr "Giờ làm thêm"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,view_type:0
+#: field:hr.employee.overtime.detail.adjust,employee_overtime_id:0
+#: field:hr.employee.timesheet,overtime:0
+#: field:hr.timesheet.general.result,overtime:0
+msgid "Overtime"
+msgstr "Làm thêm giờ"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift,overtime_rate:0
+msgid "Overtime rate"
+msgstr "Overtime rate"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,params:0
+msgid "Params"
+msgstr "Params"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,period_id:0
+#: field:hr.statistic.general.timesheet,period_id:0
+msgid "Period"
+msgstr "Period"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,auto_delete:0
+msgid "Permanently delete this email after sending it, to save space"
+msgstr "Permanently delete this email after sending it, to save space"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee,personal_email:0
+msgid "Personal email"
+msgstr "Email cá nhân"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Phê duyệt sẽ hủy bỏ tất cả các đơn đã xin, đơn xin nghỉ phép sẽ được hoàn phép!"
+msgstr "Phê duyệt sẽ hủy bỏ tất cả các đơn đã xin, đơn xin nghỉ phép sẽ được hoàn phép!"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.shift_assign_sheet_form_view
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Print Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Print general"
+msgstr "Báo cáo tổng hợp"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.timesheet,priority:0
+#: field:hr.timesheet.import.line,priority:0
+msgid "Priority"
+msgstr "Độ ưu tiên"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,random:0 field:hr.timesheet.import,random:0
+msgid "Random"
+msgstr "Random"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign,random_number:0
+msgid "Random number"
+msgstr "Random number"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign,random_number_1:0
+msgid "Random number 1"
+msgstr "Random number 1"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.attendance:ev_hr_timesheet.hr_employee_attendance_tree_view
+msgid "Re-Open"
+msgstr "Mở lại"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.import_hr_shift_assign_form_view
+msgid "Read file"
+msgstr "Duyệt file"
+
+#. module: ev_hr_timesheet
+#: selection:mail.timesheet,state:0
+msgid "Received"
+msgstr "Received"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,references:0
+msgid "References"
+msgstr "References"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Refresh"
+msgstr "Làm mới"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.going.on.business:ev_hr_timesheet.view_hr_employee_going_on_business_form
+#: view:hr.employee.have.child:ev_hr_timesheet.view_hr_employee_have_child_form
+msgid "Reject"
+msgstr "Hủy"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.going.on.business,state:0
+#: selection:hr.employee.have.child,state:0
+msgid "Rejected"
+msgstr "Đã từ chối"
+
+#. module: ev_hr_timesheet
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+msgid "Request"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,rest_leave_day:0
+msgid "Rest leave day"
+msgstr "Tồn phép năm trước"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,view_type:0
+#: field:hr.employee.timesheet,result_id:0
+msgid "Result"
+msgstr "Kết quả"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Revoke"
+msgstr "Thu hồi"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,body_html:0
+msgid "Rich-text Contents"
+msgstr "Rich-text Contents"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,body_html:0
+msgid "Rich-text/HTML message"
+msgstr "Rich-text/HTML message"
+
+#. module: ev_hr_timesheet
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Sau khi ấn làm lại, toàn bộ dữ liệu phân ca sẽ mất, bạn có chắc chắn muốn làm lại ?"
+msgstr "Sau khi ấn làm lại, toàn bộ dữ liệu phân ca sẽ mất, bạn có chắc chắn muốn làm lại ?"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.going.on.business:ev_hr_timesheet.view_hr_employee_going_on_business_form
+#: view:hr.employee.have.child:ev_hr_timesheet.view_hr_employee_have_child_form
+#: view:hr.employee.overtime:ev_hr_timesheet.hr_employee_overtime_form_view
+#: view:hr.shift.assign:ev_hr_timesheet.hr_shift_assign_form_view
+#: view:hr.shift.assign.add:ev_hr_timesheet.hr_shift_assign_add_form_view
+#: view:hr.shift.assign.adjust:ev_hr_timesheet.hr_shift_assign_adjust_form_view
+msgid "Send"
+msgstr "Gửi"
+
+#. module: ev_hr_timesheet
+#: view:hr.timesheet.mail:ev_hr_timesheet.view_hr_timesheet_mail_form
+msgid "Send mail"
+msgstr "Gửi"
+
+#. module: ev_hr_timesheet
+#: view:hr.attendance.exception:ev_hr_timesheet.hr_attendance_exception_form_view
+msgid "Send request"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_hr_timesheet
+#: selection:mail.timesheet,state:0
+msgid "Sent"
+msgstr "Sent"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Sent Email"
+msgstr "Sent Email"
+
+#. module: ev_hr_timesheet
+#: view:hr.employee.change.shift:ev_hr_timesheet.hr_employee_change_shift_inherit
+msgid "Sent request"
+msgstr "Gửi yêu cầu"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,view_type:0
+#: field:hr.attendance.exception,shift_id:0
+#: field:hr.employee.shift.standard,shift_id:0
+#: field:hr.employee.timesheet,shift_id:0
+#: field:hr.timesheet.import.line,shift_id:0
+msgid "Shift"
+msgstr "Ca làm việc"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail,init_id:0
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_hr_shift_assign1
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_hr_shift_assign2
+#: model:ir.ui.menu,name:ev_hr_timesheet.action_hr_shift_assign
+msgid "Shift Assign"
+msgstr "Phân ca làm việc"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail.add,init_id:0
+msgid "Shift Assign add"
+msgstr "Phân ca bổ sung"
+
+#. module: ev_hr_timesheet
+#: field:hr.shift.assign.detail.adjust,init_id:0
+msgid "Shift Assign adjust"
+msgstr "Điều chỉnh bảng phân ca"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_shift_assign_sheet
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_shift_assign_sheet
+msgid "Shift assign sheet"
+msgstr "Bảng phân ca"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.shift,shift_standard_ids:0
+msgid "Standard details"
+msgstr "Chi tiết giờ công chuẩn"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,view_type:0
+#: field:hr.employee.shift,standard_time:0
+#: field:hr.employee.shift.standard,standard_time:0
+#: field:hr.timesheet.general.result,standard_time:0
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_standard_time_config
+msgid "Standard time"
+msgstr "Giờ công chuẩn"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.timesheet,standard_time_config_id:0
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_standard_time_config
+msgid "Standard time config"
+msgstr "Cấu hình giờ công chuẩn"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.result,standard_time_rate:0
+msgid "Standard time rate"
+msgstr "Standard time rate"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,state:0
+#: field:hr.attendance.exception,state:0 field:hr.attendance.import,state:0
+#: field:hr.attendance.import.line,state:0 field:hr.closing.timesheet,state:0
+#: field:hr.employee.attendance,state:0
+#: field:hr.employee.attendance.line,state:0
+#: field:hr.employee.change.shift,state:0
+#: field:hr.employee.going.on.business,state:0
+#: field:hr.employee.have.child,state:0 field:hr.employee.leave,state:0
+#: field:hr.employee.overtime,state:0 field:hr.employee.timesheet,state:0
+#: field:hr.shift.assign,state:0 field:hr.shift.assign.add,state:0
+#: field:hr.shift.assign.adjust,state:0 field:hr.timesheet.import,state:0
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,statistics_ids:0
+msgid "Statistics"
+msgstr "Statistics"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,subject:0
+msgid "Subject"
+msgstr "Subject"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_HM1:0
+msgid "Sum HM1"
+msgstr "Sum HM1"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_HM2:0
+msgid "Sum HM2"
+msgstr "Sum HM2"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_HS:0
+msgid "Sum HS"
+msgstr "Sum HS"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_M1:0
+msgid "Sum M1"
+msgstr "Sum M1"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_M2:0
+msgid "Sum M2"
+msgstr "Sum M2"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_M3:0
+msgid "Sum M3"
+msgstr "Sum M3"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_S:0
+msgid "Sum S"
+msgstr "Sum S"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_day_work_of_month:0
+msgid "Sum day work of month"
+msgstr "Sum day work of month"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_hour_late_early:0
+msgid "Sum hour late early"
+msgstr "Sum hour late early"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_hour_overtime:0
+msgid "Sum hour overtime"
+msgstr "Sum hour overtime"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,sum_hour_work:0
+msgid "Sum hour work"
+msgstr "Sum hour work"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_summary:0
+msgid "Summary"
+msgstr "Summary"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import.line,from_time:0
+#: field:hr.employee.attendance,from_time:0
+#: field:hr.employee.attendance.adjust,from_time:0
+#: field:hr.employee.attendance.line,from_time:0
+#: field:hr.employee.shift,from_time:0
+msgid "Time from"
+msgstr "Từ giờ"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,total_time:0
+#: field:hr.attendance.exception,total_time:0
+msgid "Time leave"
+msgstr "Số giờ"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,overtime:0
+#: field:hr.employee.overtime,overtime:0
+msgid "Time over"
+msgstr "Số giờ làm thêm"
+
+#. module: ev_hr_timesheet
+#: field:hr.attendance.import.line,to_time:0
+#: field:hr.employee.attendance,to_time:0
+#: field:hr.employee.attendance.adjust,to_time:0
+#: field:hr.employee.attendance.line,to_time:0
+#: field:hr.employee.shift,to_time:0
+msgid "Time to"
+msgstr "Đến giờ"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,timesheet_id:0
+#: view:hr.employee:ev_hr_timesheet.view_hr_employee_line_inherit
+#: field:hr.employee.attendance,timesheet_id:0
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_ev_hr_timesheet
+msgid "Timesheet"
+msgstr "Chấm công"
+
+#. module: ev_hr_timesheet
+#: view:hr.timesheet.mail:ev_hr_timesheet.view_hr_timesheet_mail_form
+msgid "Timesheet mail Form"
+msgstr "Timesheet mail Form"
+
+#. module: ev_hr_timesheet
+#: field:hr.timesheet.general.result,timesheet_result_id:0
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_timesheet_result
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_timesheet_result
+msgid "Timesheet result"
+msgstr "Kết quả chấm công"
+
+#. module: ev_hr_timesheet
+#: model:ir.actions.act_window,name:ev_hr_timesheet.action_timesheet_sheet
+#: model:ir.ui.menu,name:ev_hr_timesheet.menu_timesheet_sheet
+msgid "Timesheet sheet"
+msgstr "Bảng chấm công"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,recipient_ids:0
+msgid "To (Partners)"
+msgstr "To (Partners)"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.going.on.business,to_date:0
+#: field:hr.employee.have.child,to_date:0 field:hr.employee.leave,to_date:0
+#: field:hr.employee.overtime,to_date:0 field:hr.shift.assign,to_date:0
+#: field:hr.shift.assign.adjust,to_date:0 field:hr.timesheet.import,to_date:0
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,total_paid_leave:0
+msgid "Total paid leave"
+msgstr "Total paid leave"
+
+#. module: ev_hr_timesheet
+#: selection:employee_timesheet.sheet,view_type:0
+#: field:hr.timesheet.general.result,total_time:0
+msgid "Total time"
+msgstr "Tổng thời gian"
+
+#. module: ev_hr_timesheet
+#: field:hr.statistic.general.timesheet,total_work_time:0
+msgid "Total work time"
+msgstr "Total work time"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.employee.attendance:0
+msgid "Trong một ngày một nhân viên chỉ check-in (check-out) 1 lần !!!"
+msgstr "Trong một ngày một nhân viên chỉ check-in (check-out) 1 lần !!!"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.timesheet.mail:0
+msgid "Trùng phòng ban và tháng (account_period)!"
+msgstr "Trùng phòng ban và tháng (account_period)!"
+
+#. module: ev_hr_timesheet
+#: field:hr.adjust.timesheet.result,type:0
+#: field:hr.adjust.timesheet.result,type_attendance_exception:0
+#: field:hr.attendance.exception,type:0 field:hr.employee.change.shift,type:0
+#: field:hr.employee.have.child,type:0 field:hr.standard.time.config,type:0
+#: field:hr.timesheet.result,type:0
+msgid "Type"
+msgstr "Hình thức"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.overtime,type_overtime:0
+#: field:hr.employee.overtime.detail.adjust,type_overtime:0
+msgid "Type overtime"
+msgstr "Kiểu làm thêm"
+
+#. module: ev_hr_timesheet
+#: sql_constraint:hr.employee.shift:0
+msgid "Tên ca bị trùng, vui lòng nhập tên khác!"
+msgstr "Tên ca bị trùng, vui lòng nhập tên khác!"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,message_unread:0
+msgid "Unread Messages"
+msgstr "Unread Messages"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.leave,used_day:0
+msgid "Used day"
+msgstr "Số ngày phép đã sử dụng"
+
+#. module: ev_hr_timesheet
+#: field:hr.employee.attendance.adjust,user_id:0
+msgid "User"
+msgstr "User"
+
+#. module: ev_hr_timesheet
+#: view:hr.attendance.import:ev_hr_timesheet.hr_attendance_import_form_view
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+msgid "Validate file"
+msgstr "Kiểm tra file"
+
+#. module: ev_hr_timesheet
+#: field:employee_timesheet.sheet,view_type:0
+msgid "View type"
+msgstr "Kiểu xem"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.change.shift,state:0
+msgid "Wait HR approval"
+msgstr "Chờ nhân sự phê duyệt"
+
+#. module: ev_hr_timesheet
+#: selection:hr.employee.going.on.business,state:0
+#: selection:hr.employee.have.child,state:0 selection:hr.shift.assign,state:0
+#: selection:hr.shift.assign.add,state:0
+#: selection:hr.shift.assign.adjust,state:0
+msgid "Wait approval"
+msgstr "Chờ phê duyệt"
+
+#. module: ev_hr_timesheet
+#: field:mail.timesheet,website_message_ids:0
+msgid "Website Messages"
+msgstr "Website Messages"
+
+#. module: ev_hr_timesheet
+#: help:mail.timesheet,website_message_ids:0
+msgid "Website communication history"
+msgstr "Website communication history"
+
+#. module: ev_hr_timesheet
+#: view:employee_timesheet.sheet:ev_hr_timesheet.shift_assign_sheet_form_view
+#: view:employee_timesheet.sheet:ev_hr_timesheet.timesheet_sheet_form_view
+msgid "Work shift period"
+msgstr "Thời gian"
+
+#. module: ev_hr_timesheet
+#: selection:hr.adjust.timesheet.result,adjust_cause:0
+msgid "Wrong"
+msgstr "Sai"
+
+#. module: ev_hr_timesheet
+#: view:hr.timesheet.import:ev_hr_timesheet.hr_timesheet_import_form_view
+msgid "to"
+msgstr "Đến"

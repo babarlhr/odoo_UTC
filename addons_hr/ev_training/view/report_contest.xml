@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="training_report_contest_action" model="ir.actions.act_window">
+            <field name="name">Report Contest</field>
+            <field name="res_model">training.report.contest</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Report Contest record</p>
+            </field>
+        </record>
+
+        <record id="view_training_report_contest_form" model="ir.ui.view">
+            <field name="name">Report Contest form</field>
+            <field name="model">training.report.contest</field>
+            <field name="arch" type="xml">
+                <form string="Rating">
+                    <sheet>
+                        <group>
+                            <field name="session_id" required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="major_id" required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+
+                        </group>
+                        <group>
+                            <field name="date" required="1"/>
+                        </group>
+                        <button class="oe_highlight" name="print_report_contest" type="object" string="Print Excel"
+                                icon="gtk-print"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--<menuitem id="menu_training_report_course" name="Report Training"-->
+                  <!--parent="ev_crm_report.menu_izi_report" sequence="8"-->
+                  <!--groups="base.group_hr_user"/>-->
+        <!--<menuitem id="menu_training_report_contest_session_action"-->
+                  <!--name="Report Contest"-->
+                  <!--parent="menu_training_report_course"-->
+                  <!--action="training_report_contest_action" sequence="3"/>-->
+    </data>
+</openerp>

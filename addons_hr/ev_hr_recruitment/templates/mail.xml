@@ -1,0 +1,275 @@
+<openerp>
+    <data>
+        <!-- template mail -->
+        <!--template_hr_recruitment_send_mail_invite_interview-->
+        <record id="template_hr_recruitment_send_mail_invite_interview_form" model="email.template">
+            <field name="name">Invite applicants interview form</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>Trước tiên, Công ty TNHH Thương mại Thiên Thủy Mộc – Thương hiệu mỹ phẩm Menard Nhật Bản gửi tới bạn ........................................... lời chào trân trọng! </p>
+
+                <p>Qua thông báo tuyển dụng, Công ty chúng tôi đã nhận được hồ sơ ứng tuyển của Bạn. Sau quá trình kiểm tra và lựa chọn hồ sơ, Phòng nhân sự Công ty  xin gửi tới Bạn thư mời phỏng vấn với nội dung như sau:</p>
+
+                <p>                      Vị trí dự tuyển: ...................</p>
+
+                <p>                      Thời gian: ............................. ngày ....................</p>
+
+                <p>                      Địa điểm: Tầng 12, Tòa nhà VMT, ngõ 82, Duy Tân, Cầu Giấy, Hà Nội</p>
+
+                <p>Bạn vui lòng xác nhận việc tham gia phỏng vấn qua mail. Nếu có bất cứ thay đổi gì, hoặc không tìm được địa chỉ, bạn vui lòng liên hệ với số hotline: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+        <record id="template_hr_recruitment_send_mail_invite_interview_7" model="email.template">
+            <field name="name">Invite applicants interview</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>Trước tiên, Công ty TNHH Thương mại Thiên Thủy Mộc – Thương hiệu mỹ phẩm Menard Nhật Bản gửi tới bạn <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['gender']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['applicant_name']}</span> lời chào trân trọng! </p>
+
+                <p>Qua thông báo tuyển dụng, Công ty chúng tôi đã nhận được hồ sơ ứng tuyển của Bạn. Sau quá trình kiểm tra và lựa chọn hồ sơ, Phòng nhân sự Công ty  xin gửi tới Bạn thư mời phỏng vấn với nội dung như sau:</p>
+
+                <p>                      Vị trí dự tuyển: <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['job_name']}</span></p>
+
+                <p>                      Thời gian: <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['time']}</span> <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['day']}</span> ngày <span>${object.obj_mail_invite_to_interview(object.applicant_id, object.interview_id)['date']}</span></p>
+
+                <p>                      Địa điểm: Tầng 12, Tòa nhà VMT, ngõ 82, Duy Tân, Cầu Giấy, Hà Nội</p>
+
+                <p>Bạn vui lòng xác nhận việc tham gia phỏng vấn qua mail. Nếu có bất cứ thay đổi gì, hoặc không tìm được địa chỉ, bạn vui lòng liên hệ với số hotline: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+        <!--template_hr_recruitment_send_mail_thank-->
+        <record id="template_hr_recruitment_send_mail_thank_1" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+
+                <p>VMT Group chân thành cảm ơn bạn đã dành thời gian để tìm hiểu, nộp hồ sơ ứng tuyển và tham dự các vòng phỏng vấn với chúng tôi. </p>
+
+                <p>Thời điểm hiện tại, hồ sơ ứng tuyển của bạn chưa thực sự phù hợp vị trí mà chúng tôi đang tuyển dụng, vì vậy VMT xin phép sẽ lưu hồ sơ của bạn vào ngân hàng hồ sơ tiềm năng cho kế hoạch tuyển dụng của chúng tôi trong tương lai gần.</p>
+
+                <p>Mong rằng VMT sẽ cơ hội hợp tác cùng bạn tại một thời điểm thích hợp với một vị trí công việc phù hợp.</p>
+
+                <p>Chúc bạn thành công!</p>
+
+                <p>Trân trọng</p>
+
+]]></field>
+        </record>
+
+        <!--template_hr_recruitment_send_mail_invite_work-->
+        <!--<record id="template_hr_recruitment_send_mail_invite_work_4" model="email.template">-->
+        <!--<field name="name">Invite applicants work</field>-->
+        <!--<field name="subject">${object.subject}</field>-->
+        <!--<field name="email_from">admin@vmt.vn</field>-->
+        <!--<field name="email_to">${object.email_to}</field>-->
+        <!--<field name="email_cc">${object.email_cc}</field>-->
+        <!--<field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>-->
+        <!--<field name="auto_delete" eval="True"/>-->
+        <!--<field name="lang">vi_VN</field>-->
+        <!--<field name="body_html"><![CDATA[-->
+        <!--Chúc mừng bạn đã trúng tuyển vào công ty!-->
+        <!--]]></field>-->
+        <!--</record>-->
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_1" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>VMT GROUP - THƯ MỜI NHẬN VIỆC_ ngày ....................</p>
+
+                <p>Kính gửi: ........................</p>
+
+                <p>Chúc mừng bạn đã vượt qua vòng phỏng vấn để có thể trở thành thành viên của VMT Group.</p>
+
+                <p>Phòng nhân sự gửi tới bạn Thư mời nhận việc theo file đính kèm.</p>
+
+                <p>Bạn vui lòng xác nhận lịch làm việc trước ngày ............................</p>
+
+                <p>Có bất cứ điều gì thắc mắc muốn phản hồi, xin vui lòng liên hệ Bộ phận tuyển dụng:</p>
+
+                <p>	Mail: tuyendung@vmt.vn</p>
+
+                <p>	Số ĐT: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_send_1" model="email.template">
+            <field name="name">Mail applicant working</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>VMT GROUP - THƯ MỜI NHẬN VIỆC_ ngày <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['date']}</span></p>
+
+                <p>Kính gửi: <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['gender']}</span> <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['applicant_name']}</span></p>
+
+                <p>Chúc mừng bạn đã vượt qua vòng phỏng vấn để có thể trở thành thành viên của VMT Group.</p>
+
+                <p>Phòng nhân sự gửi tới bạn Thư mời nhận việc theo file đính kèm.</p>
+
+                <p>Bạn vui lòng xác nhận lịch làm việc trước ngày <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['date_exp']}</span></p>
+
+                <p>Có bất cứ điều gì thắc mắc muốn phản hồi, xin vui lòng liên hệ Bộ phận tuyển dụng:</p>
+
+                <p>	Mail: tuyendung@vmt.vn</p>
+
+                <p>	Số ĐT: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_2" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+
+                <p>Kính gửi: ........................</p>
+
+                <p>Chào mừng chị gia nhập VMT Group. Thời gian làm việc bên mình bắt đầu từ 8h30 chị nhé.</p>
+
+                <p>Ngày đầu tiên đi làm, thứ  ........ ngày ......... chị mang giúp em đầy đủ hồ sơ giấy tờ như Thư mời nhận việc.</p>
+
+                <p>Có bất cứ điều gì thắc mắc muốn phản hồi, xin vui lòng liên hệ Bộ phận tuyển dụng:</p>
+
+                <p>	Mail: tuyendung@vmt.vn</p>
+
+                <p>	Số ĐT: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_send_2" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+
+                <p>Kính gửi: <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['gender']}</span> <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['applicant_name']}</span></p>
+
+                <p>Chào mừng chị gia nhập VMT Group. Thời gian làm việc bên mình bắt đầu từ 8h30 chị nhé.</p>
+
+                <p>Ngày đầu tiên đi làm, <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['day']}</span> ngày <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['date']}</span> chị mang giúp em đầy đủ hồ sơ giấy tờ như Thư mời nhận việc.</p>
+
+                <p>Có bất cứ điều gì thắc mắc muốn phản hồi, xin vui lòng liên hệ Bộ phận tuyển dụng:</p>
+
+                <p>	Mail: tuyendung@vmt.vn</p>
+
+                <p>	Số ĐT: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_3" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>Dear ....................</p>
+                <p/>
+                <p>Chào mừng em gia nhập VMT Group.</p>
+
+                <p>Thứ ....... ngày ..................... em sẽ lên Hà Nội đào tạo 01 tuần. Công ty sẽ lo chỗ ở và hỗ trợ ăn trưa tại Văn phòng.</p>
+
+                <p>Khi lên HN nhận việc em mang đầy đủ hồ sơ như Thư mời nhận việc nhé.</p>
+
+                <p>Ps: Địa chỉ văn phòng công ty: Tòa nhà VMT, ngõ 82 Duy Tân, Cầu Giấy, Hà Nội (Tòa nhà thứ 3 từ đầu ngõ đi vào, bên tay trái)</p>
+
+                <p>Có bất cứ điều gì thắc mắc muốn phản hồi, xin vui lòng liên hệ Bộ phận tuyển dụng:</p>
+
+                <p>	Mail: tuyendung@vmt.vn</p>
+
+                <p>	Số ĐT: 0919 263 096</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+
+
+        <record id="template_hr_recruitment_send_mail_invite_work_form_send_3" model="email.template">
+            <field name="name">Invite applicants work</field>
+            <field name="subject">${object.subject}</field>
+            <field name="email_from">admin@vmt.vn</field>
+            <field name="email_to">${object.email_to}</field>
+            <field name="email_cc">${object.email_cc}</field>
+            <field name="model_id" ref="ev_hr_recruitment.model_mail_recruitment"/>
+            <field name="auto_delete" eval="True"/>
+            <field name="lang">vi_VN</field>
+            <field name="body_html"><![CDATA[
+                <p>Dear <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['gender']}</span> <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['applicant_name']}</span></p>
+                <p/>
+                <p>Chào mừng em gia nhập VMT Group.</p>
+
+                <p><span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['day']}</span> ngày <span>${object.def_send_mail_working(object.applicant_id, object.interview_id, object.list_id)['date']}</span> em sẽ lên Hà Nội đào tạo 01 tuần. Công ty sẽ lo chỗ ở và hỗ trợ ăn trưa tại Văn phòng.</p>
+
+                <p>Khi lên HN nhận việc em mang đầy đủ hồ sơ như Thư mời nhận việc nhé.</p>
+
+                <p>Ps: Địa chỉ văn phòng công ty: Tòa nhà VMT, ngõ 82 Duy Tân, Cầu Giấy, Hà Nội (Tòa nhà thứ 3 từ đầu ngõ đi vào, bên tay trái)</p>
+
+                <p>Trân trọng!</p>
+]]></field>
+        </record>
+    </data>
+</openerp>

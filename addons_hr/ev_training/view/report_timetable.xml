@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="training_session_report_timetable_action" model="ir.actions.act_window">
+            <field name="name">Report Timetable</field>
+            <field name="res_model">training.report.timetable</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="context">{'readonly_by_pass': True}</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Report Timetable record</p>
+            </field>
+        </record>
+
+        <record id="view_training_report_timetable_form" model="ir.ui.view">
+            <field name="name">Report Timetable form</field>
+            <field name="model">training.report.timetable</field>
+            <field name="arch" type="xml">
+                <form string="Report timetable">
+                    <sheet>
+                        <group>
+                            <field name="session_id" required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+                        </group>
+                        <group>
+                            <field name="major_id" required="1"
+                                   options="{'no_create': 1, 'no_create_edit': 1, 'no_open': True}"/>
+
+                        </group>
+                        <group>
+                            <group>
+                                <field name="start_time" required="1"/>
+                            </group>
+                            <group>
+                                <field name="end_time" required="1"/>
+                            </group>
+                        </group>
+                        <group>
+                            <field name="duration" readonly="1" context="{'readonly_by_pass': True}"/>
+                        </group>
+                        <button class="oe_highlight" name="print_report_timetable" type="object" string="Print Excel"
+                                icon="gtk-print"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    </data>
+</openerp>

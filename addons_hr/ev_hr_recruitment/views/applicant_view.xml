@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="applicant_action" model="ir.actions.act_window">
+            <field name="name">Applicants</field>
+            <field name="res_model">hr.applicant</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new applicant record</p>
+            </field>
+        </record>
+
+        <record id="view_applicant_form" model="ir.ui.view">
+            <field name="name">Applicant form</field>
+            <field name="model">hr.applicant</field>
+            <field name="arch" type="xml">
+                <form string="Application form">
+                    <sheet>
+                        <!--<group>-->
+                        <!--<field name="file_cv_demo"/>-->
+                        <!--<field name="file_cv_demo1"/>-->
+                        <!--</group>-->
+                        <!--<h1>-->
+                        <!--ngadv-->
+                        <!--</h1>-->
+                        <button class="oe_highlight" name="action_print_cv" type="object"
+                                string="Print CV" icon="gtk-print"/>
+                        <br/>
+                        <div class="oe_title">
+                            <field name="avatar" widget='image' class="oe_left oe_avatar"/>
+                            <h2 style="display: inline-block;">
+                                <field name="partner_name" placeholder="Name applicant" class="oe_inline"/>
+                            </h2>
+                        </div>
+                        <group col="6" string="Personal information">
+                            <field name="date_of_birth" required="1"/>
+                            <field name="place_of_birth"/>
+                            <field name="gender"/>
+                            <field name="height"/>
+                            <field name="weight"/>
+                            <field name="address"/>
+                            <field name="current_address" required="1"/>
+                            <field name="identity_card"/>
+                            <field name="place_of_issue"/>
+                            <field name="date_of_issue"/>
+                            <field name="applicant_phone"/>
+                            <field name="applicant_email"/>
+                            <field name="account_facebook"/>
+                            <field name="is_married"/>
+                            <field name="is_recruited"/>
+                            <field name="description_recruited"/>
+                        </group>
+                        <group col="6" string="Job information">
+                            <field name="job_id"/>
+                            <field name="job_position_id"/>
+                            <field name="work_place"/>
+                            <field name="plan_date"/>
+                            <field name="recent_income"/>
+                            <field name="expected_income"/>
+                            <field name="applicant_source_id"/>
+                            <field name="other_source"/>
+                            <field name="experience"/>
+                            <field name="receiver_id"/>
+                        </group>
+                        <group>
+                            <label for="file_cv"/>
+                            <field name="file_cv_name" invisible="1"/>
+                            <field name="file_cv" filename="file_cv_name" nolabel="1"/>
+                        </group>
+                        <notebook>
+                            <page string="Education">
+                                <label for="applicant_degree_ids"/>
+                                <field name="applicant_degree_ids">
+                                    <tree editable="bottom">
+                                        <field name="time"/>
+                                        <field name="school"/>
+                                        <field name="major"/>
+                                        <field name="degree"/>
+                                        <field name="level"/>
+                                    </tree>
+                                </field>
+                                <br/>
+                                <label for="certificate_ids"/>
+                                <field name="certificate_ids">
+                                    <tree editable="bottom">
+                                        <field name="time"/>
+                                        <field name="name"/>
+                                        <field name="unit_allocation"/>
+                                        <field name="level"/>
+                                    </tree>
+                                </field>
+                                <br/>
+                                <label for="other_courses"/>
+                                <field name="other_courses"/>
+
+                            </page>
+                            <page string="Skill - Experience">
+                                <br/>
+                                <label for="experience_ids"/>
+                                <field name="experience_ids">
+                                    <tree editable="bottom">
+                                        <field name="time"/>
+                                        <field name="name"/>
+                                        <field name="job_position"/>
+                                        <field name="description"/>
+                                        <field name="pay_rate"/>
+                                        <field name="reason_of_leaving"/>
+                                    </tree>
+                                </field>
+                                <br/>
+                                <label for="foreign_language_ids"/>
+                                <field name="foreign_language_ids">
+                                    <tree editable="bottom">
+                                        <field name="foreign_language"/>
+                                        <field name="listen_skill"/>
+                                        <field name="speak_skill"/>
+                                        <field name="read_skill"/>
+                                        <field name="write_skill"/>
+                                    </tree>
+                                </field>
+                                <br/>
+                                <label for="applicant_references_ids"/>
+                                <field name="applicant_references_ids">
+                                    <tree editable="bottom">
+                                        <field name="name"/>
+                                        <field name="relationship"/>
+                                        <field name="job_position"/>
+                                        <field name="work_place"/>
+                                        <field name="phone"/>
+                                        <field name="email"/>
+                                    </tree>
+                                </field>
+                                <br/>
+                                <label for="informatics"/>
+                                <field name="informatics"/>
+                                <br/>
+                                <label for="compatibility_with_positive_position"/>
+                                <field name="compatibility_with_positive_position"/>
+                            </page>
+                            <page string="Family information">
+                                <label for="family_relationship_ids"/>
+                                <field name="family_relationship_ids">
+                                    <tree editable="bottom">
+                                        <field name="full_name"/>
+                                        <field name="relationship"/>
+                                        <field name="year_of_birth"/>
+                                        <field name="job"/>
+                                        <field name="work_unit"/>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Additional information">
+                                <group>
+                                    <field name="advantage"/>
+                                    <field name="disadvantages"/>
+                                    <field name="hobby"/>
+                                </group>
+                            </page>
+                        </notebook>
+                        <hr/>
+                        <br/>
+                        <label for="note"/>
+                        <field name="note"/>
+                        <br/>
+                        <label for="applicant_call_history"/>
+                        <field name="applicant_call_history">
+                            <tree editable="bottom">
+                                <field name="note"/>
+                                <field name="recruitment_session_id"/>
+                            </tree>
+                        </field>
+                        <br/>
+                        <group col="4">
+                            <field name="create_date"/>
+                            <field name="status_recruitment"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_applicant_tree" model="ir.ui.view">
+            <field name="name">hr.applicant.tree</field>
+            <field name="model">hr.applicant</field>
+            <field name="arch" type="xml">
+                <tree string="Applicants">
+                    <field name="partner_name"/>
+                    <field name="applicant_email"/>
+                    <field name="applicant_phone"/>
+                    <field name="job_id"/>
+                    <field name="job_position_id"/>
+                    <field name="work_place"/>
+                    <field name="applicant_source_id"/>
+                    <field name="note"/>
+                    <field name="status_recruitment"/>
+                    <field name="status_applicant"/>
+                    <field name="create_date"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_applicant_search">
+            <field name="name">Applicants search</field>
+            <field name="model">hr.applicant</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"
+                           filter_domain="['|','|', ('partner_name','ilike',self),('applicant_email','ilike',self),('applicant_phone','ilike',self)]"
+                           string="Applicant"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_view_applicant_tree" model="ir.actions.act_window.view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="view_applicant_tree"/>
+            <field name="act_window_id" ref="applicant_action"/>
+        </record>
+
+        <record id="action_view_applicant_form" model="ir.actions.act_window.view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_applicant_form"/>
+            <field name="act_window_id" ref="applicant_action"/>
+        </record>
+
+        <menuitem id="applicant_menu"
+                  name="Applicants"
+                  parent="hr_recruitment.menu_hr_recruitment_root"
+                  action="applicant_action"/>
+
+    </data>
+</odoo>

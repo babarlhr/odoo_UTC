@@ -1,0 +1,280 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* ev_hr_holiday
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-11-29 03:09+0000\n"
+"PO-Revision-Date: 2017-11-29 03:09+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: ev_hr_holiday
+#: model:ir.actions.act_window,help:ev_hr_holiday.hr_holiday_action
+msgid "<p class=\"oe_view_nocontent_create\">Click create to add a new holiday record</p>\n"
+"            "
+msgstr "<p class=\"oe_view_nocontent_create\">Click create to add a new holiday record</p>\n"
+"            "
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,type_shift_haft_day:0
+msgid "After"
+msgstr "Nửa sau"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+#: view:hr.employee.holiday.type:ev_hr_holiday.view_hr_holiday_type_form
+msgid "Application form"
+msgstr "Application form"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Approval"
+msgstr "Phê duyệt"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Approval cancel"
+msgstr "Phê duyệt đơn hủy"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,type_shift_haft_day:0
+msgid "Before"
+msgstr "Nửa trước"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Cancel"
+msgstr "Hủy bỏ"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday.type,category:0
+msgid "Category"
+msgstr "Phân loại"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,create_uid:0
+#: field:hr.employee.holiday.line,create_uid:0
+#: field:hr.employee.holiday.type,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,create_date:0
+#: field:hr.employee.holiday.line,create_date:0
+#: field:hr.employee.holiday.type,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.hr_holiday_filter
+#: field:hr.employee.holiday,department_id:0
+msgid "Department"
+msgstr "Phòng ban"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,employee_holiday_line_ids:0
+msgid "Details"
+msgstr "Chi tiết"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Done"
+msgstr "Hoàn thành"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Draft"
+msgstr "Nháp"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,employee_id:0
+msgid "Employee"
+msgstr "Nhân viên"
+
+#. module: ev_hr_holiday
+#: model:ir.ui.menu,name:ev_hr_holiday.menu_employee_leave
+msgid "Employee leave"
+msgstr "Nghỉ phép của nhân viên"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.hr_holiday_filter
+msgid "From Date"
+msgstr "Tháng"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,from_date:0
+msgid "From date"
+msgstr "Từ ngày"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday.line,employee_holiday_type_id:0
+#: view:hr.employee.holiday.type:ev_hr_holiday.view_hr_holiday_type_tree
+#: model:ir.actions.act_window,name:ev_hr_holiday.hr_holiday_type_action
+#: model:ir.ui.menu,name:ev_hr_holiday.hr_holiday_type_menu
+msgid "Holiday type"
+msgstr "Kiểu nghỉ"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_tree
+#: field:hr.employee.holiday,holidays:0
+#: model:ir.actions.act_window,name:ev_hr_holiday.hr_holiday_action
+#: model:ir.ui.menu,name:ev_hr_holiday.holidays_menu
+#: model:ir.ui.menu,name:ev_hr_holiday.hr_holiday_menu
+msgid "Holidays"
+msgstr "Đơn xin nghỉ"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,id:0
+#: field:hr.employee.holiday.line,id:0
+#: field:hr.employee.holiday.type,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday.type,category:0
+msgid "Is employee leave"
+msgstr "Nghỉ phép"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,is_haft_day:0
+msgid "Is haft day"
+msgstr "Nghỉ nửa ngày"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,is_need_work_time:0
+msgid "Is need work time"
+msgstr "Is need work time"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday.type,category:0
+msgid "Is special"
+msgstr "Nghỉ đặc biệt"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday.type,category:0
+msgid "Is unpaid leave"
+msgstr "Nghỉ không lương"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,write_uid:0
+#: field:hr.employee.holiday.line,write_uid:0
+#: field:hr.employee.holiday.type,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,write_date:0
+#: field:hr.employee.holiday.line,write_date:0
+#: field:hr.employee.holiday.type,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,name:0
+#: field:hr.employee.holiday.type,name:0
+msgid "Name"
+msgstr "Tên "
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,note:0
+msgid "Note"
+msgstr "Ghi chú"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday.line,number_of_day:0
+#: field:hr.employee.holiday.type,number_of_day:0
+msgid "Number of day"
+msgstr "Số ngày nghỉ"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Reject"
+msgstr "Hủy"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Reject cancel"
+msgstr "Từ chối đơn hủy"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,remaining_leave_day:0
+msgid "Remaining leave day"
+msgstr "Ngày nghỉ còn lại"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Send"
+msgstr "Gửi"
+
+#. module: ev_hr_holiday
+#: view:hr.employee.holiday:ev_hr_holiday.view_hr_holiday_form
+msgid "Send cancel"
+msgstr "Gửi đơn hủy"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,shift_id:0
+msgid "Shift"
+msgstr "Ca"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,type_shift_haft_day:0
+msgid "Shift haft day"
+msgstr "Buổi nghỉ"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,state:0
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday.type,timesheet_result_id:0
+msgid "Timesheet result"
+msgstr "Kết quả chấm công"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,to_date:0
+msgid "To date"
+msgstr "Đến ngày"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Wait GD approval"
+msgstr "Chờ tổng giám đốc phê duyệt"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Wait HR approval"
+msgstr "Chờ nhân sự phê duyệt"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Wait HR approval cancel"
+msgstr "Chờ nhân sự phê duyệt đơn hủy"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Wait manager approval"
+msgstr "Chờ trưởng phòng phê duyệt"
+
+#. module: ev_hr_holiday
+#: selection:hr.employee.holiday,state:0
+msgid "Wait manager approval cancel"
+msgstr "Chờ trưởng phòng phê duyệt đơn hủy"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday,work_time:0
+msgid "Work time"
+msgstr "Thời gian đi làm hoặc ra về"
+
+#. module: ev_hr_holiday
+#: field:hr.employee.holiday.line,employee_holiday_id:0
+msgid "employee_holiday_id"
+msgstr "Nhân viên"
+

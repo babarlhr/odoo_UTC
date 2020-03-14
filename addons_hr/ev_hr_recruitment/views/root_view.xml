@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="crm_case_tree_view_job_id" model="ir.ui.view">
+            <field name="name">hr_recruitment_phone.hr_applicant.tree</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.crm_case_tree_view_job"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="work_place"/>
+                </xpath>
+            </field>
+        </record>
+
+        <menuitem id="recruitment_process_menu" name="Recruitment process" parent="hr.menu_hr_root"/>
+    </data>
+</odoo>

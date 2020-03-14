@@ -1,0 +1,935 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ev_training
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-01 02:52+0000\n"
+"PO-Revision-Date: 2019-10-01 09:52+0700\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: vi\n"
+"X-Generator: Poedit 2.2.3\n"
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_session_contest_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Contest record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một lịch thi mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.level_employee_config_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Level employee record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Level employee record</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_major_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Major record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm tạo để thêm một Chuyên ngành mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_rating_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Rating record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một đánh giá mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_report_contest_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Contest record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Contest record</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_report_session_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Session record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Session record</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_session_report_timetable_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Timetable record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Report Timetable record</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_teacher_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Teacher record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một giáo viên mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_course_id_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Training Course Employee record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một khóa học mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_session_timetable_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Click create to add a new Training Timetable record</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một thời khóa biểu mới</p>\n"
+"            "
+
+#. module: ev_training
+#: model:ir.actions.act_window,help:ev_training.training_session_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">Create the first Session Employee item</p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">Bấm để tạo thêm một lớp học mới</p>\n"
+"            "
+
+#. module: ev_training
+#: field:training.session.contest.line,ability:0
+msgid "Ability "
+msgstr "Khả năng làm việc"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: selection:training.course,state:0
+#: view:training.session:ev_training.view_training_session_id_form
+#: selection:training.session,state:0
+#: view:training.session.contest:ev_training.view_training_session_contest_contest_form
+#: view:training.session.contest:ev_training.view_training_session_contest_form
+#: selection:training.session.contest,state:0
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+#: selection:training.session.timetable,state:0
+msgid "Active"
+msgstr "Hoạt động"
+
+#. module: ev_training
+#: field:training.session.contest.line,additional_comments:0
+msgid "Additional comments"
+msgstr "Ý kiến bổ sung của giáo viên "
+
+#. module: ev_training
+#: field:training.session.contest.line,advantages:0
+msgid "Advantages"
+msgstr "Ưu điểm"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "April"
+msgstr "Tháng 4"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+#: view:training.session.timetable:ev_training.view_training_session_timetable_id_form
+msgid "Attendance"
+msgstr "Điểm danh"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "August"
+msgstr "Tháng 8"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_comment_student
+#: view:birt.report.timetable:ev_training.birt_report_contest_session
+#: view:birt.report.timetable:ev_training.birt_report_scores_consultants
+#: view:birt.report.timetable:ev_training.birt_report_scores_expert_skincare
+#: view:birt.report.timetable:ev_training.birt_report_skill_consultants
+#: view:birt.report.timetable:ev_training.birt_report_skill_expert_skincare
+msgid "Birt report contest"
+msgstr "Báo cáo kiểm tra"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Báo Cáo Điểm Danh"
+msgstr "Báo Cáo Điểm Danh"
+
+#. module: ev_training
+#: model:ir.actions.report.xml,name:ev_training.report_training_timetable_attendance
+msgid "Báo cáo điểm danh"
+msgstr "Báo cáo điểm danh"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_comment_student
+#: view:birt.report.timetable:ev_training.birt_report_contest_session
+#: view:birt.report.timetable:ev_training.birt_report_scores_consultants
+#: view:birt.report.timetable:ev_training.birt_report_scores_expert_skincare
+#: view:birt.report.timetable:ev_training.birt_report_skill_consultants
+#: view:birt.report.timetable:ev_training.birt_report_skill_expert_skincare
+msgid "Cancel"
+msgstr "Hủy"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Chú thích"
+msgstr "Chú thích"
+
+#. module: ev_training
+#: field:training.course,code:0 field:training.major,major_code:0
+msgid "Code"
+msgstr "Code"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.training_course_config
+msgid "Config"
+msgstr "Cấu hình"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_session_contest_action
+#: model:ir.ui.menu,name:ev_training.training_course_session_contest_action
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+#: field:training.session,contest_ids:0
+#: view:training.session.contest:ev_training.view_training_session_contest_contest_form
+#: view:training.session.contest:ev_training.view_training_session_contest_form
+#: view:training.session.contest:ev_training.view_training_session_contest_tree
+#: field:training.session.contest.line,contest_id:0
+msgid "Contest"
+msgstr "Kiểm tra"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_tree
+#: field:training.course,name:0 field:training.session,course_id:0
+msgid "Course"
+msgstr "Khóa học"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_course_id_action
+msgid "Course Employee"
+msgstr "Khóa học"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+msgid "Course Form"
+msgstr "Khóa học"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_comment_student
+#: view:birt.report.timetable:ev_training.birt_report_contest_session
+msgid "Create"
+msgstr "Tạo"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_skill_expert_skincare
+msgid "Create report MENARD6"
+msgstr "Tạo báo cáo MENARD6"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_scores_consultants
+msgid "Create report update scores CVTV"
+msgstr "Tạo báo cáo cập nhật điểm CVTV"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_scores_expert_skincare
+msgid "Create report update scores CVTV 2"
+msgstr "Tạo báo cáo cập nhật điểm CVTV 2"
+
+#. module: ev_training
+#: view:birt.report.timetable:ev_training.birt_report_skill_consultants
+msgid "Create report update skills CVTV"
+msgstr "Tạo báo cáo cập nhật kĩ năng CVTV"
+
+#. module: ev_training
+#: field:birt.report.timetable,create_uid:0
+#: field:level.employee.config,create_uid:0 field:training.course,create_uid:0
+#: field:training.major,create_uid:0 field:training.rating,create_uid:0
+#: field:training.report.contest,create_uid:0
+#: field:training.report.session,create_uid:0
+#: field:training.report.timetable,create_uid:0
+#: field:training.session,create_uid:0
+#: field:training.session.contest,create_uid:0
+#: field:training.session.contest.line,create_uid:0
+#: field:training.session.employee,create_uid:0
+#: field:training.session.import,create_uid:0
+#: field:training.session.teacher,create_uid:0
+#: field:training.session.timetable,create_uid:0
+#: field:training.session.timetable.line,create_uid:0
+#: field:training.teacher,create_uid:0
+#: field:training.timetable.log,create_uid:0
+msgid "Created by"
+msgstr "Tạo bởi"
+
+#. module: ev_training
+#: field:birt.report.timetable,create_date:0
+#: field:level.employee.config,create_date:0
+#: field:training.course,create_date:0 field:training.major,create_date:0
+#: field:training.rating,create_date:0
+#: field:training.report.contest,create_date:0
+#: field:training.report.session,create_date:0
+#: field:training.report.timetable,create_date:0
+#: field:training.session,create_date:0
+#: field:training.session.contest,create_date:0
+#: field:training.session.contest.line,create_date:0
+#: field:training.session.employee,create_date:0
+#: field:training.session.import,create_date:0
+#: field:training.session.teacher,create_date:0
+#: field:training.session.timetable,create_date:0
+#: field:training.session.timetable.line,create_date:0
+#: field:training.teacher,create_date:0
+#: field:training.timetable.log,create_date:0
+msgid "Created on"
+msgstr "Tạo trên"
+
+#. module: ev_training
+#: selection:training.session.timetable.line,state_timetable:0
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Có mặt"
+msgstr "Có mặt"
+
+#. module: ev_training
+#: field:training.report.contest,date:0 field:training.session.contest,date:0
+#: field:training.session.import,date:0 field:training.timetable.log,date:0
+msgid "Date"
+msgstr "Ngày"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "December"
+msgstr "Tháng 12"
+
+#. module: ev_training
+#: field:training.session.contest.line,defect:0
+msgid "Defect"
+msgstr "Nhược điểm"
+
+#. module: ev_training
+#: field:training.course,department_ids:0
+msgid "Department"
+msgstr "Bộ phận áp dụng"
+
+#. module: ev_training
+#: field:training.major,description:0 field:training.rating,description:0
+#: field:training.session,description:0
+#: field:training.session.timetable,description:0
+msgid "Description"
+msgstr "Chú thích"
+
+#. module: ev_training
+#: field:training.course,description:0
+msgid "Descripton"
+msgstr "Chú thích"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: selection:training.course,state:0
+#: view:training.session:ev_training.view_training_session_id_form
+#: selection:training.session,state:0
+#: view:training.session.contest:ev_training.view_training_session_contest_contest_form
+#: view:training.session.contest:ev_training.view_training_session_contest_form
+#: selection:training.session.contest,state:0
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+#: view:training.session.timetable:ev_training.view_training_session_timetable_id_form
+#: selection:training.session.timetable,state:0
+msgid "Done"
+msgstr "Kết thúc"
+
+#. module: ev_training
+#: field:training.report.timetable,duration:0
+#: field:training.session.timetable,duration:0
+msgid "Duration"
+msgstr "Thời gian học"
+
+#. module: ev_training
+#: model:ir.model,name:ev_training.model_hr_employee
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+#: field:training.session.contest.line,employee_id:0
+#: field:training.session.employee,employee_id:0
+#: field:training.session.timetable.line,employee_id:0
+msgid "Employee"
+msgstr "Người lao động"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+#: field:training.session,employees_ids:0
+#: view:training.session.contest:ev_training.view_training_session_contest_contest_form
+#: view:training.session.contest:ev_training.view_training_session_contest_form
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+#: field:training.session.timetable,employee_ids:0
+msgid "Employees"
+msgstr "Học viên"
+
+#. module: ev_training
+#: field:training.course,end_date:0 field:training.session,end_date:0
+msgid "End date"
+msgstr "Ngày kết thúc"
+
+#. module: ev_training
+#: field:training.report.timetable,end_time:0
+#: field:training.session.timetable,end_time:0
+msgid "End time"
+msgstr "Thời gian kết thúc"
+
+#. module: ev_training
+#: selection:training.session.contest.line,type:0
+msgid "Exam"
+msgstr "Ví dụ"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "February"
+msgstr "Tháng 2"
+
+#. module: ev_training
+#: field:training.session,xls_file:0
+#: field:training.session.import,xls_file_contest:0
+#: field:training.session.import,xls_file_timetable:0
+msgid "File"
+msgstr "File"
+
+#. module: ev_training
+#: field:training.session,file_name:0 field:training.session.import,file_name:0
+msgid "File name"
+msgstr "File name"
+
+#. module: ev_training
+#: selection:training.session.timetable,state:0
+msgid "Finish"
+msgstr "Kết thúc"
+
+#. module: ev_training
+#: field:training.session,footer_code:0
+msgid "Footer code"
+msgstr "Mã cuối"
+
+#. module: ev_training
+#: field:training.session,header_code:0
+msgid "Header code"
+msgstr "Mã đầu"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Học viên"
+msgstr "Học viên"
+
+#. module: ev_training
+#: field:birt.report.timetable,id:0 field:level.employee.config,id:0
+#: field:training.course,id:0 field:training.major,id:0
+#: field:training.rating,id:0 field:training.report.contest,id:0
+#: field:training.report.session,id:0 field:training.report.timetable,id:0
+#: field:training.session,id:0 field:training.session.contest,id:0
+#: field:training.session.contest.line,id:0
+#: field:training.session.employee,id:0 field:training.session.import,id:0
+#: field:training.session.teacher,id:0 field:training.session.timetable,id:0
+#: field:training.session.timetable.line,id:0 field:training.teacher,id:0
+#: field:training.timetable.log,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.view_act_import_id
+#: view:training.session:ev_training.view_training_session_id_form
+msgid "Import"
+msgstr "Import"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "January"
+msgstr "Tháng giêng"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "July"
+msgstr "Tháng 7"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "June"
+msgstr "Tháng 6"
+
+#. module: ev_training
+#: field:birt.report.timetable,write_uid:0
+#: field:level.employee.config,write_uid:0 field:training.course,write_uid:0
+#: field:training.major,write_uid:0 field:training.rating,write_uid:0
+#: field:training.report.contest,write_uid:0
+#: field:training.report.session,write_uid:0
+#: field:training.report.timetable,write_uid:0
+#: field:training.session,write_uid:0
+#: field:training.session.contest,write_uid:0
+#: field:training.session.contest.line,write_uid:0
+#: field:training.session.employee,write_uid:0
+#: field:training.session.import,write_uid:0
+#: field:training.session.teacher,write_uid:0
+#: field:training.session.timetable,write_uid:0
+#: field:training.session.timetable.line,write_uid:0
+#: field:training.teacher,write_uid:0 field:training.timetable.log,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: ev_training
+#: field:birt.report.timetable,write_date:0
+#: field:level.employee.config,write_date:0 field:training.course,write_date:0
+#: field:training.major,write_date:0 field:training.rating,write_date:0
+#: field:training.report.contest,write_date:0
+#: field:training.report.session,write_date:0
+#: field:training.report.timetable,write_date:0
+#: field:training.session,write_date:0
+#: field:training.session.contest,write_date:0
+#: field:training.session.contest.line,write_date:0
+#: field:training.session.employee,write_date:0
+#: field:training.session.import,write_date:0
+#: field:training.session.teacher,write_date:0
+#: field:training.session.timetable,write_date:0
+#: field:training.session.timetable.line,write_date:0
+#: field:training.teacher,write_date:0
+#: field:training.timetable.log,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: ev_training
+#: field:hr.employee,level_id:0 field:level.employee.config,level:0
+msgid "Level"
+msgstr "Cấp độ"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_level_employee_config
+msgid "Level Employee"
+msgstr "Level nhân viên"
+
+#. module: ev_training
+#: view:level.employee.config:ev_training.level_employee_config_form
+#: view:level.employee.config:ev_training.level_employee_config_tree
+msgid "Level employee"
+msgstr "Level nhân viên"
+
+#. module: ev_training
+#: field:training.session.contest,line_ids:0
+msgid "Line"
+msgstr "Line"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Lớp :"
+msgstr "Lớp :"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_major_action
+#: model:ir.ui.menu,name:ev_training.training_major_master_action
+#: view:training.major:ev_training.view_training_major_tree
+#: field:training.report.contest,major_id:0
+#: field:training.report.timetable,major_id:0
+#: field:training.session.contest,major_id:0
+#: field:training.session.import,major_id:0
+#: field:training.session.teacher,major_id:0
+#: field:training.session.timetable,major_id:0
+#: field:training.timetable.log,major_id:0
+msgid "Major"
+msgstr "Chuyên ngành"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: field:training.session,teacher_ids:0
+msgid "Manager"
+msgstr "Giáo viên"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "March"
+msgstr "Tháng 3"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "May"
+msgstr "Tháng 5"
+
+#. module: ev_training
+#: field:birt.report.timetable,from_month:0
+#: field:birt.report.timetable,to_month:0
+msgid "Month"
+msgstr "Tháng"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Mã học viên"
+msgstr "Mã học viên"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Mô tả:"
+msgstr "Mô tả:"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Môn :"
+msgstr "Môn :"
+
+#. module: ev_training
+#: field:level.employee.config,name:0 field:training.major,name:0
+#: field:training.rating,name:0 field:training.session,name:0
+#: field:training.session.employee,name:0 field:training.session.teacher,name:0
+#: field:training.session.timetable.line,name:0 field:training.teacher,name:0
+msgid "Name"
+msgstr "Tên"
+
+#. module: ev_training
+#: selection:training.course,state:0 selection:training.session,state:0
+#: selection:training.session.contest,state:0
+#: selection:training.session.timetable,state:0
+msgid "New"
+msgstr "Mới"
+
+#. module: ev_training
+#: selection:training.session.timetable.line,state_timetable:0
+msgid "Nghỉ có phép"
+msgstr "Nghỉ có phép"
+
+#. module: ev_training
+#: selection:training.session.timetable.line,state_timetable:0
+msgid "Nghỉ không phép"
+msgstr "Nghỉ không phép"
+
+#. module: ev_training
+#: selection:training.session.contest.line,type:0
+msgid "Not Exam"
+msgstr "Chưa kiểm tra"
+
+#. module: ev_training
+#: field:training.session.employee,note:0
+#: field:training.session.timetable.line,note:0
+msgid "Note"
+msgstr "Chú thích"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "November"
+msgstr "Tháng 11"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "October"
+msgstr "Tháng 10"
+
+#. module: ev_training
+#: field:training.session.contest.line,practice_scores:0
+msgid "Practice scores"
+msgstr "Điểm thực hành"
+
+#. module: ev_training
+#: view:training.report.contest:ev_training.view_training_report_contest_form
+#: view:training.report.session:ev_training.view_training_report_session_form
+#: view:training.report.timetable:ev_training.view_training_report_timetable_form
+msgid "Print Excel"
+msgstr "Xuất Excel"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_rating_action
+#: model:ir.ui.menu,name:ev_training.training_rating_course_action
+#: view:training.rating:ev_training.view_training_rating_form
+#: view:training.rating:ev_training.view_training_rating_tree
+#: view:training.report.contest:ev_training.view_training_report_contest_form
+#: field:training.session.contest.line,rating_ids:0
+msgid "Rating"
+msgstr "Đánh giá"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_report_ev
+msgid "Report"
+msgstr "Báo Cáo"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_report_contest_action
+#: model:ir.ui.menu,name:ev_training.menu_training_report_contest_session_action
+msgid "Report Contest"
+msgstr "Báo cáo đánh giá học viên"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_report_session_action
+#: model:ir.ui.menu,name:ev_training.menu_training_report_session_session_action
+msgid "Report Session"
+msgstr "Báo cáo danh sách lớp học"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_session_report_timetable_action
+msgid "Report Timetable"
+msgstr "Báo cáo điểm danh"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_training_report_course
+msgid "Report Training"
+msgstr "Báo cáo đào tạo"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_conment_student
+msgid "Report comment student"
+msgstr "Báo cáo nhận xét từng học viên cuối khóa học"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_contest_session_repor
+msgid "Report contest session"
+msgstr "Báo cáo kiểm tra theo lớp"
+
+#. module: ev_training
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+msgid "Report excel"
+msgstr "Báo cáo excel"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_scores_consultants
+msgid "Report scores consultants"
+msgstr "Báo cáo điểm chuyên viên tư vấn"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_scores_expert_skincare
+msgid "Report scores expert skincare"
+msgstr "Báo cáo điểm chuyên viên chăm sóc da"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_skill_consultants
+msgid "Report skill consultants"
+msgstr "Báo cáo kĩ năng chuyên viên tư vấn"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.menu_skill_expert_skincare
+msgid "Report skill expert skincare"
+msgstr "Báo cáo kĩ năng chuyên viên chăm sóc da"
+
+#. module: ev_training
+#: view:training.report.timetable:ev_training.view_training_report_timetable_form
+msgid "Report timetable"
+msgstr "Báo cáo điểm danh"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+msgid "Reset"
+msgstr "Điểm danh lại"
+
+#. module: ev_training
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+msgid "Reset to active"
+msgstr "Điểm danh lại"
+
+#. module: ev_training
+#: field:training.session.contest.line,scores:0
+msgid "Scores"
+msgstr "Điểm"
+
+#. module: ev_training
+#: selection:birt.report.timetable,from_month:0
+#: selection:birt.report.timetable,to_month:0
+msgid "September"
+msgstr "Tháng 9"
+
+#. module: ev_training
+#: field:birt.report.timetable,session_ids:0
+#: model:ir.ui.menu,name:ev_training.training_session_id_action
+#: view:training.course:ev_training.view_training_course_id_form
+#: field:training.course,session_ids:0
+#: field:training.report.contest,session_id:0
+#: view:training.report.session:ev_training.view_training_report_session_form
+#: field:training.report.session,session_id:0
+#: field:training.report.timetable,session_id:0
+#: view:training.session:ev_training.view_training_session_id_tree
+#: field:training.session.contest,session_id:0
+#: field:training.session.employee,session_id:0
+#: field:training.session.import,session_id:0
+#: field:training.session.teacher,session_id:0
+#: field:training.session.timetable,session_id:0
+#: field:training.timetable.log,session_id:0
+msgid "Session"
+msgstr "Lớp"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_session_action
+msgid "Session Employee"
+msgstr "Lớp học"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+msgid "Session Form"
+msgstr "Lớp học"
+
+#. module: ev_training
+#: model:ir.ui.menu,name:ev_training.training_session_timetable_id_action
+msgid "Session Timetable"
+msgstr "Thời khóa biểu"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_session_timetable_action
+msgid "Session Timetable Employee"
+msgstr "Danh sách điểm danh"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.birt_report_conment_student_id
+msgid "Session comment student"
+msgstr "Ý kiếm bổ sung học viên "
+
+#. module: ev_training
+#: field:hr.employee,session_ids:0
+msgid "Sessions"
+msgstr "Lớp"
+
+#. module: ev_training
+#: field:training.course,start_date:0 field:training.session,start_date:0
+msgid "Start date"
+msgstr "Ngày bắt đầu"
+
+#. module: ev_training
+#: field:training.report.timetable,start_time:0
+#: field:training.session.timetable,start_time:0
+msgid "Start time"
+msgstr "Thời gian vào học"
+
+#. module: ev_training
+#: field:training.course,state:0 field:training.session,state:0
+#: field:training.session.contest,state:0
+#: field:training.session.timetable,state:0
+#: field:training.session.timetable.line,state_timetable:0
+msgid "State"
+msgstr "Trạng thái"
+
+#. module: ev_training
+#: field:training.course,target:0
+msgid "Target"
+msgstr "Mục tiêu"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.training_teacher_action
+#: model:ir.ui.menu,name:ev_training.training_teacher_course_action
+#: field:training.session.contest,teacher_id:0
+#: field:training.session.import,teacher_id:0
+#: field:training.session.teacher,teacher_id:0
+#: field:training.session.timetable,teacher_id:0
+#: view:training.teacher:ev_training.view_training_teacher_form
+#: field:training.teacher,employee_id:0
+msgid "Teacher"
+msgstr "Giáo viên"
+
+#. module: ev_training
+#: help:training.course,code:0 help:training.major,major_code:0
+#: help:training.session,header_code:0
+msgid "The code will be generated automatically"
+msgstr "Code dược tự động sinh"
+
+#. module: ev_training
+#: field:training.session.contest.line,theory_scores:0
+msgid "Theory Scores"
+msgstr "Điểm lý thuyết"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Thời gian học :"
+msgstr "Thời gian học :"
+
+#. module: ev_training
+#: field:training.timetable.log,time:0
+msgid "Time"
+msgstr "Thời gian"
+
+#. module: ev_training
+#: view:training.course:ev_training.view_training_course_id_form
+#: view:training.session:ev_training.view_training_session_id_form
+#: field:training.session,timetable_ids:0
+#: view:training.session.timetable:ev_training.view_training_session_timetable_id_tree
+#: field:training.session.timetable.line,timetable_id:0
+msgid "Timetable"
+msgstr "Thời khóa biểu"
+
+#. module: ev_training
+#: view:hr.employee:ev_training.res_employee_session_form_view_inherit
+#: model:ir.ui.menu,name:ev_training.education_course_session
+#: model:ir.ui.menu,name:ev_training.education_course_session_id
+msgid "Training"
+msgstr "Đào tạo"
+
+#. module: ev_training
+#: view:training.major:ev_training.view_training_major_form
+msgid "Training Major"
+msgstr "Môn học"
+
+#. module: ev_training
+#: view:training.teacher:ev_training.view_training_teacher_tree
+msgid "Training Teacher"
+msgstr "Giáo viên"
+
+#. module: ev_training
+#: view:training.session.timetable:ev_training.view_training_session_timetable_form
+msgid "Training Timetable Form"
+msgstr "Thời khóa biểu"
+
+#. module: ev_training
+#: field:training.session.contest.line,type:0
+msgid "Type"
+msgstr "Kiểu"
+
+#. module: ev_training
+#: view:training.session:ev_training.view_training_session_id_form
+#: view:training.session.import:ev_training.view_act_import_contest
+#: view:training.session.import:ev_training.view_act_import_timetable
+msgid "Update"
+msgstr "Cập nhật"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Vắng mặt"
+msgstr "Vắng mặt"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.level_employee_config_action
+msgid "level_employee_config"
+msgstr "Cấu hình cấp độ nhân viên"
+
+#. module: ev_training
+#: model:ir.actions.act_window,name:ev_training.birt_report_contest_session_id
+#: model:ir.actions.act_window,name:ev_training.birt_report_scores_consultants_id
+#: model:ir.actions.act_window,name:ev_training.birt_report_scores_expert_skincare_id
+#: model:ir.actions.act_window,name:ev_training.birt_report_skill_consultants_id
+#: model:ir.actions.act_window,name:ev_training.birt_report_skill_expert_skincare_id
+msgid "session contest"
+msgstr "Kiểm tra theo lớp"
+
+#. module: ev_training
+#: selection:training.session.timetable.line,state_timetable:0
+msgid "Đi muộn quá 10 phút"
+msgstr "Đi muộn quá 10 phút"
+
+#. module: ev_training
+#: view:website:ev_training.report_session_timetable_attendance_view_id
+msgid "Điểm danh"
+msgstr "Điểm danh"

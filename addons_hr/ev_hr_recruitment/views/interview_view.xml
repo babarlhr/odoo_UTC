@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <record id="interview_action" model="ir.actions.act_window">
+            <field name="name">interviews</field>
+            <field name="res_model">hr.interview</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new interview record</p>
+            </field>
+        </record>
+        <!--<record id="view_via_recruitment_session_interview_form" model="ir.ui.view">-->
+        <!--<field name="name">interview form11</field>-->
+        <!--<field name="model">hr.interview</field>-->
+        <!--<field name="arch" type="xml">-->
+        <!--<form string="interview Form">-->
+        <!--<sheet>-->
+        <!--<div>-->
+        <!--<h1>-->
+        <!--<field name="name" readonly="1"/>-->
+        <!--</h1>-->
+        <!--</div>-->
+        <!--<group col="4">-->
+        <!--<field name="times_interview" readonly="1"/>-->
+        <!--<field name="from_date_interview"/>-->
+        <!--<field name="interviewer_ids" widget="many2many_tags"/>-->
+        <!--<field name="to_date_interview"/>-->
+        <!--<field name="job_id"/>-->
+
+        <!--</group>-->
+        <!--<label for="note"/>-->
+        <!--<field name="note"/>-->
+        <!--<hr/>-->
+        <!--<label for="interview_line_ids"/>-->
+        <!--<field name="interview_line_ids"-->
+        <!--context="{'recruitment_session_id': context.get('recruitment_session_id')}">-->
+        <!--<tree editable="bottom"-->
+        <!--colors="red:status_applicant=='not_pass';red:status_applicant=='not_coming';green:status_applicant=='pass';blue:status_applicant=='waiting'">-->
+        <!--<field name="applicant_id"-->
+        <!--context="{'recruitment_session_id_from_interview': context.get('recruitment_session_id'),'job_id':parent.job_id}"-->
+        <!--attrs="{'readonly': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"-->
+        <!--options="{'no_create': 1, 'no_create_edit': 1}"/>-->
+        <!--<field name="time_interview"-->
+        <!--attrs="{'readonly': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"/>-->
+        <!--<field name="file_interview_name" invisible="1"/>-->
+        <!--<field name="file_interview" filename="file_interview_name" nolabel="1" readonly="1"-->
+        <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+        <!--<field name="note" readonly="1"-->
+        <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+        <!--<field name="status_applicant" readonly="1"-->
+        <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+
+
+        <!--&lt;!&ndash;<button name="%(hr.view_employee_form)d" string="Update"&ndash;&gt;-->
+        <!--&lt;!&ndash;type="action" context="{'do_create_employee': 1}" class="oe_highlight"/>&ndash;&gt;-->
+
+        <!--<field name="status_employee" invisible="1"/>-->
+
+        <!--<button name="action_open_form_update_applicant" string="Update"-->
+        <!--type="object"-->
+        <!--attrs="{'invisible': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"-->
+        <!--class="oe_highlight"/>-->
+        <!--<button name="action_open_form_create_employee" string="Create Employee"-->
+        <!--type="object"-->
+        <!--attrs="{'invisible': ['|', ('status_applicant', '!=', 'pass'),('status_employee', '=', 'is_employee') ]}"-->
+        <!--class="oe_highlight"/>-->
+        <!--</tree>-->
+        <!--</field>-->
+        <!--</sheet>-->
+        <!--</form>-->
+        <!--</field>-->
+        <!--</record>-->
+
+        <!--<record id="view_interview_form_id" model="ir.ui.view">-->
+            <!--<field name="name">interview form</field>-->
+            <!--<field name="model">hr.interview</field>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<form string="interview Form">-->
+                    <!--<header class="oe_read_only">-->
+                        <!--<button name="start"-->
+                                <!--string="Start" type="object" class="oe_highlight"-->
+                                <!--states="draft"/>-->
+                        <!--<button name="done"-->
+                                <!--string="Done" type="object" class="oe_highlight"-->
+                                <!--attrs="{'invisible': [('state', 'in', ['draft','invite','done','cancel'])]}"-->
+                                <!--states="invite"/>-->
+                        <!--<button name="cancel"-->
+                                <!--string="Cancel" type="object" class="oe_highlight"-->
+                                <!--states="process"/>-->
+                        <!--<field name="state" widget="statusbar" statusbar_visible="draft,invite,process,done,cancel"/>-->
+                    <!--</header>-->
+                    <!--<sheet>-->
+                        <!--<div>-->
+                            <!--<h1>-->
+                                <!--<field name="name" readonly="1"/>-->
+                            <!--</h1>-->
+                        <!--</div>-->
+                        <!--<group col="4">-->
+                            <!--<field name="times_interview" readonly="1"-->
+                                   <!--attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+                            <!--<field name="job_id"/>-->
+                            <!--<field name="recruitment_session_id"-->
+                                   <!--domain="[('state', '=', 'interview')]"-->
+                                   <!--options="{'no_create': 1, 'no_create_edit': 1}"-->
+                                   <!--attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+                            <!--<field name="from_date_interview"-->
+                                   <!--attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+
+                            <!--<field name="interviewer_ids" widget="many2many_tags"-->
+                                   <!--attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+                            <!--<field name="to_date_interview" attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+
+                        <!--</group>-->
+                        <!--<label for="note"/>-->
+                        <!--<field name="note" attrs="{'readonly': [('state', 'in', ['done','cancel'])]}"/>-->
+                        <!--<hr/>-->
+
+                        <!--<button name="action_send_mail_invite_interview" string="Send mail invite interview"-->
+                                <!--type="object"-->
+                                <!--attrs="{'invisible': [('state', 'in', ['draft','done','cancel'])]}"-->
+                                <!--options="{'no_create': 1, 'no_create_edit': 1}"/>-->
+                        <!--<br/>-->
+                        <!--<br/>-->
+                        <!--<label for="interview_line_ids"/>-->
+                        <!--<field name="interview_line_ids"-->
+                               <!--attrs="{'readonly': [('state', 'in', ['done','cancel'])]}">-->
+                            <!--<tree editable="bottom">-->
+                                <!--<field name="work_place" readonly="1"/>-->
+                                <!--<field name="interview_id" invisible="1"/>-->
+                                <!--<field name="applicant_id"-->
+                                       <!--context="{'recruitment_session_id_from_interview':parent.recruitment_session_id,'job_id':parent.job_id}"-->
+                                       <!--attrs="{'readonly': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"-->
+                                       <!--options="{'no_create': 1, 'no_create_edit': 1}"/>-->
+                                <!--<field name="job_id" readonly="1"/>-->
+                                <!--<field name="time_interview"-->
+                                       <!--attrs="{'readonly': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"/>-->
+                                <!--<field name="file_interview_name" invisible="1"/>-->
+                                <!--<field name="file_interview" filename="file_interview_name" nolabel="1" readonly="1"-->
+                                       <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+                                <!--<field name="note" readonly="1"-->
+                                       <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+                                <!--<field name="status_applicant" readonly="1"-->
+                                       <!--attrs="{'invisible': [('status_applicant', 'in', ['waiting'])]}"/>-->
+                                <!--<field name="status_employee" invisible="1"/>-->
+
+                                <!--<button name="action_open_form_update_applicant" string="Update"-->
+                                        <!--type="object"-->
+                                        <!--attrs="{'invisible': [('status_applicant', 'in', ['not_pass','pass','not_coming'])]}"-->
+                                        <!--class="oe_highlight"/>-->
+
+                                <!--&lt;!&ndash;<button name="%(hr.open_view_employee_list_my)d" string="Update"&ndash;&gt;-->
+                                <!--&lt;!&ndash;type="action" context="{'active_id_interview': id}" class="oe_highlight"/>&ndash;&gt;-->
+
+                                <!--<button name="action_open_form_create_employee" string="Create Employee"-->
+                                        <!--type="object"-->
+                                        <!--attrs="{'invisible': ['|',('status_applicant', '!=', 'pass'),('status_employee', '=', 'is_employee')]}"-->
+                                        <!--class="oe_highlight"/>-->
+
+                                <!--<field name="is_sent_mail_invite_work" invisible="1"/>-->
+                                <!--<field name="is_sent_mail_thank" invisible="1"/>-->
+
+                                <!--<button name="action_send_mail_invite_work" string="Send mail invite work"-->
+                                        <!--type="object"-->
+                                        <!--attrs="{'invisible': ['|',('is_sent_mail_invite_work', '=', True), ('status_applicant', 'not in', ['pass'])]}"/>-->
+                                <!--<button name="action_send_mail_thank" string="Send mail thank"-->
+                                        <!--type="object"-->
+                                        <!--attrs="{'invisible': ['|',('is_sent_mail_thank', '=', True), ('status_applicant', 'not in', ['not_pass'])]}"/>-->
+                            <!--</tree>-->
+                        <!--</field>-->
+                    <!--</sheet>-->
+                <!--</form>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <record id="view_interview_tree" model="ir.ui.view">
+            <field name="name">hr.interview.tree</field>
+            <field name="model">hr.interview</field>
+            <field name="arch" type="xml">
+                <tree string="interviews">
+                    <field name="name"/>
+                    <field name="times_interview"/>
+                    <field name="recruitment_session_id" context="{'recruitment_session_id': 1}"/>
+                    <field name="job_id"/>
+                    <field name="from_date_interview"/>
+                    <field name="to_date_interview"/>
+                    <field name="note"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <menuitem id="interview_menu"
+                  name="Interviews"
+                  parent="hr_recruitment.menu_hr_recruitment_root"
+                  action="interview_action"/>
+
+    </data>
+</odoo>

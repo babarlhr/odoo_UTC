@@ -1,0 +1,66 @@
+<openerp>
+    <data>
+        <record forcecreate="1" id="ev_training_course_name_seq_type_id" model="ir.sequence.type">
+            <field name="name">EV_TRAINING_COURSE_NAME_SEQ</field>
+            <field name="code">ev_training_course_name_seq</field>
+        </record>
+        <record forcecreate="1" id="ev_training_course_name_seq_id" model="ir.sequence">
+            <field name="name">ev training course name seq</field>
+            <field name="code">ev_training_course_name_seq</field>
+            <field name="padding" eval="2"/>
+            <field name="prefix">COU/%(y)s%(month)s</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+        <record forcecreate="1" id="ev_training_session_name_seq_type_id" model="ir.sequence.type">
+            <field name="name">EV_TRAINING_SESSION_NAME_SEQ</field>
+            <field name="code">ev_training_session_name_seq</field>
+        </record>
+        <record forcecreate="1" id="ev_training_session_name_seq_id" model="ir.sequence">
+            <field name="name">ev training session name seq</field>
+            <field name="code">ev_training_session_name_seq</field>
+            <field name="padding" eval="2"/>
+            <field name="prefix">SES/%(y)s%(month)s</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+
+        <record forcecreate="1" id="ev_training_session_name_seq_type_id_20" model="ir.sequence.type">
+            <field name="name">EV_TRAINING_SESSION_NAME_SEQ_20</field>
+            <field name="code">ev_training_session_name_seq_20</field>
+        </record>
+        <record forcecreate="1" id="ev_training_session_name_seq_id_20" model="ir.sequence">
+            <field name="name">ev training session name seq 20</field>
+            <field name="code">ev_training_session_name_seq_20</field>
+            <field name="padding" eval="4"/>
+            <field name="prefix">/</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+
+        <record forcecreate="1" id="training_major_name_seq_type_id" model="ir.sequence.type">
+            <field name="name">TRAINING_MAJOR_NAME_SEQ</field>
+            <field name="code">training_major_name_seq</field>
+        </record>
+        <record forcecreate="1" id="training_major_name_seq_id" model="ir.sequence">
+            <field name="name">training major name seq</field>
+            <field name="code">training_major_name_seq</field>
+            <field name="padding" eval="2"/>
+            <field name="prefix">MAJ/%(y)s%(month)s</field>
+            <field name="implementation">standard</field>
+            <field name="implementation">standard</field>
+            <field eval="1" name="number_next"/>
+            <field eval="1" name="number_increment"/>
+            <field name="reset_init_number">1</field>
+        </record>
+    </data>
+</openerp>

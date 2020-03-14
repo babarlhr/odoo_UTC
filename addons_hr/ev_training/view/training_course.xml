@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<openerp>
+    <data>
+        <record id="training_course_id_action" model="ir.actions.act_window">
+            <field name="name">Course Employee</field>
+            <field name="res_model">training.course</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Click create to add a new Training Course Employee record</p>
+            </field>
+        </record>
+        <record id="view_training_course_id_form" model="ir.ui.view">
+            <field name="name">Course Employee form</field>
+            <field name="model">training.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <header>
+                        <button name="action_active" type="object"
+                                string="Active" states="new"
+                                class="oe_highlight"/>
+                        <button name="action_done" type="object"
+                                string="Done" states="active"
+                                class="oe_highlight"/>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <h1>
+                                <field name="name" required="1" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            </h1>
+                        </group>
+                        <group>
+                            <field name="code" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="department_ids" attrs="{'readonly': [('state', '!=', 'new')]}"
+                                   widget="many2many_tags"></field>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="start_date" required="1" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            </group>
+                            <group>
+                                <field name="end_date" required="1" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Session">
+                                <field name="session_ids" attrs="{'readonly': [('state', '=', 'done')]}">
+                                    <tree string="Session">
+                                        <field name="name"/>
+                                        <field name="start_date"/>
+                                        <field name="end_date"/>
+                                        <field name="state"/>
+                                    </tree>
+                                    <form string="Session Form">
+                                        <sheet>
+                                            <group>
+                                                <h1>
+                                                    <field name="name" required="1"/>
+                                                </h1>
+                                            </group>
+                                            <group>
+                                                <field name="code" readonly="1"/>
+                                            </group>
+                                            <group>
+                                                <group>
+                                                    <field name="start_date" required="1"/>
+                                                </group>
+                                                <group>
+                                                    <field name="end_date" required="1"/>
+                                                </group>
+                                            </group>
+                                            <notebook>
+                                                <page string="Manager">
+                                                    <field name="teacher_ids" string="Manager">
+                                                        <tree editable="bottom">
+                                                            <field name="teacher_id" string="Manager" required="1"/>
+                                                            <field name="major_id" required="1"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                                <page string="Employee">
+                                                    <field name="employees_ids" string="Employee">
+                                                        <tree editable="bottom">
+                                                            <field name="employee_id"/>
+                                                            <field name="note"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                            <notebook>
+                                                <page string="Timetable">
+                                                    <field name="timetable_ids" string="Timetable">
+                                                        <tree editable="bottom">
+                                                            <field name="major_id" required="1"
+                                                                   attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                                                            <field name="start_time" required="1"
+                                                                   attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                                                            <field name="end_time" required="1"
+                                                                   attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                                                            <field name="duration" readonly="1"/>
+                                                            <field name="state" required="1"/>
+                                                            <button name="attendance_ses" string="Attendance"
+                                                                    type="object"
+                                                                    class="oe_highlight"
+                                                                    attrs="{'invisible': [('state', '!=', 'active')]}"/>
+                                                            <button name="reset_to_active" string="Reset" type="object"
+                                                                    class="oe_highlight"
+                                                                    attrs="{'invisible': [('state', '!=', 'done')]}"/>
+                                                        </tree>
+                                                    </field>
+                                                </page>
+                                                <page string="Contest">
+                                                    <field name="contest_ids" string="Contest">
+                                                        <tree>
+                                                            <field name="major_id"/>
+                                                            <field name="date"/>
+                                                            <button name="contest" type="object"
+                                                                    string="Contest"
+                                                                    class="oe_highlight"/>
+                                                        </tree>
+                                                        <form>
+                                                            <sheet>
+                                                                <field name="session_id" readonly="1"/>
+                                                                <group>
+                                                                    <field name="major_id" required="1"/>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="date" required="1"/>
+                                                                </group>
+                                                                <group>
+                                                                    <field name="line_ids" string="Employees">
+                                                                        <tree create="0" delete="0" editable="bottom">
+                                                                            <field name="employee_id" readonly="1"/>
+                                                                            <field name="practice_scores" readonly="1"/>
+                                                                        </tree>
+                                                                    </field>
+                                                                </group>
+                                                            </sheet>
+                                                        </form>
+                                                    </field>
+                                                </page>
+                                            </notebook>
+                                            <group>
+                                                <field name="description"/>
+                                            </group>
+                                        </sheet>
+                                    </form>
+                                </field>
+                            </page>
+                        </notebook>
+                        <group>
+                            <field name="target" required="1" attrs="{'readonly': [('state', '!=', 'new')]}"/>
+                        </group>
+
+                        <group>
+                            <field name="description" required="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_training_course_id_tree" model="ir.ui.view">
+            <field name="name">Course Session Employee tree</field>
+            <field name="model">training.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course">
+                    <field name="name"/>
+                    <field name="code"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="target"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>
